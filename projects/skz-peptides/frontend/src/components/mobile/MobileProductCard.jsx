@@ -27,26 +27,7 @@ const MobileProductCard = ({ product }) => {
             }}
           />
           
-          {/* Stock badge */}
-          <div className="absolute top-2 right-2">
-            <span 
-              className="px-2 py-1 text-xs font-medium rounded-full"
-              style={{
-                backgroundColor: product.inStock > 10 
-                  ? 'rgba(167, 139, 250, 0.2)' 
-                  : product.inStock > 0 
-                  ? 'rgba(167, 139, 250, 0.15)' 
-                  : 'rgba(239, 68, 68, 0.2)',
-                color: product.inStock > 10 
-                  ? '#A78BFA' 
-                  : product.inStock > 0 
-                  ? '#C4B5FD' 
-                  : '#EF4444'
-              }}
-            >
-              {product.inStock > 0 ? `${product.inStock} in stock` : 'Out of stock'}
-            </span>
-          </div>
+
         </div>
 
         {/* Product Info */}

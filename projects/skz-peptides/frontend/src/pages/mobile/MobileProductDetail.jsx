@@ -80,19 +80,7 @@ const MobileProductDetail = () => {
           {product.name}
         </h1>
 
-        {/* Stock Status */}
-        <div className="flex items-center mb-4">
-          <div 
-            className="w-2 h-2 rounded-full mr-2"
-            style={{
-              backgroundColor: product.inStock > 10 ? '#A78BFA' : 
-                              product.inStock > 0 ? '#C4B5FD' : '#EF4444'
-            }}
-          />
-          <span className="text-sm text-gray-600 dark:text-gray-400">
-            {product.inStock > 0 ? `${product.inStock} in stock` : 'Out of stock'}
-          </span>
-        </div>
+
 
         {/* Price */}
         <div className="mb-6">
