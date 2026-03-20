@@ -172,26 +172,52 @@ const MobileProductDetail = () => {
           )}
         </div>
 
-        {/* Free Gift Notice - only for peptides, not supplies */}
+        {/* Free Promotions - only for peptides, not supplies */}
         {product.category !== 'Supplies' && (
-          <div className="mb-6 p-4 rounded-xl" style={{ 
-            background: 'rgba(34, 197, 94, 0.1)', 
-            border: '1px solid rgba(34, 197, 94, 0.2)' 
-          }}>
-            <div className="flex items-center space-x-3">
-              <div 
-                className="p-2 rounded-full"
-                style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}
-              >
-                <Package className="w-4 h-4" style={{ color: '#22C55E' }} />
+          <div className="mb-6 space-y-3">
+            {/* FREE Gift */}
+            <div className="p-4 rounded-xl" style={{ 
+              background: 'rgba(34, 197, 94, 0.1)', 
+              border: '1px solid rgba(34, 197, 94, 0.2)' 
+            }}>
+              <div className="flex items-center space-x-3">
+                <div 
+                  className="p-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}
+                >
+                  <Package className="w-4 h-4" style={{ color: '#22C55E' }} />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900 dark:text-white text-sm">
+                    FREE Gift Included
+                  </p>
+                  <p className="text-xs" style={{ color: '#22C55E' }}>
+                    • Bacteriostatic Water • Insulin Syringe • Alcohol Swab
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="font-medium text-gray-900 dark:text-white text-sm">
-                  FREE Gift Included
-                </p>
-                <p className="text-xs" style={{ color: '#22C55E' }}>
-                  • Bacteriostatic Water • Insulin Syringe • Alcohol Swab
-                </p>
+            </div>
+
+            {/* FREE Consultation */}
+            <div className="p-4 rounded-xl" style={{ 
+              background: 'rgba(59, 130, 246, 0.1)', 
+              border: '1px solid rgba(59, 130, 246, 0.2)' 
+            }}>
+              <div className="flex items-center space-x-3">
+                <div 
+                  className="p-2 rounded-full"
+                  style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
+                >
+                  <FileText className="w-4 h-4" style={{ color: '#3B82F6' }} />
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900 dark:text-white text-sm">
+                    FREE Research Consultation
+                  </p>
+                  <p className="text-xs" style={{ color: '#3B82F6' }}>
+                    Expert guidance on protocols, dosing, and research methodology
+                  </p>
+                </div>
               </div>
             </div>
           </div>

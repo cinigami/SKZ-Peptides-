@@ -108,21 +108,43 @@ const ProductDetail = () => {
               </div>
               <p className="text-gray-600">Storage: {product.storage}</p>
               
-              {/* Free Gift Promotion - only for peptides, not supplies */}
+              {/* Free Promotions - only for peptides, not supplies */}
               {product.category !== 'Supplies' && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="bg-green-100 p-2 rounded-full">
-                      <Package className="w-5 h-5 text-green-600" />
+                <div className="space-y-3 mt-4">
+                  {/* FREE Gift */}
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-green-100 p-2 rounded-full">
+                        <Package className="w-5 h-5 text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-green-800 mb-1">
+                          FREE Gift Included
+                        </h4>
+                        <div className="flex items-center space-x-4 text-sm text-green-700">
+                          <span>• Bacteriostatic Water</span>
+                          <span>• Insulin Syringe</span>
+                          <span>• Alcohol Swab</span>
+                        </div>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-green-800 mb-1">
-                        FREE Gift Included
-                      </h4>
-                      <div className="flex items-center space-x-4 text-sm text-green-700">
-                        <span>• Bacteriostatic Water</span>
-                        <span>• Insulin Syringe</span>
-                        <span>• Alcohol Swab</span>
+                  </div>
+
+                  {/* FREE Consultation */}
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="bg-blue-100 p-2 rounded-full">
+                        <FileText className="w-5 h-5 text-blue-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-blue-800 mb-1">
+                          FREE Research Consultation
+                        </h4>
+                        <div className="flex items-center space-x-4 text-sm text-blue-700">
+                          <span>• Protocol Guidance</span>
+                          <span>• Dosing Recommendations</span>
+                          <span>• Expert Support</span>
+                        </div>
                       </div>
                     </div>
                   </div>

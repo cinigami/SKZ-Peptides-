@@ -64,18 +64,30 @@ const ProductCard = ({ product }) => {
               {product.category}
             </span>
 
-            {/* Free Gift Badge - only for peptides, not supplies */}
+            {/* Free promotions - only for peptides, not supplies */}
             {product.category !== 'Supplies' && (
-              <span 
-                className="inline-block text-[10px] font-medium leading-tight px-2 py-1 rounded"
-                style={{
-                  background: 'rgba(34, 197, 94, 0.15)',
-                  border: '1px solid rgba(34, 197, 94, 0.3)',
-                  color: '#22C55E'
-                }}
-              >
-                FREE<br/>GIFT
-              </span>
+              <div className="flex flex-col gap-1">
+                <span 
+                  className="inline-block text-[10px] font-medium leading-tight px-2 py-1 rounded text-center"
+                  style={{
+                    background: 'rgba(34, 197, 94, 0.15)',
+                    border: '1px solid rgba(34, 197, 94, 0.3)',
+                    color: '#22C55E'
+                  }}
+                >
+                  FREE<br/>GIFT
+                </span>
+                <span 
+                  className="inline-block text-[9px] font-medium leading-tight px-1.5 py-1 rounded text-center"
+                  style={{
+                    background: 'rgba(59, 130, 246, 0.15)',
+                    border: '1px solid rgba(59, 130, 246, 0.3)',
+                    color: '#3B82F6'
+                  }}
+                >
+                  FREE<br/>CONSULT
+                </span>
+              </div>
             )}
           </div>
         </div>

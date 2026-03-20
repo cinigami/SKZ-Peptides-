@@ -32,7 +32,7 @@ const MobileProductCard = ({ product }) => {
 
         {/* Product Info */}
         <div className="p-4">
-          <div className="flex items-center justify-between mb-2">
+          <div className="flex items-start justify-between mb-2">
             {/* Category badge */}
             <span 
               className="inline-block"
@@ -49,20 +49,34 @@ const MobileProductCard = ({ product }) => {
               {product.category}
             </span>
 
-            {/* Free Gift Badge - only for peptides, not supplies */}
+            {/* Free promotions - only for peptides, not supplies */}
             {product.category !== 'Supplies' && (
-              <span 
-                className="inline-block text-[10px] font-medium leading-tight"
-                style={{
-                  background: 'rgba(34, 197, 94, 0.15)',
-                  border: '1px solid rgba(34, 197, 94, 0.3)',
-                  color: '#22C55E',
-                  padding: '2px 6px',
-                  borderRadius: '6px'
-                }}
-              >
-                FREE<br/>GIFT
-              </span>
+              <div className="flex flex-col gap-1">
+                <span 
+                  className="inline-block text-[10px] font-medium leading-tight text-center"
+                  style={{
+                    background: 'rgba(34, 197, 94, 0.15)',
+                    border: '1px solid rgba(34, 197, 94, 0.3)',
+                    color: '#22C55E',
+                    padding: '2px 6px',
+                    borderRadius: '6px'
+                  }}
+                >
+                  FREE<br/>GIFT
+                </span>
+                <span 
+                  className="inline-block text-[9px] font-medium leading-tight text-center"
+                  style={{
+                    background: 'rgba(59, 130, 246, 0.15)',
+                    border: '1px solid rgba(59, 130, 246, 0.3)',
+                    color: '#3B82F6',
+                    padding: '2px 5px',
+                    borderRadius: '6px'
+                  }}
+                >
+                  FREE<br/>CONSULT
+                </span>
+              </div>
             )}
           </div>
 

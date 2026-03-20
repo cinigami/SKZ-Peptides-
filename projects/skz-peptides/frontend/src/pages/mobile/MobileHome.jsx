@@ -100,8 +100,9 @@ const MobileHome = () => {
         </div>
       </section>
 
-      {/* Free Gift Promo */}
-      <section className="px-4 py-6">
+      {/* Free Promotions */}
+      <section className="px-4 py-6 space-y-4">
+        {/* FREE Gift */}
         <div className="p-4 rounded-xl" style={{ 
           background: 'rgba(34, 197, 94, 0.1)', 
           border: '1px solid rgba(34, 197, 94, 0.2)' 
@@ -131,6 +132,41 @@ const MobileHome = () => {
                   <span className="text-xs">🧽</span>
                 </div>
                 <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>Alcohol Swab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FREE Consultation */}
+        <div className="p-4 rounded-xl" style={{ 
+          background: 'rgba(59, 130, 246, 0.1)', 
+          border: '1px solid rgba(59, 130, 246, 0.2)' 
+        }}>
+          <div className="text-center">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+              🔬 FREE Research Consultation
+            </h3>
+            <div className="flex items-center justify-center space-x-6 text-sm">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
+                  <span className="text-xs">📋</span>
+                </div>
+                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Protocol</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
+                  <span className="text-xs">⚗️</span>
+                </div>
+                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Dosing</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
+                  <span className="text-xs">🎯</span>
+                </div>
+                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Support</span>
               </div>
             </div>
           </div>
