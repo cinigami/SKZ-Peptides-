@@ -52,16 +52,16 @@ const MobileProductCard = ({ product }) => {
             {/* Free Essential Kit - only for peptides, not supplies */}
             {product.category !== 'Supplies' && (
               <span 
-                className="inline-block text-[9px] font-medium leading-tight text-center"
+                className="inline-block text-[10px] font-medium text-center"
                 style={{
                   background: 'rgba(34, 197, 94, 0.15)',
                   border: '1px solid rgba(34, 197, 94, 0.3)',
                   color: '#22C55E',
-                  padding: '2px 5px',
+                  padding: '3px 6px',
                   borderRadius: '6px'
                 }}
               >
-                FREE<br/>ESSENTIAL<br/>KIT
+                Free essential kit
               </span>
             )}
           </div>
