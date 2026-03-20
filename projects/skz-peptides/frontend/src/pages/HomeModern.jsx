@@ -106,7 +106,7 @@ const HomeModern = () => {
                     <span className="text-2xl">💧</span>
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">Bacteriostatic Water</h4>
-                  <p className="text-sm text-gray-600 text-center">Sterile mixing solution</p>
+                  <p className="text-sm text-gray-600 text-center">3ml sterile vial</p>
                 </div>
                 
                 <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">

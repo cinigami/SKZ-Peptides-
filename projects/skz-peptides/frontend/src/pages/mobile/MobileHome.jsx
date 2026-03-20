@@ -122,7 +122,7 @@ const MobileHome = () => {
                 </div>
                 <div>
                   <p className="font-medium text-gray-900 text-xs">Bacteriostatic Water</p>
-                  <p className="text-gray-500 text-xs">10ml sterile vial</p>
+                  <p className="text-gray-500 text-xs">3ml sterile vial</p>
                 </div>
               </div>
               
@@ -149,11 +149,7 @@ const MobileHome = () => {
               </div>
             </div>
             
-            <div className="mt-3 pt-3 border-t border-gray-200">
-              <p className="text-center text-xs text-green-600 font-medium">
-                $25+ Value • Completely Free
-              </p>
-            </div>
+
           </div>
         </div>
 

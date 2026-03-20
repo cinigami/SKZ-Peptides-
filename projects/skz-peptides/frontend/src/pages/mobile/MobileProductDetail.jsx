@@ -189,7 +189,7 @@ const MobileProductDetail = () => {
               <div className="p-3 space-y-2">
                 <div className="flex items-center space-x-2 text-xs">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Bacteriostatic Water (10ml vial)</span>
+                  <span className="text-gray-700 dark:text-gray-300">Bacteriostatic Water (3ml vial)</span>
                 </div>
                 <div className="flex items-center space-x-2 text-xs">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -200,11 +200,7 @@ const MobileProductDetail = () => {
                   <span className="text-gray-700 dark:text-gray-300">Alcohol Prep Pad (70% sterile)</span>
                 </div>
                 
-                <div className="mt-2 pt-2 border-t border-gray-200 dark:border-gray-600">
-                  <p className="text-center text-xs font-medium text-green-600 dark:text-green-400">
-                    $25+ Value Included Free
-                  </p>
-                </div>
+
               </div>
             </div>
 
