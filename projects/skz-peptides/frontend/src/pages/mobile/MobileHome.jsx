@@ -102,72 +102,112 @@ const MobileHome = () => {
 
       {/* Free Promotions */}
       <section className="px-4 py-6 space-y-4">
-        {/* FREE Essential Kit */}
-        <div className="p-4 rounded-xl" style={{ 
-          background: 'rgba(34, 197, 94, 0.1)', 
-          border: '1px solid rgba(34, 197, 94, 0.2)' 
-        }}>
-          <div className="text-center">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">
-              🧪 FREE Essential Kit with Every Peptide
+        {/* FREE Essential Kit - Professional Design */}
+        <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4">
+            <h3 className="font-bold text-gray-900 text-center mb-2">
+              FREE Essential Kit
             </h3>
-            <div className="flex items-center justify-center space-x-6 text-sm">
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
-                  <span className="text-xs">💧</span>
+            <p className="text-xs text-gray-600 text-center mb-3">
+              Complete research supplies included with every peptide purchase
+            </p>
+          </div>
+          
+          <div className="p-4 bg-white">
+            <div className="space-y-3">
+              {/* Bacteriostatic Water */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="w-3 h-4 bg-blue-400 rounded-sm"></div>
                 </div>
-                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>BAC Water</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
-                  <span className="text-xs">💉</span>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Bacteriostatic Water</p>
+                  <p className="text-gray-500 text-xs">10ml sterile vial</p>
                 </div>
-                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>Syringe</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
-                  <span className="text-xs">🧽</span>
+              
+              {/* Insulin Syringe */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-1 bg-gray-600 rounded-full"></div>
                 </div>
-                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>Alcohol Swab</span>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Insulin Syringe</p>
+                  <p className="text-gray-500 text-xs">1ml precision dosing</p>
+                </div>
               </div>
+              
+              {/* Alcohol Swab */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-white border border-gray-300 rounded"></div>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Alcohol Prep Pad</p>
+                  <p className="text-gray-500 text-xs">Sterile 70% isopropyl</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-3 pt-3 border-t border-gray-200">
+              <p className="text-center text-xs text-green-600 font-medium">
+                $25+ Value • Completely Free
+              </p>
             </div>
           </div>
         </div>
 
-        {/* FREE Consultation */}
-        <div className="p-4 rounded-xl" style={{ 
-          background: 'rgba(59, 130, 246, 0.1)', 
-          border: '1px solid rgba(59, 130, 246, 0.2)' 
-        }}>
-          <div className="text-center">
-            <h3 className="font-bold text-gray-900 dark:text-white mb-2">
-              🔬 FREE Research Consultation
+        {/* FREE Consultation - Professional Design */}
+        <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4">
+            <h3 className="font-bold text-gray-900 text-center mb-2">
+              Expert Research Consultation
             </h3>
-            <div className="flex items-center justify-center space-x-6 text-sm">
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
-                  <span className="text-xs">📋</span>
+            <p className="text-xs text-gray-600 text-center mb-3">
+              Professional guidance from certified research specialists
+            </p>
+          </div>
+          
+          <div className="p-4 bg-white">
+            <div className="space-y-3">
+              {/* Protocol Review */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <FileText className="w-4 h-4 text-blue-600" />
                 </div>
-                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Protocol</span>
-              </div>
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
-                  <span className="text-xs">⚗️</span>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Protocol Review</p>
+                  <p className="text-gray-500 text-xs">Research methodology analysis</p>
                 </div>
-                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Dosing</span>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
-                     style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}>
-                  <span className="text-xs">🎯</span>
+              
+              {/* Dosing Guidance */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
                 </div>
-                <span style={{ color: '#3B82F6', fontSize: '0.7rem' }}>Support</span>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Dosing Guidance</p>
+                  <p className="text-gray-500 text-xs">Personalized recommendations</p>
+                </div>
               </div>
+              
+              {/* Expert Support */}
+              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 border-2 border-blue-600 rounded-full"></div>
+                </div>
+                <div>
+                  <p className="font-medium text-gray-900 text-xs">Ongoing Support</p>
+                  <p className="text-gray-500 text-xs">Direct researcher access</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-3 pt-3 border-t border-gray-200">
+              <p className="text-center text-xs text-blue-600 font-medium">
+                Professional Service • No Additional Cost
+              </p>
             </div>
           </div>
         </div>

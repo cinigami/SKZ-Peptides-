@@ -175,47 +175,67 @@ const MobileProductDetail = () => {
         {/* Free Promotions - only for peptides, not supplies */}
         {product.category !== 'Supplies' && (
           <div className="mb-6 space-y-3">
-            {/* FREE Essential Kit */}
-            <div className="p-4 rounded-xl" style={{ 
-              background: 'rgba(34, 197, 94, 0.1)', 
-              border: '1px solid rgba(34, 197, 94, 0.2)' 
-            }}>
-              <div className="flex items-center space-x-3">
-                <div 
-                  className="p-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}
-                >
-                  <Package className="w-4 h-4" style={{ color: '#22C55E' }} />
+            {/* FREE Essential Kit - Professional Design */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600 overflow-hidden">
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
+                  FREE Essential Kit Included
+                </h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  Complete research supplies included at no additional cost
+                </p>
+              </div>
+              
+              <div className="p-3 space-y-2">
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Bacteriostatic Water (10ml vial)</span>
                 </div>
-                <div>
-                  <p className="font-medium text-gray-900 dark:text-white text-sm">
-                    FREE Essential Kit Included
-                  </p>
-                  <p className="text-xs" style={{ color: '#22C55E' }}>
-                    • Bacteriostatic Water • Insulin Syringe • Alcohol Swab
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Insulin Syringe (1ml precision)</span>
+                </div>
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Alcohol Prep Pad (70% sterile)</span>
+                </div>
+                
+                <div className="mt-2 pt-2 border-t border-gray-200 dark:border-gray-600">
+                  <p className="text-center text-xs font-medium text-green-600 dark:text-green-400">
+                    $25+ Value Included Free
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* FREE Consultation */}
-            <div className="p-4 rounded-xl" style={{ 
-              background: 'rgba(59, 130, 246, 0.1)', 
-              border: '1px solid rgba(59, 130, 246, 0.2)' 
-            }}>
-              <div className="flex items-center space-x-3">
-                <div 
-                  className="p-2 rounded-full"
-                  style={{ backgroundColor: 'rgba(59, 130, 246, 0.2)' }}
-                >
-                  <FileText className="w-4 h-4" style={{ color: '#3B82F6' }} />
+            {/* FREE Consultation - Professional Design */}
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600 overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-3">
+                <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
+                  Expert Research Consultation
+                </h4>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  Professional guidance from certified research specialists
+                </p>
+              </div>
+              
+              <div className="p-3 space-y-2">
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Protocol review & optimization</span>
                 </div>
-                <div>
-                  <p className="font-medium text-gray-900 dark:text-white text-sm">
-                    FREE Research Consultation
-                  </p>
-                  <p className="text-xs" style={{ color: '#3B82F6' }}>
-                    Expert guidance on protocols, dosing, and research methodology
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Personalized dosing guidance</span>
+                </div>
+                <div className="flex items-center space-x-2 text-xs">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span className="text-gray-700 dark:text-gray-300">Ongoing research support</span>
+                </div>
+                
+                <div className="mt-2 pt-2 border-t border-gray-200 dark:border-gray-600">
+                  <p className="text-center text-xs font-medium text-blue-600 dark:text-blue-400">
+                    Professional Service at No Cost
                   </p>
                 </div>
               </div>
