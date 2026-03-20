@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --primary-50: #f8faff;
+  --primary-100: #eef2ff;
+  --primary-200: #e0e7ff;
+  --primary-300: #c7d2fe;
+  --primary-400: #a5b4fc;
+  --primary-500: #8b5cf6;
+  --primary-600: #7c3aed;
+  --primary-700: #6d28d9;
+  --primary-800: #5b21b6;
+  --primary-900: #4c1d95;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9);
+    min-height: 100vh;
+  }
+  
+  .dark body {
+    background: linear-gradient(to bottom, #0f172a, #1e293b);
+    color: #f1f5f9;
+  }
+
+  /* Beautiful dark mode support */
+  .dark {
+    body {
+      background: linear-gradient(to bottom, #0f172a, #1e293b) !important;
+      color: #f1f5f9 !important;
+    }
+    
+    /* Dark backgrounds */
+    .bg-white {
+      background-color: #1e293b !important;
+      color: #f1f5f9 !important;
+    }
+    
+    .bg-gray-50 {
+      background-color: #0f172a !important;
+      color: #f1f5f9 !important;
+    }
+    
+    .bg-primary-50 {
+      background-color: rgba(77, 139, 255, 0.1) !important;
+    }
+    
+    /* Dark mode text colors - Perfect hierarchy */
+    .text-gray-900 {
+      color: #f8fafc !important;
+    }
+    
+    .text-gray-800 {
+      color: #e2e8f0 !important;
+    }
+    
+    .text-gray-700 {
+      color: #B0B8C4 !important; /* Nav links - much more readable */
+    }
+    
+    .text-gray-600 {
+      color: #A0AAB8 !important; /* Body text - comfortable reading */
+    }
+    
+    .text-gray-500 {
+      color: #9ca3af !important;
+    }
+    
+    /* Enhanced blue colors for dark mode - Override to bright blue */
+    .text-primary-600 {
+      color: #60a5fa !important;
+      text-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
+    }
+    
+    .text-primary-700 {
+      color: #60a5fa !important;
+      text-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
+    }
+    
+    .text-primary-500 {
+      color: #60a5fa !important;
+    }
+    
+    /* Button improvements */
+    .bg-primary-600 {
+      background-color: #60a5fa !important;
+      box-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
+    }
+    
+    .bg-primary-700 {
+      background-color: #60a5fa !important;
+      box-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
+    }
+    
+    /* Card and component backgrounds */
+    .neuro-card {
+      background-color: #1e293b !important;
+      color: #f1f5f9 !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    .glass {
+      background: rgba(30, 41, 59, 0.8) !important;
+      color: #f1f5f9 !important;
+    }
+    
+    /* Borders for dark mode */
+    .border-gray-200 {
+      border-color: #374151 !important;
+    }
+    
+    .border-gray-300 {
+      border-color: #4b5563 !important;
+    }
+    
+    .border-primary-200 {
+      border-color: rgba(77, 139, 255, 0.3) !important;
+    }
+    
+    /* Hero section gradient for dark mode */
+    .bg-gradient-to-br {
+      background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a) !important;
+    }
+    
+    /* SKZ Brand - Readable Purple (Top of hierarchy) */
+    .text-gradient {
+      color: #A78BFA !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      background-clip: unset !important;
+      text-shadow: 0 0 30px rgba(167, 139, 250, 0.6) !important;
+    }
+    
+    .text-gradient-hero {
+      color: #A78BFA !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      -webkit-text-fill-color: unset !important;
+      background-clip: unset !important;
+      text-shadow: 0 0 20px rgba(167, 139, 250, 0.15) !important;
+    }
+    
+    /* Product card enhancements */
+    .bg-gradient-to-r {
+      background: linear-gradient(to right, rgba(77, 139, 255, 0.1), rgba(30, 41, 59, 0.8)) !important;
+    }
+    
+    /* Primary color sections */
+    .bg-primary-600 {
+      background-color: #1e40af !important;
+    }
+    
+    /* Purple buttons for dark mode - unified theme */
+    .btn-gradient {
+      background: #7C3AED !important;
+      color: #ffffff !important;
+      box-shadow: 0 0 25px rgba(124, 58, 237, 0.4) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    .btn-gradient:hover {
+      background: #8B5CF6 !important;
+      box-shadow: 0 0 35px rgba(139, 92, 246, 0.6) !important;
+    }
+    
+    .btn-secondary {
+      background: transparent !important;
+      color: #A78BFA !important;
+      border: 2px solid #A78BFA !important;
+      backdrop-filter: blur(10px) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(167, 139, 250, 0.1) !important;
+      border-color: #A78BFA !important;
+      color: #A78BFA !important;
+    }
+    
+    /* Better text hierarchy */
+    .dark .text-gray-300 {
+      color: #d1d5db !important;
+    }
+    
+    .dark .text-gray-200 {
+      color: #e5e7eb !important;
+    }
+    
+    /* Ensure primary-700 elements use purple in dark mode */
+    .dark .text-primary-700 {
+      color: #A78BFA !important;
+    }
+    
+    /* Force accent text to purple in dark mode */
+    .dark .text-purple-400 {
+      color: #A78BFA !important;
+    }
+    
+    /* Override all primary text colors to purple in dark mode */
+    .dark .text-primary-500 {
+      color: #A78BFA !important;
+    }
+    
+    .dark .text-primary-600 {
+      color: #A78BFA !important;
+    }
+    
+    .dark .text-primary-400 {
+      color: #A78BFA !important;
+    }
+    
+    /* Custom accent text class */
+    .accent-text {
+      color: #8b5cf6;
+    }
+    
+    .dark .accent-text {
+      color: #A78BFA !important;
+    }
+    
+    /* Premium badge specific styling */
+    .dark .premium-badge {
+      color: #A78BFA !important;
+    }
+    
+    .dark .premium-badge .w-4 {
+      color: #A78BFA !important;
+    }
+    
+    .dark .premium-badge svg {
+      color: #A78BFA !important;
+    }
+    
+    /* Make sure text-purple-400 uses our exact purple */
+    .dark .text-purple-400 {
+      color: #A78BFA !important;
+    }
+    
+    /* Convert all blue/cyan text to purple in dark mode */
+    .dark .text-blue-300,
+    .dark .text-blue-600,
+    .dark .text-blue-700,
+    .dark .text-blue-800,
+    .dark .text-blue-900,
+    .dark .text-cyan-300,
+    .dark .text-cyan-400,
+    .dark .text-cyan-500 {
+      color: #A78BFA !important;
+    }
+    
+    /* Convert blue backgrounds to purple in dark mode */
+    .dark .bg-blue-100 {
+      background-color: rgba(167, 139, 250, 0.1) !important;
+    }
+    
+    .dark .bg-blue-600 {
+      background-color: #A78BFA !important;
+    }
+    
+    .dark .bg-blue-50 {
+      background-color: rgba(167, 139, 250, 0.05) !important;
+    }
+    
+    /* Convert green elements to purple in dark mode */
+    .dark .text-green-600,
+    .dark .text-green-700,
+    .dark .text-green-800,
+    .dark .text-green-900 {
+      color: #A78BFA !important;
+    }
+    
+    .dark .bg-green-100 {
+      background-color: rgba(167, 139, 250, 0.1) !important;
+    }
+    
+    .dark .bg-green-50 {
+      background-color: rgba(167, 139, 250, 0.05) !important;
+    }
+    
+    .dark .bg-green-500 {
+      background-color: #7C3AED !important;
+    }
+    
+    /* Purple theme for primary elements */
+    .dark .bg-primary-100 {
+      background-color: rgba(124, 58, 237, 0.1) !important;
+    }
+    
+    /* Dark mode card styling */
+    .dark .card {
+      background-color: #1E1E2E !important;
+      border: 1px solid rgba(167, 139, 250, 0.1) !important;
+    }
+    
+    .dark .card:hover {
+      border-color: rgba(167, 139, 250, 0.3) !important;
+    }
+    
+    /* Product card elements */
+    .dark .bg-slate-800 {
+      background-color: #1E1E2E !important;
+    }
+    
+    .dark .bg-slate-700 {
+      background-color: #2A2A3C !important;
+    }
+    
+    /* Override any white/light backgrounds in dark mode */
+    .dark .bg-white {
+      background-color: #1E1E2E !important;
+    }
+    
+    .dark .bg-gray-50 {
+      background-color: #1E1E2E !important;
+    }
+    
+    .dark .bg-gray-100 {
+      background-color: #2A2A3C !important;
+    }
+    
+    /* Footer specific overrides */
+    .dark footer .bg-primary-600 {
+      background-color: #A78BFA !important;
+    }
+    
+    .dark footer .text-primary-500 {
+      color: #A78BFA !important;
+    }
+    
+    /* Ensure all footer icons are purple */
+    .dark footer .w-4,
+    .dark footer .w-5 {
+      color: #A78BFA !important;
+    }
+    
+    .dark footer svg {
+      color: #A78BFA !important;
+    }
+    
+    /* Specific footer icon styling */
+    .dark .footer-icon {
+      color: #A78BFA !important;
+    }
+    
+    .dark .text-purple-400 {
+      color: #A78BFA !important;
+    }
+  }
+
+  /* Modern scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* Neumorphism cards */
+  .neuro-card {
+    background: #f8fafc;
+    box-shadow: 
+      20px 20px 40px #d1d9e0,
+      -20px -20px 40px #ffffff;
+    border-radius: 1rem;
+  }
+
+  /* Modern cards */
+  .modern-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 rounded-xl p-6 shadow-lg;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .modern-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Text gradients with glow - Light Mode (Original Violet) */
+  .text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 30px rgba(102, 126, 234, 0.4));
+  }
+
+  /* Extra glow for hero text - Light Mode */
+  .text-gradient-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 40px rgba(102, 126, 234, 0.6)) drop-shadow(0 0 80px rgba(102, 126, 234, 0.3));
+  }
+
+  /* Grid auto fit */
+  .grid-auto-fit {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Navigation glass */
+  .nav-glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800;
+    @apply text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl;
+    @apply transform hover:-translate-y-1 transition-all duration-300;
+    @apply border border-primary-500/20;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/80 backdrop-blur-sm hover:bg-white text-gray-700 hover:text-gray-900;
+    @apply font-medium py-3 px-6 rounded-xl border border-gray-200/50 hover:border-gray-300;
+    @apply shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+    @apply flex items-center justify-center;
+  }
+  
+  .card {
+    @apply modern-card;
+  }
+
+  .btn-gradient {
+    @apply px-6 py-3 rounded-lg font-semibold text-white shadow-md transition-all duration-300;
+    @apply flex items-center justify-center;
+    background: var(--gradient-primary);
+    transform: translateY(0);
+  }
+  
+  .btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+  }
+
+  /* Floating elements */
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  /* Premium pricing display */
+  .price-display {
+    @apply text-3xl font-bold;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Modern badges */
+  .badge-modern {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md;
+  }
+}
