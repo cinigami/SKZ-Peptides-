@@ -102,14 +102,14 @@ const MobileHome = () => {
 
       {/* Free Promotions */}
       <section className="px-4 py-6 space-y-4">
-        {/* FREE Gift */}
+        {/* FREE Essential Kit */}
         <div className="p-4 rounded-xl" style={{ 
           background: 'rgba(34, 197, 94, 0.1)', 
           border: '1px solid rgba(34, 197, 94, 0.2)' 
         }}>
           <div className="text-center">
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">
-              🎁 FREE Gift with Every Peptide
+              🧪 FREE Essential Kit with Every Peptide
             </h3>
             <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex flex-col items-center">

@@ -175,7 +175,7 @@ const MobileProductDetail = () => {
         {/* Free Promotions - only for peptides, not supplies */}
         {product.category !== 'Supplies' && (
           <div className="mb-6 space-y-3">
-            {/* FREE Gift */}
+            {/* FREE Essential Kit */}
             <div className="p-4 rounded-xl" style={{ 
               background: 'rgba(34, 197, 94, 0.1)', 
               border: '1px solid rgba(34, 197, 94, 0.2)' 
@@ -189,7 +189,7 @@ const MobileProductDetail = () => {
                 </div>
                 <div>
                   <p className="font-medium text-gray-900 dark:text-white text-sm">
-                    FREE Gift Included
+                    FREE Essential Kit Included
                   </p>
                   <p className="text-xs" style={{ color: '#22C55E' }}>
                     • Bacteriostatic Water • Insulin Syringe • Alcohol Swab

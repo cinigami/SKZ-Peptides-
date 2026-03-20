@@ -53,16 +53,16 @@ const MobileProductCard = ({ product }) => {
             {product.category !== 'Supplies' && (
               <div className="flex flex-col gap-1">
                 <span 
-                  className="inline-block text-[10px] font-medium leading-tight text-center"
+                  className="inline-block text-[9px] font-medium leading-tight text-center"
                   style={{
                     background: 'rgba(34, 197, 94, 0.15)',
                     border: '1px solid rgba(34, 197, 94, 0.3)',
                     color: '#22C55E',
-                    padding: '2px 6px',
+                    padding: '2px 5px',
                     borderRadius: '6px'
                   }}
                 >
-                  FREE<br/>GIFT
+                  FREE<br/>ESSENTIAL<br/>KIT
                 </span>
                 <span 
                   className="inline-block text-[9px] font-medium leading-tight text-center"
