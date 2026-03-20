@@ -130,52 +130,7 @@ const HomeModern = () => {
         </div>
       </section>
 
-      {/* Free Consultation Promotion */}
-      <section className="py-16 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200"
-          >
-            <div className="text-center max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                🔬 FREE Research Consultation
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Expert guidance and personalized support for your research protocols and methodology
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-blue-200">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">📋</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Protocol Review</h4>
-                  <p className="text-sm text-gray-600 text-center">Analysis and optimization</p>
-                </div>
-                
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-blue-200">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">⚗️</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Dosing Guidance</h4>
-                  <p className="text-sm text-gray-600 text-center">Personalized recommendations</p>
-                </div>
-                
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-blue-200">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">🎯</span>
-                  </div>
-                  <h4 className="font-semibold text-gray-900 mb-1">Expert Support</h4>
-                  <p className="text-sm text-gray-600 text-center">Ongoing research assistance</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* Featured Products - Modern Grid */}
       <section className="py-20 relative">

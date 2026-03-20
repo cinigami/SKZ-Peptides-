@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Truck, Info, Package, Zap, FileText } from 'lucide-react'
+import { ArrowRight, Shield, Truck, Info, Package, Zap } from 'lucide-react'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 
@@ -153,60 +153,7 @@ const MobileHome = () => {
           </div>
         </div>
 
-        {/* FREE Consultation - Professional Design */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4">
-            <h3 className="font-bold text-gray-900 text-center mb-2">
-              Expert Research Consultation
-            </h3>
-            <p className="text-xs text-gray-600 text-center mb-3">
-              Professional guidance from certified research specialists
-            </p>
-          </div>
-          
-          <div className="p-4 bg-white">
-            <div className="space-y-3">
-              {/* Protocol Review */}
-              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <FileText className="w-4 h-4 text-blue-600" />
-                </div>
-                <div>
-                  <p className="font-medium text-gray-900 text-xs">Protocol Review</p>
-                  <p className="text-gray-500 text-xs">Research methodology analysis</p>
-                </div>
-              </div>
-              
-              {/* Dosing Guidance */}
-              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                </div>
-                <div>
-                  <p className="font-medium text-gray-900 text-xs">Dosing Guidance</p>
-                  <p className="text-gray-500 text-xs">Personalized recommendations</p>
-                </div>
-              </div>
-              
-              {/* Expert Support */}
-              <div className="flex items-center space-x-3 p-2 bg-gray-50 rounded-lg">
-                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 border-2 border-blue-600 rounded-full"></div>
-                </div>
-                <div>
-                  <p className="font-medium text-gray-900 text-xs">Ongoing Support</p>
-                  <p className="text-gray-500 text-xs">Direct researcher access</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mt-3 pt-3 border-t border-gray-200">
-              <p className="text-center text-xs text-blue-600 font-medium">
-                Professional Service • No Additional Cost
-              </p>
-            </div>
-          </div>
-        </div>
+
       </section>
 
       {/* Featured Products */}

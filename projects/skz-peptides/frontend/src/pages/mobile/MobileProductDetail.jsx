@@ -204,38 +204,7 @@ const MobileProductDetail = () => {
               </div>
             </div>
 
-            {/* FREE Consultation - Professional Design */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-600 overflow-hidden">
-              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-3">
-                <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
-                  Expert Research Consultation
-                </h4>
-                <p className="text-xs text-gray-600 dark:text-gray-400">
-                  Professional guidance from certified research specialists
-                </p>
-              </div>
-              
-              <div className="p-3 space-y-2">
-                <div className="flex items-center space-x-2 text-xs">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Protocol review & optimization</span>
-                </div>
-                <div className="flex items-center space-x-2 text-xs">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Personalized dosing guidance</span>
-                </div>
-                <div className="flex items-center space-x-2 text-xs">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Ongoing research support</span>
-                </div>
-                
-                <div className="mt-2 pt-2 border-t border-gray-200 dark:border-gray-600">
-                  <p className="text-center text-xs font-medium text-blue-600 dark:text-blue-400">
-                    Professional Service at No Cost
-                  </p>
-                </div>
-              </div>
-            </div>
+
           </div>
         )}
 
