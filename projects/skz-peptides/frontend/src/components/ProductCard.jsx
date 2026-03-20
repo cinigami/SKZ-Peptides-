@@ -58,10 +58,26 @@ const ProductCard = ({ product }) => {
             {product.description}
           </p>
           
-          {/* Category badge */}
-          <span className="inline-block px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-purple-600/20 dark:text-purple-400 rounded">
-            {product.category}
-          </span>
+          <div className="flex items-center justify-between">
+            {/* Category badge */}
+            <span className="inline-block px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-purple-600/20 dark:text-purple-400 rounded">
+              {product.category}
+            </span>
+
+            {/* Free Accessories Badge - only for peptides, not supplies */}
+            {product.category !== 'Supplies' && (
+              <span 
+                className="inline-block text-[10px] font-medium leading-tight px-2 py-1 rounded"
+                style={{
+                  background: 'rgba(34, 197, 94, 0.15)',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  color: '#22C55E'
+                }}
+              >
+                FREE<br/>ACCESSORIES
+              </span>
+            )}
+          </div>
         </div>
 
 
