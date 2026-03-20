@@ -60,12 +60,12 @@ const HomeModern = () => {
               </h1>
               
               <p className="text-2xl md:text-3xl text-gray-600 dark:text-[#A0AAB8] font-light max-w-4xl mx-auto leading-relaxed">
-                Just good peptides
-                <span className="accent-text font-semibold"> without the BS</span>
+                Quality research peptides
+                <span className="accent-text font-semibold"> from Malaysia 🇲🇾</span>
               </p>
               
               <p className="text-lg text-gray-500 dark:text-[#9CA3AF] max-w-3xl mx-auto">
-                Real peptides from Malaysia. No fake reviews, no ridiculous prices. Just quality research compounds.
+                Research peptides with proper documentation and honest pricing from a real person.
               </p>
             </motion.div>
 

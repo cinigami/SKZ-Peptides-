@@ -18,11 +18,11 @@ const MobileHome = () => {
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-8" style={{ background: 'linear-gradient(135deg, #1E1028 0%, #2D1B69 50%, #1E1028 100%)' }}>
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-3">
-            Just good peptides
-            <span className="block" style={{ color: '#C4B5FD' }}>without the BS</span>
+            Quality peptides from
+            <span className="block" style={{ color: '#C4B5FD' }}>Malaysia 🇲🇾</span>
           </h1>
           <p className="mb-6 text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
-            Real peptides from Malaysia. No fake reviews, no ridiculous prices. Just quality research compounds.
+            Research peptides with proper documentation and honest pricing from a real person.
           </p>
           
           <div className="flex flex-col space-y-3">
