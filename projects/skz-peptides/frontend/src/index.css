@@ -36,335 +36,6 @@
     color: #f1f5f9;
   }
 
-  /* Beautiful dark mode support */
-  .dark {
-    body {
-      background: linear-gradient(to bottom, #0f172a, #1e293b) !important;
-      color: #f1f5f9 !important;
-    }
-    
-    /* Dark backgrounds */
-    .bg-white {
-      background-color: #1e293b !important;
-      color: #f1f5f9 !important;
-    }
-    
-    .bg-gray-50 {
-      background-color: #0f172a !important;
-      color: #f1f5f9 !important;
-    }
-    
-    .bg-primary-50 {
-      background-color: rgba(77, 139, 255, 0.1) !important;
-    }
-    
-    /* Dark mode text colors - Perfect hierarchy */
-    .text-gray-900 {
-      color: #f8fafc !important;
-    }
-    
-    .text-gray-800 {
-      color: #e2e8f0 !important;
-    }
-    
-    .text-gray-700 {
-      color: #B0B8C4 !important; /* Nav links - much more readable */
-    }
-    
-    .text-gray-600 {
-      color: #A0AAB8 !important; /* Body text - comfortable reading */
-    }
-    
-    .text-gray-500 {
-      color: #9ca3af !important;
-    }
-    
-    /* Enhanced blue colors for dark mode - Override to bright blue */
-    .text-primary-600 {
-      color: #60a5fa !important;
-      text-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
-    }
-    
-    .text-primary-700 {
-      color: #60a5fa !important;
-      text-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
-    }
-    
-    .text-primary-500 {
-      color: #60a5fa !important;
-    }
-    
-    /* Button improvements */
-    .bg-primary-600 {
-      background-color: #60a5fa !important;
-      box-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
-    }
-    
-    .bg-primary-700 {
-      background-color: #60a5fa !important;
-      box-shadow: 0 0 20px rgba(96, 165, 250, 0.3) !important;
-    }
-    
-    /* Card and component backgrounds */
-    .neuro-card {
-      background-color: #1e293b !important;
-      color: #f1f5f9 !important;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
-    }
-    
-    .glass {
-      background: rgba(30, 41, 59, 0.8) !important;
-      color: #f1f5f9 !important;
-    }
-    
-    /* Borders for dark mode */
-    .border-gray-200 {
-      border-color: #374151 !important;
-    }
-    
-    .border-gray-300 {
-      border-color: #4b5563 !important;
-    }
-    
-    .border-primary-200 {
-      border-color: rgba(77, 139, 255, 0.3) !important;
-    }
-    
-    /* Hero section gradient for dark mode */
-    .bg-gradient-to-br {
-      background: linear-gradient(to bottom right, #0f172a, #1e293b, #0f172a) !important;
-    }
-    
-    /* SKZ Brand - Readable Purple (Top of hierarchy) */
-    .text-gradient {
-      color: #A78BFA !important;
-      background: none !important;
-      -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: unset !important;
-      background-clip: unset !important;
-      text-shadow: 0 0 30px rgba(167, 139, 250, 0.6) !important;
-    }
-    
-    .text-gradient-hero {
-      color: #A78BFA !important;
-      background: none !important;
-      -webkit-background-clip: unset !important;
-      -webkit-text-fill-color: unset !important;
-      background-clip: unset !important;
-      text-shadow: 0 0 20px rgba(167, 139, 250, 0.15) !important;
-    }
-    
-    /* Product card enhancements */
-    .bg-gradient-to-r {
-      background: linear-gradient(to right, rgba(77, 139, 255, 0.1), rgba(30, 41, 59, 0.8)) !important;
-    }
-    
-    /* Primary color sections */
-    .bg-primary-600 {
-      background-color: #1e40af !important;
-    }
-    
-    /* Purple buttons for dark mode - unified theme */
-    .btn-gradient {
-      background: #7C3AED !important;
-      color: #ffffff !important;
-      box-shadow: 0 0 25px rgba(124, 58, 237, 0.4) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    
-    .btn-gradient:hover {
-      background: #8B5CF6 !important;
-      box-shadow: 0 0 35px rgba(139, 92, 246, 0.6) !important;
-    }
-    
-    .btn-secondary {
-      background: transparent !important;
-      color: #A78BFA !important;
-      border: 2px solid #A78BFA !important;
-      backdrop-filter: blur(10px) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-    
-    .btn-secondary:hover {
-      background: rgba(167, 139, 250, 0.1) !important;
-      border-color: #A78BFA !important;
-      color: #A78BFA !important;
-    }
-    
-    /* Better text hierarchy */
-    .dark .text-gray-300 {
-      color: #d1d5db !important;
-    }
-    
-    .dark .text-gray-200 {
-      color: #e5e7eb !important;
-    }
-    
-    /* Ensure primary-700 elements use purple in dark mode */
-    .dark .text-primary-700 {
-      color: #A78BFA !important;
-    }
-    
-    /* Force accent text to purple in dark mode */
-    .dark .text-purple-400 {
-      color: #A78BFA !important;
-    }
-    
-    /* Override all primary text colors to purple in dark mode */
-    .dark .text-primary-500 {
-      color: #A78BFA !important;
-    }
-    
-    .dark .text-primary-600 {
-      color: #A78BFA !important;
-    }
-    
-    .dark .text-primary-400 {
-      color: #A78BFA !important;
-    }
-    
-    /* Custom accent text class */
-    .accent-text {
-      color: #8b5cf6;
-    }
-    
-    .dark .accent-text {
-      color: #A78BFA !important;
-    }
-    
-    /* Premium badge specific styling */
-    .dark .premium-badge {
-      color: #A78BFA !important;
-    }
-    
-    .dark .premium-badge .w-4 {
-      color: #A78BFA !important;
-    }
-    
-    .dark .premium-badge svg {
-      color: #A78BFA !important;
-    }
-    
-    /* Make sure text-purple-400 uses our exact purple */
-    .dark .text-purple-400 {
-      color: #A78BFA !important;
-    }
-    
-    /* Convert all blue/cyan text to purple in dark mode */
-    .dark .text-blue-300,
-    .dark .text-blue-600,
-    .dark .text-blue-700,
-    .dark .text-blue-800,
-    .dark .text-blue-900,
-    .dark .text-cyan-300,
-    .dark .text-cyan-400,
-    .dark .text-cyan-500 {
-      color: #A78BFA !important;
-    }
-    
-    /* Convert blue backgrounds to purple in dark mode */
-    .dark .bg-blue-100 {
-      background-color: rgba(167, 139, 250, 0.1) !important;
-    }
-    
-    .dark .bg-blue-600 {
-      background-color: #A78BFA !important;
-    }
-    
-    .dark .bg-blue-50 {
-      background-color: rgba(167, 139, 250, 0.05) !important;
-    }
-    
-    /* Convert green elements to purple in dark mode */
-    .dark .text-green-600,
-    .dark .text-green-700,
-    .dark .text-green-800,
-    .dark .text-green-900 {
-      color: #A78BFA !important;
-    }
-    
-    .dark .bg-green-100 {
-      background-color: rgba(167, 139, 250, 0.1) !important;
-    }
-    
-    .dark .bg-green-50 {
-      background-color: rgba(167, 139, 250, 0.05) !important;
-    }
-    
-    .dark .bg-green-500 {
-      background-color: #7C3AED !important;
-    }
-    
-    /* Purple theme for primary elements */
-    .dark .bg-primary-100 {
-      background-color: rgba(124, 58, 237, 0.1) !important;
-    }
-    
-    /* Dark mode card styling */
-    .dark .card {
-      background-color: #1E1E2E !important;
-      border: 1px solid rgba(167, 139, 250, 0.1) !important;
-    }
-    
-    .dark .card:hover {
-      border-color: rgba(167, 139, 250, 0.3) !important;
-    }
-    
-    /* Product card elements */
-    .dark .bg-slate-800 {
-      background-color: #1E1E2E !important;
-    }
-    
-    .dark .bg-slate-700 {
-      background-color: #2A2A3C !important;
-    }
-    
-    /* Override any white/light backgrounds in dark mode */
-    .dark .bg-white {
-      background-color: #1E1E2E !important;
-    }
-    
-    .dark .bg-gray-50 {
-      background-color: #1E1E2E !important;
-    }
-    
-    .dark .bg-gray-100 {
-      background-color: #2A2A3C !important;
-    }
-    
-    /* Footer specific overrides */
-    .dark footer .bg-primary-600 {
-      background-color: #A78BFA !important;
-    }
-    
-    .dark footer .text-primary-500 {
-      color: #A78BFA !important;
-    }
-    
-    /* Ensure all footer icons are purple */
-    .dark footer .w-4,
-    .dark footer .w-5 {
-      color: #A78BFA !important;
-    }
-    
-    .dark footer svg {
-      color: #A78BFA !important;
-    }
-    
-    /* Specific footer icon styling */
-    .dark .footer-icon {
-      color: #A78BFA !important;
-    }
-    
-    .dark .text-purple-400 {
-      color: #A78BFA !important;
-    }
-  }
-
   /* Modern scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -381,6 +52,291 @@
   
   ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
+  }
+}
+
+/* DARK MODE STYLES - HIGHEST SPECIFICITY GLOBAL */
+.dark body {
+  background: linear-gradient(to bottom, #0f172a, #1e293b) !important;
+  color: #f1f5f9 !important;
+}
+
+/* Dark backgrounds - Global override */
+.dark .bg-white {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #2A2A3C !important;
+  color: #f1f5f9 !important;
+}
+
+/* Purple text colors for dark mode */
+.dark .text-gradient,
+.dark .text-gradient-hero,
+.dark .accent-text,
+.dark .text-purple-400,
+.dark .text-primary-500,
+.dark .text-primary-600,
+.dark .text-primary-700,
+.dark .text-primary-400 {
+  color: #A78BFA !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  text-shadow: 0 0 20px rgba(167, 139, 250, 0.4) !important;
+}
+
+/* Purple buttons for dark mode */
+.dark .btn-gradient,
+.dark .bg-primary-600,
+.dark .bg-primary-700 {
+  background: #7C3AED !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 25px rgba(124, 58, 237, 0.4) !important;
+}
+
+.dark .btn-gradient:hover,
+.dark .bg-primary-600:hover,
+.dark .bg-primary-700:hover {
+  background: #8B5CF6 !important;
+  box-shadow: 0 0 35px rgba(139, 92, 246, 0.6) !important;
+}
+
+/* Text hierarchy for dark mode */
+.dark .text-gray-900 {
+  color: #f8fafc !important;
+}
+
+.dark .text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #B0B8C4 !important;
+}
+
+.dark .text-gray-600 {
+  color: #A0AAB8 !important;
+}
+
+.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+.dark .text-gray-400 {
+  color: #9ca3af !important;
+}
+
+.dark .text-gray-300 {
+  color: #d1d5db !important;
+}
+
+.dark .text-gray-200 {
+  color: #e5e7eb !important;
+}
+
+/* Footer specific dark mode */
+.dark footer .bg-primary-600 {
+  background-color: #A78BFA !important;
+}
+
+.dark footer .text-primary-500 {
+  color: #A78BFA !important;
+}
+
+.dark .footer-icon {
+  color: #A78BFA !important;
+}
+
+.dark footer .w-4,
+.dark footer .w-5 {
+  color: #A78BFA !important;
+}
+
+.dark footer svg {
+  color: #A78BFA !important;
+}
+
+/* Card styles for dark mode */
+.dark .card {
+  background-color: #1E1E2E !important;
+  border: 1px solid rgba(167, 139, 250, 0.1) !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .card:hover {
+  border-color: rgba(167, 139, 250, 0.3) !important;
+}
+
+.dark .bg-slate-800 {
+  background-color: #1E1E2E !important;
+}
+
+.dark .bg-slate-700 {
+  background-color: #2A2A3C !important;
+}
+
+/* Button secondary styling for dark mode */
+.dark .btn-secondary {
+  background: transparent !important;
+  color: #A78BFA !important;
+  border: 2px solid #A78BFA !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.dark .btn-secondary:hover {
+  background: rgba(167, 139, 250, 0.1) !important;
+  border-color: #A78BFA !important;
+  color: #A78BFA !important;
+}
+
+/* Glass effect for dark mode */
+.dark .glass {
+  background: rgba(30, 41, 59, 0.8) !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .neuro-card {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Border colors for dark mode */
+.dark .border-gray-200 {
+  border-color: #374151 !important;
+}
+
+.dark .border-gray-300 {
+  border-color: #4b5563 !important;
+}
+
+.dark .border-primary-200 {
+  border-color: rgba(77, 139, 255, 0.3) !important;
+}
+
+/* Background colors for dark mode */
+.dark .bg-primary-50 {
+  background-color: rgba(77, 139, 255, 0.1) !important;
+}
+
+.dark .bg-primary-100 {
+  background-color: rgba(124, 58, 237, 0.1) !important;
+}
+
+/* Convert other colors to purple in dark mode */
+.dark .text-blue-300,
+.dark .text-blue-600,
+.dark .text-blue-700,
+.dark .text-blue-800,
+.dark .text-blue-900,
+.dark .text-cyan-300,
+.dark .text-cyan-400,
+.dark .text-cyan-500,
+.dark .text-green-600,
+.dark .text-green-700,
+.dark .text-green-800,
+.dark .text-green-900 {
+  color: #A78BFA !important;
+}
+
+.dark .bg-blue-100,
+.dark .bg-green-100 {
+  background-color: rgba(167, 139, 250, 0.1) !important;
+}
+
+.dark .bg-blue-50,
+.dark .bg-green-50 {
+  background-color: rgba(167, 139, 250, 0.05) !important;
+}
+
+.dark .bg-blue-600,
+.dark .bg-green-500 {
+  background-color: #7C3AED !important;
+}
+
+/* MOBILE DARK MODE OVERRIDES - ABSOLUTELY HIGHEST SPECIFICITY */
+@media screen and (max-width: 768px) {
+  html.dark .text-primary-600,
+  html.dark .text-primary-700,
+  html.dark .text-primary-500,
+  html.dark .text-purple-400,
+  html.dark .text-gradient,
+  html.dark .accent-text,
+  .dark .text-primary-600,
+  .dark .text-primary-700,
+  .dark .text-primary-500,
+  .dark .text-purple-400,
+  .dark .text-gradient,
+  .dark .accent-text {
+    color: #A78BFA !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
+    text-shadow: 0 0 20px rgba(167, 139, 250, 0.4) !important;
+  }
+
+  html.dark .bg-primary-600,
+  html.dark .bg-primary-700,
+  html.dark .btn-gradient,
+  .dark .bg-primary-600,
+  .dark .bg-primary-700,
+  .dark .btn-gradient {
+    background-color: #7C3AED !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 25px rgba(124, 58, 237, 0.4) !important;
+  }
+
+  html.dark .bg-white,
+  html.dark .bg-gray-50,
+  html.dark .bg-gray-100,
+  .dark .bg-white,
+  .dark .bg-gray-50,
+  .dark .bg-gray-100 {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
+  }
+
+  html.dark footer .footer-icon,
+  html.dark footer svg,
+  html.dark footer .w-4,
+  html.dark footer .w-5,
+  .dark footer .footer-icon,
+  .dark footer svg,
+  .dark footer .w-4,
+  .dark footer .w-5 {
+    color: #A78BFA !important;
+  }
+}
+
+/* TABLET DARK MODE OVERRIDES */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  html.dark .text-primary-600,
+  html.dark .text-primary-700,
+  html.dark .text-primary-500,
+  html.dark .text-purple-400,
+  html.dark .text-gradient,
+  html.dark .accent-text,
+  .dark .text-primary-600,
+  .dark .text-primary-700,
+  .dark .text-primary-500,
+  .dark .text-purple-400,
+  .dark .text-gradient,
+  .dark .accent-text {
+    color: #A78BFA !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: unset !important;
+    background-clip: unset !important;
   }
 }
 
@@ -428,6 +384,11 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     filter: drop-shadow(0 0 40px rgba(102, 126, 234, 0.6)) drop-shadow(0 0 80px rgba(102, 126, 234, 0.3));
+  }
+
+  /* Custom accent text class */
+  .accent-text {
+    color: #8b5cf6;
   }
 
   /* Grid auto fit */
@@ -501,5 +462,26 @@
   .badge-modern {
     @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
     @apply bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-md;
+  }
+}
+
+@layer utilities {
+  /* Dark Mode Mobile Fix - Utility Classes */
+  .dark-mode-purple {
+    color: #A78BFA !important;
+  }
+  
+  .dark-mode-purple-bg {
+    background-color: #7C3AED !important;
+    color: #ffffff !important;
+  }
+  
+  .dark-mode-text {
+    color: #f1f5f9 !important;
+  }
+  
+  .dark-mode-bg {
+    background-color: #1e293b !important;
+    color: #f1f5f9 !important;
   }
 }
