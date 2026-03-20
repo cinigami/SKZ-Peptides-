@@ -112,26 +112,7 @@ const MobileHome = () => {
             </Link>
           </div>
           
-          {/* Trust chips */}
-          <div 
-            className="pt-4"
-            style={{ borderTop: '1px solid rgba(255, 255, 255, 0.04)' }}
-          >
-            <div className="flex items-center space-x-4 text-xs" style={{ color: '#5C5775' }}>
-              <div className="flex items-center space-x-1">
-                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
-                <span>Real COAs</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
-                <span>Cold-chain</span>
-              </div>
-              <div className="flex items-center space-x-1">
-                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
-                <span>Direct support</span>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 

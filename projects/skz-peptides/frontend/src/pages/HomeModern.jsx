@@ -138,27 +138,7 @@ const HomeModern = () => {
               </Link>
             </motion.div>
             
-            {/* Trust chips */}
-            <motion.div 
-              variants={itemVariants}
-              className="pt-6"
-              style={{ borderTop: '1px solid rgba(255, 255, 255, 0.04)' }}
-            >
-              <div className="flex items-center space-x-8 text-sm" style={{ color: '#5C5775' }}>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
-                  <span>Real COAs</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
-                  <span>Cold-chain</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
-                  <span>Direct support</span>
-                </div>
-              </div>
-            </motion.div>
+
 
           </motion.div>
         </div>
