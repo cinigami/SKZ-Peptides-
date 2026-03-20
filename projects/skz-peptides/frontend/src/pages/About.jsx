@@ -75,10 +75,7 @@ const About = () => {
                   solve the same problems I had when I was looking for reliable peptides.
                 </p>
 
-                <p className="text-sm text-gray-600 italic">
-                  (Yes, I know the website looks professional. I spent way too much time on it 
-                  instead of sleeping. Don't let it fool you - it's still just one person behind all this.)
-                </p>
+
 
               </div>
             </div>
