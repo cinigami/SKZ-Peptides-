@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { Filter, Grid, List, Search } from 'lucide-react'
 import { products, categories } from '../data/products'
 import ProductCard from '../components/ProductCard'
+import MobileProducts from './mobile/MobileProducts'
 import { motion } from 'framer-motion'
 
 const Products = () => {
@@ -12,6 +13,17 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [sortBy, setSortBy] = useState('name')
   const [viewMode, setViewMode] = useState('grid')
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   // Filter and sort products
   useEffect(() => {
@@ -57,6 +69,11 @@ const Products = () => {
     } else {
       setSearchParams({ category })
     }
+  }
+
+  // Return mobile version if on mobile
+  if (isMobile) {
+    return <MobileProducts />
   }
 
   return (

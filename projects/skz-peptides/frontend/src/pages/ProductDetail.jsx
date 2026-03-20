@@ -1,17 +1,34 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Info, Download, FileText } from 'lucide-react'
 import { products } from '../data/products'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
 import ProductBenefits from '../components/ProductBenefits'
+import MobileProductDetail from './mobile/MobileProductDetail'
 
 const ProductDetail = () => {
   const { id } = useParams()
   const product = products.find(p => p.id === id)
   const [quantity, setQuantity] = useState(1)
   const [activeTab, setActiveTab] = useState('description')
+  const [isMobile, setIsMobile] = useState(false)
   const { addToCart } = useCart()
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Return mobile version if on mobile
+  if (isMobile) {
+    return <MobileProductDetail />
+  }
 
   if (!product) {
     return (

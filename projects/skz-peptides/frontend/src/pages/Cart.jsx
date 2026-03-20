@@ -1,10 +1,28 @@
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Trash2, Plus, Minus, ArrowRight, ShoppingBag } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
+import MobileCart from './mobile/MobileCart'
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, cartTotal, clearCart } = useCart()
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1024)
+    }
+    
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
+  // Return mobile version if on mobile
+  if (isMobile) {
+    return <MobileCart />
+  }
 
   if (cart.length === 0) {
     return (
