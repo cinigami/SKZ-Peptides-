@@ -34,56 +34,134 @@ const HomeModern = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section - Glassmorphism Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+      {/* Hero Section - New Structure */}
+      <section 
+        className="relative min-h-screen flex items-center overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(175deg, #150D25 0%, #0C0C10 45%, #0E0B16 100%)'
+        }}
+      >
+        {/* Left accent line */}
+        <div 
+          className="absolute left-0 top-0 w-[3px] h-full opacity-40"
+          style={{
+            background: 'linear-gradient(to bottom, #7C3AED, transparent 70%)'
+          }}
+        />
         
-        {/* Floating Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-300/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary-200/20 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="space-y-8"
+            style={{ paddingLeft: '36px' }}
           >
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-6xl md:text-8xl font-black tracking-tight">
-                <span className="text-gradient-hero">SKZ</span>{' '}
-                <span className="text-gray-900 dark:text-white">Peptides</span>
+            {/* Origin label */}
+            <motion.div variants={itemVariants} className="mb-6">
+              <span 
+                className="uppercase font-medium inline-flex items-center"
+                style={{
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.15em',
+                  color: '#5C5775'
+                }}
+              >
+                <span className="w-3 h-[1px] mr-3" style={{ background: '#7C3AED' }}></span>
+                Malaysia 🇲🇾
+              </span>
+            </motion.div>
+            
+            {/* Main heading */}
+            <motion.div variants={itemVariants} className="mb-8">
+              <h1 
+                className="font-bold leading-tight"
+                style={{
+                  fontSize: 'clamp(3rem, 8vw, 6rem)',
+                  color: '#FFFFFF',
+                  letterSpacing: '-0.03em',
+                  lineHeight: '1.1'
+                }}
+              >
+                Research
               </h1>
-              
-              <p className="text-2xl md:text-3xl text-gray-600 dark:text-[#A0AAB8] font-light max-w-4xl mx-auto leading-relaxed">
-                Quality research peptides
-                <span className="accent-text font-semibold"> from Malaysia 🇲🇾</span>
-              </p>
-              
-              <p className="text-lg text-gray-500 dark:text-[#9CA3AF] max-w-3xl mx-auto">
-                Research peptides with proper documentation and honest pricing from a real person.
-              </p>
+              <h1 
+                className="font-bold leading-tight"
+                style={{
+                  fontSize: 'clamp(3.5rem, 9vw, 7rem)',
+                  color: '#A78BFA',
+                  letterSpacing: '-0.03em',
+                  lineHeight: '1.1'
+                }}
+              >
+                Peptides.
+              </h1>
             </motion.div>
-
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link to="/products" className="btn-gradient text-lg px-8 py-4 group">
-                Explore Products
-                <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
+            
+            {/* Subtitle */}
+            <motion.p 
+              variants={itemVariants}
+              className="mb-10 leading-relaxed max-w-lg"
+              style={{
+                fontSize: '1.1rem',
+                color: '#8A8599'
+              }}
+            >
+              Quality peptides with <span className="font-bold" style={{ color: '#C4B5FD' }}>real documentation</span> and honest pricing. No middlemen, no mystery sourcing. Just what you need, properly handled.
+            </motion.p>
+            
+            {/* Buttons */}
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                to="/products"
+                className="font-semibold px-8 py-4 transition-all duration-300 flex items-center justify-center group"
+                style={{ 
+                  background: '#7C3AED', 
+                  color: '#FFFFFF',
+                  borderRadius: '12px'
+                }}
+              >
+                <span>Browse Products</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/about" className="btn-secondary text-lg px-8 py-4 group">
-                Learn More
-                <Beaker className="w-6 h-6 ml-2 group-hover:rotate-12 transition-transform" />
+              
+              <Link
+                to="/about"
+                className="font-medium px-8 py-4 transition-all duration-300 flex items-center justify-center"
+                style={{ 
+                  background: 'transparent', 
+                  border: '1px solid rgba(167, 139, 250, 0.25)', 
+                  color: '#A78BFA',
+                  borderRadius: '12px'
+                }}
+              >
+                <span>About</span>
               </Link>
             </motion.div>
-
+            
+            {/* Trust chips */}
+            <motion.div 
+              variants={itemVariants}
+              className="pt-6"
+              style={{ borderTop: '1px solid rgba(255, 255, 255, 0.04)' }}
+            >
+              <div className="flex items-center space-x-8 text-sm" style={{ color: '#5C5775' }}>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
+                  <span>Real COAs</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
+                  <span>Cold-chain</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-1.5 h-1.5 bg-purple-500 rotate-45"></div>
+                  <span>Direct support</span>
+                </div>
+              </div>
+            </motion.div>
 
           </motion.div>
         </div>
-
 
       </section>
 

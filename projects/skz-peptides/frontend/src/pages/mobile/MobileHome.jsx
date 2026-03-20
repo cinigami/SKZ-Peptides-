@@ -14,22 +14,85 @@ const MobileHome = () => {
 
   return (
     <div className="lg:hidden min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
-      {/* Hero Section - Personal & Authentic */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-8" style={{ background: 'linear-gradient(135deg, #1E1028 0%, #2D1B69 50%, #1E1028 100%)' }}>
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-3">
-            Quality peptides from
-            <span className="block" style={{ color: '#C4B5FD' }}>Malaysia 🇲🇾</span>
-          </h1>
-          <p className="mb-6 text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
-            Research peptides with proper documentation and honest pricing from a real person.
+      {/* Hero Section - New Structure */}
+      <section 
+        className="relative text-white py-12 px-0 overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(175deg, #150D25 0%, #0C0C10 45%, #0E0B16 100%)'
+        }}
+      >
+        {/* Left accent line */}
+        <div 
+          className="absolute left-0 top-0 w-[3px] h-full opacity-40"
+          style={{
+            background: 'linear-gradient(to bottom, #7C3AED, transparent 70%)'
+          }}
+        />
+        
+        {/* Content with left padding */}
+        <div style={{ paddingLeft: '36px', paddingRight: '16px' }}>
+          {/* Origin label */}
+          <div className="mb-4">
+            <span 
+              className="uppercase font-medium inline-flex items-center"
+              style={{
+                fontSize: '0.72rem',
+                letterSpacing: '0.15em',
+                color: '#5C5775'
+              }}
+            >
+              <span className="w-2 h-[1px] bg-purple-500 mr-2" style={{ background: '#7C3AED' }}></span>
+              Malaysia 🇲🇾
+            </span>
+          </div>
+          
+          {/* Main heading */}
+          <div className="mb-6">
+            <h1 
+              className="font-bold leading-tight"
+              style={{
+                fontSize: '2.2rem',
+                color: '#FFFFFF',
+                letterSpacing: '-0.03em',
+                lineHeight: '1.1'
+              }}
+            >
+              Research
+            </h1>
+            <h1 
+              className="font-bold leading-tight"
+              style={{
+                fontSize: '2.5rem',
+                color: '#A78BFA',
+                letterSpacing: '-0.03em',
+                lineHeight: '1.1'
+              }}
+            >
+              Peptides.
+            </h1>
+          </div>
+          
+          {/* Subtitle */}
+          <p 
+            className="mb-8 leading-relaxed max-w-sm"
+            style={{
+              fontSize: '0.95rem',
+              color: '#8A8599'
+            }}
+          >
+            Quality peptides with <span className="font-bold" style={{ color: '#C4B5FD' }}>real documentation</span> and honest pricing. No middlemen, no mystery sourcing. Just what you need, properly handled.
           </p>
           
-          <div className="flex flex-col space-y-3">
+          {/* Buttons */}
+          <div className="flex flex-col space-y-3 mb-8">
             <Link
               to="/products"
-              className="font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
-              style={{ background: '#7C3AED', color: '#FFFFFF' }}
+              className="font-semibold py-3 px-6 transition-all duration-300 flex items-center justify-center"
+              style={{ 
+                background: '#7C3AED', 
+                color: '#FFFFFF',
+                borderRadius: '12px'
+              }}
             >
               <span>Browse Products</span>
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -37,12 +100,37 @@ const MobileHome = () => {
             
             <Link
               to="/about"
-              className="font-medium py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center"
-              style={{ background: 'transparent', border: '1px solid #A78BFA', color: '#A78BFA' }}
+              className="font-medium py-3 px-6 transition-all duration-300 flex items-center justify-center"
+              style={{ 
+                background: 'transparent', 
+                border: '1px solid rgba(167, 139, 250, 0.25)', 
+                color: '#A78BFA',
+                borderRadius: '12px'
+              }}
             >
-              <Info className="w-5 h-5 mr-2" />
-              <span>About Us</span>
+              <span>About</span>
             </Link>
+          </div>
+          
+          {/* Trust chips */}
+          <div 
+            className="pt-4"
+            style={{ borderTop: '1px solid rgba(255, 255, 255, 0.04)' }}
+          >
+            <div className="flex items-center space-x-4 text-xs" style={{ color: '#5C5775' }}>
+              <div className="flex items-center space-x-1">
+                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
+                <span>Real COAs</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
+                <span>Cold-chain</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <div className="w-1 h-1 bg-purple-500 rotate-45"></div>
+                <span>Direct support</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
