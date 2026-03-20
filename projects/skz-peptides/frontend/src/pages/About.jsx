@@ -54,15 +54,15 @@ const About = () => {
                 </p>
 
                 <p>
-                  The big companies want $200+ for what should cost $50. The sketchy ones give you powder 
-                  in a baggie with no documentation. Nobody seems interested in actually helping you 
-                  understand what you're buying or how to use it properly.
+                  I wanted fair pricing, proper documentation, and someone who could actually answer questions 
+                  about the products. Most importantly, I needed protocols that were written by someone who 
+                  actually uses these compounds.
                 </p>
 
                 <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
                   <h3 className="text-lg font-semibold text-blue-900 mb-2">So I started doing it differently:</h3>
                   <ul className="space-y-2 text-blue-800">
-                    <li>• Source from the same labs the big companies use (minus the 400% markup)</li>
+                    <li>• Source directly from quality labs with fair pricing</li>
                     <li>• Write actual research protocols instead of just safety disclaimers</li>
                     <li>• Answer questions honestly, even if it means you might not buy</li>
                     <li>• Include everything you need to get started (essential kit)</li>
@@ -151,7 +151,7 @@ const About = () => {
                     <ul className="text-sm space-y-1">
                       <li>• I sleep sometimes, so responses take 6-24h</li>
                       <li>• No fancy customer service department</li>
-                      <li>• Can't stock 100+ products like big companies</li>
+                      <li>• Focus on quality over quantity - smaller product range</li>
                       <li>• Sometimes I run out of popular items</li>
                       <li>• I'm in Malaysia (GMT+8 timezone)</li>
                     </ul>
