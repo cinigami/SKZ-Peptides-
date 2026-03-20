@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Truck, Info, Package, Zap } from 'lucide-react'
+import { ArrowRight, Shield, Truck, Info, Package, Zap, FileText } from 'lucide-react'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 
