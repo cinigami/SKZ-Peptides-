@@ -100,7 +100,7 @@ const MobileHome = () => {
         </div>
       </section>
 
-      {/* Free Accessories Promo */}
+      {/* Free Gift Promo */}
       <section className="px-4 py-6">
         <div className="p-4 rounded-xl" style={{ 
           background: 'rgba(34, 197, 94, 0.1)', 
@@ -108,7 +108,7 @@ const MobileHome = () => {
         }}>
           <div className="text-center">
             <h3 className="font-bold text-gray-900 dark:text-white mb-2">
-              🎁 FREE Accessories with Every Peptide
+              🎁 FREE Gift with Every Peptide
             </h3>
             <div className="flex items-center justify-center space-x-6 text-sm">
               <div className="flex flex-col items-center">

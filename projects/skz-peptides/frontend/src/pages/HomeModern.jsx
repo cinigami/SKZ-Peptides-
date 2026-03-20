@@ -83,7 +83,7 @@ const HomeModern = () => {
 
       </section>
 
-      {/* Free Accessories Promotion */}
+      {/* Free Gift Promotion */}
       <section className="py-16 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -94,10 +94,10 @@ const HomeModern = () => {
           >
             <div className="text-center max-w-4xl mx-auto">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                🎁 FREE Accessories with Every Peptide
+                🎁 FREE Gift with Every Peptide
               </h3>
               <p className="text-gray-600 mb-6">
-                Every peptide purchase includes essential research accessories at no extra cost
+                Every peptide purchase includes essential research supplies as a complimentary gift
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">

@@ -49,7 +49,7 @@ const MobileProductCard = ({ product }) => {
               {product.category}
             </span>
 
-            {/* Free Accessories Badge - only for peptides, not supplies */}
+            {/* Free Gift Badge - only for peptides, not supplies */}
             {product.category !== 'Supplies' && (
               <span 
                 className="inline-block text-[10px] font-medium leading-tight"
@@ -61,7 +61,7 @@ const MobileProductCard = ({ product }) => {
                   borderRadius: '6px'
                 }}
               >
-                FREE<br/>ACCESSORIES
+                FREE<br/>GIFT
               </span>
             )}
           </div>

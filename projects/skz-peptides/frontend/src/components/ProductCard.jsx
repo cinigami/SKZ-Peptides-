@@ -64,7 +64,7 @@ const ProductCard = ({ product }) => {
               {product.category}
             </span>
 
-            {/* Free Accessories Badge - only for peptides, not supplies */}
+            {/* Free Gift Badge - only for peptides, not supplies */}
             {product.category !== 'Supplies' && (
               <span 
                 className="inline-block text-[10px] font-medium leading-tight px-2 py-1 rounded"
@@ -74,7 +74,7 @@ const ProductCard = ({ product }) => {
                   color: '#22C55E'
                 }}
               >
-                FREE<br/>ACCESSORIES
+                FREE<br/>GIFT
               </span>
             )}
           </div>

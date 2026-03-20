@@ -108,7 +108,7 @@ const ProductDetail = () => {
               </div>
               <p className="text-gray-600">Storage: {product.storage}</p>
               
-              {/* Free Accessories Promotion - only for peptides, not supplies */}
+              {/* Free Gift Promotion - only for peptides, not supplies */}
               {product.category !== 'Supplies' && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
                   <div className="flex items-center space-x-3">
@@ -117,7 +117,7 @@ const ProductDetail = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-green-800 mb-1">
-                        FREE Accessories Included
+                        FREE Gift Included
                       </h4>
                       <div className="flex items-center space-x-4 text-sm text-green-700">
                         <span>• Bacteriostatic Water</span>
