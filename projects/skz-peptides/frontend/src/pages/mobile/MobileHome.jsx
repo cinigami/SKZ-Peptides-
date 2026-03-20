@@ -15,20 +15,21 @@ const MobileHome = () => {
   return (
     <div className="lg:hidden min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
       {/* Hero Section - Mobile Optimized */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 dark:from-purple-800 dark:to-purple-900 text-white px-4 py-8">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-8" style={{ background: 'linear-gradient(135deg, #1E1028 0%, #2D1B69 50%, #1E1028 100%)' }}>
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-3">
             Research Peptides for 
-            <span className="text-yellow-300 block">Scientific Studies</span>
+            <span className="block" style={{ color: '#C4B5FD' }}>Scientific Studies</span>
           </h1>
-          <p className="text-primary-100 dark:text-purple-100 mb-6 text-sm leading-relaxed">
+          <p className="mb-6 text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
             Quality peptides with proper documentation and straightforward ordering.
           </p>
           
           <div className="flex flex-col space-y-3">
             <Link
               to="/products"
-              className="bg-white text-primary-700 dark:bg-purple-600 dark:text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+              className="font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center"
+              style={{ background: '#7C3AED', color: '#FFFFFF' }}
             >
               <span>Browse Products</span>
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -36,7 +37,8 @@ const MobileHome = () => {
             
             <Link
               to="/about"
-              className="bg-transparent border-2 border-white text-white dark:border-[#A78BFA] dark:text-[#A78BFA] font-medium py-3 px-6 rounded-xl hover:bg-white hover:text-primary-700 dark:hover:bg-transparent dark:hover:border-[#A78BFA] dark:hover:text-[#A78BFA] transition-all duration-300 flex items-center justify-center"
+              className="font-medium py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center"
+              style={{ background: 'transparent', border: '1px solid #A78BFA', color: '#A78BFA' }}
             >
               <Info className="w-5 h-5 mr-2" />
               <span>About Us</span>

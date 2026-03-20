@@ -97,14 +97,21 @@ const MobileHeader = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 ${
-                  active
-                    ? 'text-primary-600 dark:text-purple-400'
-                    : 'text-gray-400 dark:text-gray-500'
-                }`}
+                style={{ 
+                  color: active ? '#A78BFA' : '#6B7280',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  padding: '8px 12px',
+                  minWidth: '0',
+                  flex: '1'
+                }}
               >
                 <Icon className={`w-5 h-5 mb-1 ${active ? 'scale-110' : ''} transition-transform`} />
-                <span className={`text-xs font-medium ${active ? 'text-primary-600 dark:text-purple-400' : 'text-gray-600 dark:text-gray-400'}`}>
+                <span 
+                  className="text-xs font-medium"
+                  style={{ color: active ? '#A78BFA' : '#6B7280' }}
+                >
                   {item.name}
                 </span>
               </Link>
@@ -114,21 +121,32 @@ const MobileHeader = () => {
           {/* Cart in bottom nav */}
           <Link
             to="/cart"
-            className={`flex flex-col items-center py-2 px-3 min-w-0 flex-1 relative ${
-              location.pathname === '/cart'
-                ? 'text-primary-600 dark:text-purple-400'
-                : 'text-gray-400 dark:text-gray-500'
-            }`}
+            style={{ 
+              color: location.pathname === '/cart' ? '#A78BFA' : '#6B7280',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              padding: '8px 12px',
+              minWidth: '0',
+              flex: '1',
+              position: 'relative'
+            }}
           >
             <div className="relative">
               <ShoppingCart className={`w-5 h-5 mb-1 ${location.pathname === '/cart' ? 'scale-110' : ''} transition-transform`} />
               {itemCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-primary-600 dark:bg-purple-600 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-bold text-[10px]">
+                <span 
+                  className="absolute -top-2 -right-2 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-bold text-[10px]"
+                  style={{ backgroundColor: '#A78BFA' }}
+                >
                   {itemCount}
                 </span>
               )}
             </div>
-            <span className={`text-xs font-medium ${location.pathname === '/cart' ? 'text-primary-600 dark:text-purple-400' : 'text-gray-600 dark:text-gray-400'}`}>
+            <span 
+              className="text-xs font-medium"
+              style={{ color: location.pathname === '/cart' ? '#A78BFA' : '#6B7280' }}
+            >
               Cart
             </span>
           </Link>

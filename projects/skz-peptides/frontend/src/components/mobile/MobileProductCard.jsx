@@ -29,13 +29,21 @@ const MobileProductCard = ({ product }) => {
           
           {/* Stock badge */}
           <div className="absolute top-2 right-2">
-            <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-              product.inStock > 10 
-                ? 'bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400' 
-                : product.inStock > 0 
-                ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400' 
-                : 'bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400'
-            }`}>
+            <span 
+              className="px-2 py-1 text-xs font-medium rounded-full"
+              style={{
+                backgroundColor: product.inStock > 10 
+                  ? 'rgba(167, 139, 250, 0.2)' 
+                  : product.inStock > 0 
+                  ? 'rgba(167, 139, 250, 0.15)' 
+                  : 'rgba(239, 68, 68, 0.2)',
+                color: product.inStock > 10 
+                  ? '#A78BFA' 
+                  : product.inStock > 0 
+                  ? '#C4B5FD' 
+                  : '#EF4444'
+              }}
+            >
               {product.inStock > 0 ? `${product.inStock} in stock` : 'Out of stock'}
             </span>
           </div>
