@@ -100,6 +100,43 @@ const MobileHome = () => {
         </div>
       </section>
 
+      {/* Free Accessories Promo */}
+      <section className="px-4 py-6">
+        <div className="p-4 rounded-xl" style={{ 
+          background: 'rgba(34, 197, 94, 0.1)', 
+          border: '1px solid rgba(34, 197, 94, 0.2)' 
+        }}>
+          <div className="text-center">
+            <h3 className="font-bold text-gray-900 dark:text-white mb-2">
+              🎁 FREE Accessories with Every Peptide
+            </h3>
+            <div className="flex items-center justify-center space-x-6 text-sm">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
+                  <span className="text-xs">💧</span>
+                </div>
+                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>BAC Water</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
+                  <span className="text-xs">💉</span>
+                </div>
+                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>Syringe</span>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full mb-1 flex items-center justify-center" 
+                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}>
+                  <span className="text-xs">🧽</span>
+                </div>
+                <span style={{ color: '#22C55E', fontSize: '0.7rem' }}>Alcohol Swab</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products */}
       <section className="px-4 py-6">
         <div className="flex items-center justify-between mb-4">

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Download, FileText } from 'lucide-react'
+import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Download, FileText, Package } from 'lucide-react'
 import { products } from '../../data/products'
 import { useCart } from '../../context/CartContext'
 
@@ -102,6 +102,31 @@ const MobileProductDetail = () => {
             <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{product.dosage}</p>
           )}
         </div>
+
+        {/* Free Accessories Notice - only for peptides, not supplies */}
+        {product.category !== 'Supplies' && (
+          <div className="mb-6 p-4 rounded-xl" style={{ 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            border: '1px solid rgba(34, 197, 94, 0.2)' 
+          }}>
+            <div className="flex items-center space-x-3">
+              <div 
+                className="p-2 rounded-full"
+                style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)' }}
+              >
+                <Package className="w-4 h-4" style={{ color: '#22C55E' }} />
+              </div>
+              <div>
+                <p className="font-medium text-gray-900 dark:text-white text-sm">
+                  FREE Accessories Included
+                </p>
+                <p className="text-xs" style={{ color: '#22C55E' }}>
+                  • Bacteriostatic Water • Insulin Syringe • Alcohol Swab
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Quantity Selector */}
         <div className="flex items-center justify-between mb-6">

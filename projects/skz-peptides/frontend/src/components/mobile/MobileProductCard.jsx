@@ -32,21 +32,39 @@ const MobileProductCard = ({ product }) => {
 
         {/* Product Info */}
         <div className="p-4">
-          {/* Category badge */}
-          <span 
-            className="inline-block mb-2"
-            style={{
-              background: 'rgba(167, 139, 250, 0.12)',
-              border: '1px solid rgba(167, 139, 250, 0.3)',
-              color: '#A78BFA',
-              padding: '4px 12px',
-              borderRadius: '99px',
-              fontSize: '0.75rem',
-              fontWeight: '500'
-            }}
-          >
-            {product.category}
-          </span>
+          <div className="flex items-center justify-between mb-2">
+            {/* Category badge */}
+            <span 
+              className="inline-block"
+              style={{
+                background: 'rgba(167, 139, 250, 0.12)',
+                border: '1px solid rgba(167, 139, 250, 0.3)',
+                color: '#A78BFA',
+                padding: '4px 12px',
+                borderRadius: '99px',
+                fontSize: '0.75rem',
+                fontWeight: '500'
+              }}
+            >
+              {product.category}
+            </span>
+
+            {/* Free Accessories Badge - only for peptides, not supplies */}
+            {product.category !== 'Supplies' && (
+              <span 
+                className="inline-block text-[10px] font-medium leading-tight"
+                style={{
+                  background: 'rgba(34, 197, 94, 0.15)',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  color: '#22C55E',
+                  padding: '2px 6px',
+                  borderRadius: '6px'
+                }}
+              >
+                FREE<br/>ACCESSORIES
+              </span>
+            )}
+          </div>
 
           {/* Product Name */}
           <h3 className="font-semibold text-gray-900 dark:text-white mb-1 text-base line-clamp-1">
