@@ -15,90 +15,90 @@
 
 ---
 
-## THREADS CONTENT
+## THREADS CONTENT (ROJAK STYLE)
 
 ### Thread Chain 1: Timeline Reality Check
 **Post 1 (Hook):**
-"Most people ask: 'When will I see results?'
+"Ramai tanya: 'Bila baru nampak results?'
 
-Here's the honest timeline for popular research peptides 🧬
+Nih timeline betul untuk peptides yang popular 🧬
 
-Not the BS you see elsewhere ⬇️"
+Tak tipu macam seller lain ⬇️"
 
 **Post 2 (Education):**
-"RETATRUTIDE (Weight Management):
-• Week 1-2: Appetite naturally decreases
-• Month 1-2: 5-10% weight reduction
+"RETATRUTIDE (Untuk kurus):
+• Week 1-2: Nafsu makan kurang sikit
+• Month 1-2: Berat turun 5-10% 
 • Month 3-4: Peak results (15-25%)
 
-Gradual is better than dramatic 📊"
+Slow and steady menang lah 📊"
 
 **Post 3 (More Science):**
-"MOTS-C (Performance):
-• Days 3-7: Endurance boost kicks in
-• Weeks 2-4: 15-25% VO2 improvement  
-• Months 2-3: Peak athletic performance
+"MOTS-C (Untuk stamina):
+• Days 3-7: Workout lagi power
+• Weeks 2-4: Performance naik 15-25%
+• Months 2-3: Jadi athlete level
 
-The compound athletes love 💪"
+Yang gym bros suka gila nih 💪"
 
 **Post 4 (Behind Scenes):**
-"Why share real timelines?
+"Kenapa share timeline sebenar?
 
-Because managing expectations = happy researchers
+Sebab kalau set expectation betul, customer happy mah
 
-No miracle promises. Just science. 🧪
+No promise ajaib-ajaib. Pure science je 🧪
 
-For research purposes only."
+For research purposes only lah"
 
 **Post 5 (CTA):**
-"Questions about peptide timelines?
+"Got questions pasal timeline?
 
-Drop them below 👇
+Drop kat bawah nih 👇
 
-Available at @skzpeptides — COA verified, shipped from Malaysia 🇲🇾"
+Available kat @skzpeptides — COA ada, ship dari Malaysia 🇲🇾"
 
 ### Quick Tip Posts
 
 **Post A:**
 "Peptide timeline tip:
 
-Most people give up at week 2 because they expect instant results.
+Ramai give up week ke-2 sebab expect instant results.
 
-Research compounds work gradually. Be patient. Document everything.
+Research compounds kena slow-slow. Sabar sikit. Record semua.
 
-Science takes time ⏰"
+Science takes time one ⏰"
 
 **Post B:**
-"Why BPC-157 works fast (3-5 days for pain relief) but Retatrutide takes weeks?
+"Kenapa BPC-157 cepat kerja (3-5 days untuk sakit) tapi Retatrutide ambil berapa minggu?
 
-Different mechanisms, different timelines.
+Different mechanism lah bro. Different timeline.
 
-Healing vs metabolic changes = different speeds 🧬"
+Healing vs metabolic = speed lain-lain 🧬"
 
 ---
 
-## TIKTOK CONTENT
+## TIKTOK CONTENT (ROJAK STYLE)
 
 ### Video 1: Timeline Breakdown (45-60 seconds)
-**Hook (0-3s):** "POV: Someone asks when peptides start working"
+**Hook (0-3s):** "POV: Orang tanya bila peptides mula kerja"
 **Visual:** Show infographic with dramatic zoom
-**Voiceover:** "Here's the real timeline no one talks about..."
-**Content:** Go through each peptide with quick facts
-**End:** "For research only. Link in bio for COAs"
-**Hashtags:** #peptides #biohacking #research #malaysia #science
+**Voiceover:** "Nih timeline betul yang tak ada orang nak cakap..."
+**Content:** Go through each peptide dengan facts
+**End:** "For research je tau. Link kat bio ada COA semua"
+**Hashtags:** #peptides #biohacking #research #malaysia #sains
 
 ### Video 2: Expectation vs Reality (30s)
-**Format:** Split screen - "What people expect" vs "What actually happens"
-**Left side:** Instant results, miracle transformations
+**Format:** Split screen - "Orang expect" vs "Yang betul berlaku"
+**Left side:** Instant results, transformation ajaib
 **Right side:** Real timeline infographic
-**Text overlay:** "Peptide timelines - the truth"
-**Music:** Trending sound with science/education theme
+**Text overlay:** "Peptide timelines - the truth je"
+**Music:** Trending sound dengan science/education theme
 
-### Video 3: "Timeline Tuesday" Series
-**Concept:** Weekly series featuring one peptide per video
-**Format:** Simple slideshow with timeline graphics
+### Video 3: "Timeline Tuesday" Series  
+**Concept:** Weekly series satu peptide per video
+**Format:** Simple slideshow dengan timeline graphics
 **Duration:** 15-30 seconds each
-**Series potential:** 5 weeks of content
+**Series potential:** 5 minggu content
 
 ---
 
@@ -117,16 +117,16 @@ Healing vs metabolic changes = different speeds 🧬"
 - **Sunday:** Behind-the-scenes timeline creation process
 
 ### Engagement Tactics
-1. **Polls:** "Which peptide timeline surprises you most?"
-2. **Questions:** "What's your experience with [peptide] timelines?"
-3. **Educational:** "Here's why [peptide] works differently..."
+1. **Polls:** "Peptide mana timeline paling mengejutkan?"
+2. **Questions:** "Korang punya experience dengan [peptide] macam mana?"
+3. **Educational:** "Sebab kenapa [peptide] kerja lain-lain..."
 4. **Community:** Share (anonymized) user timeline experiences
 
 ### Call-to-Actions
-- "Questions about timelines? DM us"
-- "See full protocols on our website"
-- "Available at skzpeptides.com with COAs"
-- "Follow for more peptide education"
+- "Ada questions pasal timelines? DM je"
+- "Full protocols tengok kat website kita"
+- "Available kat skzpeptides.com dengan COAs"
+- "Follow untuk more peptide education"
 
 ---
 
@@ -176,4 +176,42 @@ Healing vs metabolic changes = different speeds 🧬"
 - **Reference:** `marketing-content.md` for detailed timelines
 - **Brand guide:** Follow BrandLab voice and messaging rules
 
-**Campaign Ready for Launch! 🚀**
+---
+
+## ADDITIONAL ROJAK CONTENT EXAMPLES
+
+### Instagram Stories (Rojak Style)
+**Story 1:** "Bro tanya: Bila nampak results peptide nih?"
+**Story 2:** "Actually... depends on which peptide lah"
+**Story 3:** "Some fast macam BPC-157 (few days)"
+**Story 4:** "Some slow sikit macam Retatrutide (few weeks)"
+**Story 5:** "Yang penting: realistic expectations je"
+
+### TikTok Captions (Rojak Style)
+**Caption 1:**
+"Peptides timeline yang sebenar nih! 🧬
+Jangan percaya yang cakap instant results tau
+Science tak boleh tipu 
+#peptides #malaysia #realtalk #biohacking"
+
+**Caption 2:**
+"Ramai expect macam magic tapi...
+Actually kena tunggu berapa minggu 😅
+Patient sikit, results akan nampak
+#peptidejourney #expectations #science"
+
+### Community Engagement (Rojak Style)
+**Reply Templates:**
+- "Betul tu bro, kena sabar sikit"
+- "Experience korang macam mana? Share lah"
+- "Timeline ni based on research je, individual results boleh berbeza"
+- "Good question! Actually..."
+- "Kat website ada more detailed info"
+
+### Live Session Topics (Rojak Style)
+1. "Q&A Session: Tanya apa-apa pasal peptide timelines"
+2. "Myth vs Reality: Peptides tak magic macam orang cakap"  
+3. "Share your timeline: Korang punya experience"
+4. "Behind the scenes: Macam mana kita research semua nih"
+
+**Campaign Ready untuk Malaysian Market! 🇲🇾🚀**
