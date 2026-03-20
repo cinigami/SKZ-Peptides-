@@ -116,29 +116,7 @@ const MobileHome = () => {
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="px-4 py-6 bg-white dark:bg-gray-800">
-        <div className="grid grid-cols-3 gap-4 text-center">
-          <div className="p-3">
-            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
-              <Shield className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
-            </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Real COAs</p>
-          </div>
-          <div className="p-3">
-            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
-              <Truck className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
-            </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">From Malaysia</p>
-          </div>
-          <div className="p-3">
-            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
-              <Info className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
-            </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Real Person</p>
-          </div>
-        </div>
-      </section>
+
 
       {/* Categories */}
       <section className="px-4 py-6">
