@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Plus, Minus, ShoppingCart, Star, Shield, Truck, Info, Download, FileText } from 'lucide-react'
+import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Info, Download, FileText } from 'lucide-react'
 import { products } from '../data/products'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
@@ -184,8 +184,8 @@ const ProductDetail = () => {
                 <p className="text-sm text-gray-600">Fast Shipping</p>
               </div>
               <div className="text-center">
-                <Star className="w-8 h-8 text-primary-600 mx-auto mb-2" />
-                <p className="text-sm text-gray-600">Premium Quality</p>
+                <Shield className="w-8 h-8 text-primary-600 mx-auto mb-2" />
+                <p className="text-sm text-gray-600">Quality Documentation</p>
               </div>
             </div>
           </motion.div>

@@ -60,8 +60,8 @@ const HomeModern = () => {
               </h1>
               
               <p className="text-2xl md:text-3xl text-gray-600 dark:text-[#A0AAB8] font-light max-w-4xl mx-auto leading-relaxed">
-                Unlock the power of premium research peptides for 
-                <span className="accent-text font-semibold"> fitness, wellness, and recovery</span>
+                Research peptides for 
+                <span className="accent-text font-semibold"> scientific studies and research</span>
               </p>
             </motion.div>
 
@@ -211,11 +211,11 @@ const HomeModern = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
-              Premium <span className="text-gradient">Collection</span>
+              Research <span className="text-gradient">Collection</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our highest-grade research peptides for serious researchers seeking 
-              exceptional quality and maximum results.
+              Our research peptides for scientific studies with 
+              proper documentation and consistent quality.
             </p>
           </motion.div>
 
@@ -320,8 +320,8 @@ const HomeModern = () => {
               Ready to Start Your Research Journey?
             </h2>
             <p className="text-2xl text-primary-100 leading-relaxed max-w-2xl mx-auto">
-              Join thousands of researchers who trust SKZ Peptides for premium quality products 
-              and exceptional results.
+              Research peptides with proper documentation and 
+              straightforward ordering process.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

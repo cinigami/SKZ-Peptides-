@@ -15,8 +15,8 @@ const Footer = () => {
               <span className="text-xl font-bold">Peptides</span>
             </div>
             <p className="text-gray-400 mb-4">
-              Premium research peptides for fitness and wellness enthusiasts. 
-              Quality guaranteed, fast shipping.
+              Research peptides for scientific purposes. 
+              Straightforward ordering, reliable shipping.
             </p>
             <div className="space-y-2 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Award className="footer-icon w-5 h-5 text-primary-500 dark:text-purple-400" />
-                <span className="text-sm text-gray-400">Premium Quality</span>
+                <span className="text-sm text-gray-400">Documented Quality</span>
               </div>
             </div>
           </div>

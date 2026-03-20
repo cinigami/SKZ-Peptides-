@@ -18,8 +18,8 @@ const Protocols = () => {
             Research <span className="text-gradient">Protocols</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive research protocols for our premium peptides. 
-            Professional documentation to guide your research journey.
+            Detailed research protocols for our peptides. 
+            Clear documentation to guide your research work.
           </p>
         </motion.div>
 

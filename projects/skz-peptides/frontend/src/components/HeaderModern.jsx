@@ -35,7 +35,7 @@ const HeaderModern = () => {
             <div>
               <span className="text-2xl font-black text-gradient">SKZ</span>
               <span className="text-xl font-light text-gray-700 ml-2">Peptides</span>
-              <div className="text-xs text-gray-500 -mt-1">Premium Research</div>
+              <div className="text-xs text-gray-500 -mt-1">Research Peptides</div>
             </div>
           </Link>
 

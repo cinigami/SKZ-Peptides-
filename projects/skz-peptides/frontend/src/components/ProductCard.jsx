@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ShoppingCart, Star, Eye } from 'lucide-react'
+import { ShoppingCart, Eye } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
 
@@ -64,15 +64,7 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        {/* Rating (placeholder) */}
-        <div className="flex items-center mb-3">
-          <div className="flex text-yellow-400">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 fill-current" />
-            ))}
-          </div>
-          <span className="text-sm text-gray-500 ml-2">(4.8)</span>
-        </div>
+
 
         {/* Pricing */}
         <div className="flex items-center justify-between mb-4">
