@@ -33,7 +33,18 @@ const MobileProductCard = ({ product }) => {
         {/* Product Info */}
         <div className="p-4">
           {/* Category badge */}
-          <span className="inline-block px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-purple-900/20 dark:text-purple-400 rounded-full mb-2">
+          <span 
+            className="inline-block mb-2"
+            style={{
+              background: 'rgba(167, 139, 250, 0.12)',
+              border: '1px solid rgba(167, 139, 250, 0.3)',
+              color: '#A78BFA',
+              padding: '4px 12px',
+              borderRadius: '99px',
+              fontSize: '0.75rem',
+              fontWeight: '500'
+            }}
+          >
             {product.category}
           </span>
 

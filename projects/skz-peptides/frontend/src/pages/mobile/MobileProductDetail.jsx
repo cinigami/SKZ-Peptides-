@@ -71,7 +71,18 @@ const MobileProductDetail = () => {
       {/* Product Info */}
       <div className="bg-white dark:bg-gray-800 px-4 py-6">
         {/* Category Badge */}
-        <span className="inline-block px-3 py-1 text-sm font-medium bg-primary-100 text-primary-800 dark:bg-purple-900/20 dark:text-purple-400 rounded-full mb-3">
+        <span 
+          className="inline-block mb-3"
+          style={{
+            background: 'rgba(167, 139, 250, 0.12)',
+            border: '1px solid rgba(167, 139, 250, 0.3)',
+            color: '#A78BFA',
+            padding: '4px 12px',
+            borderRadius: '99px',
+            fontSize: '0.75rem',
+            fontWeight: '500'
+          }}
+        >
           {product.category}
         </span>
 
