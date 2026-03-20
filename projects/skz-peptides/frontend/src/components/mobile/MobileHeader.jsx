@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ShoppingCart, Menu, X, Search, Home, Package, FileText, Info } from 'lucide-react'
+import { ShoppingCart, Menu, X, Search, Home, Package, Info } from 'lucide-react'
 import { useCart } from '../../context/CartContext'
 
 const MobileHeader = () => {
@@ -11,7 +11,6 @@ const MobileHeader = () => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Products', href: '/products', icon: Package },
-    { name: 'Protocols', href: '/protocols', icon: FileText },
     { name: 'About', href: '/about', icon: Info },
   ]
 

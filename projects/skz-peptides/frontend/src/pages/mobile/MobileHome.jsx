@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Truck, FileText, Package, Zap } from 'lucide-react'
+import { ArrowRight, Shield, Truck, Info, Package, Zap } from 'lucide-react'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 
@@ -35,11 +35,11 @@ const MobileHome = () => {
             </Link>
             
             <Link
-              to="/protocols"
-              className="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-xl hover:bg-white hover:text-primary-700 dark:hover:bg-purple-600 dark:hover:border-purple-600 transition-all duration-300 flex items-center justify-center"
+              to="/about"
+              className="bg-transparent border-2 border-white text-white dark:border-[#A78BFA] dark:text-[#A78BFA] font-medium py-3 px-6 rounded-xl hover:bg-white hover:text-primary-700 dark:hover:bg-transparent dark:hover:border-[#A78BFA] dark:hover:text-[#A78BFA] transition-all duration-300 flex items-center justify-center"
             >
-              <FileText className="w-5 h-5 mr-2" />
-              <span>View Protocols</span>
+              <Info className="w-5 h-5 mr-2" />
+              <span>About Us</span>
             </Link>
           </div>
         </div>
@@ -49,16 +49,22 @@ const MobileHome = () => {
       <section className="px-4 py-6 bg-white dark:bg-gray-800">
         <div className="grid grid-cols-3 gap-4 text-center">
           <div className="p-3">
-            <Shield className="w-6 h-6 text-primary-600 dark:text-purple-400 mx-auto mb-2" />
-            <p className="text-xs font-medium text-gray-600 dark:text-gray-400">Documented Quality</p>
+            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
+              <Shield className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
+            </div>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Documented Quality</p>
           </div>
           <div className="p-3">
-            <Truck className="w-6 h-6 text-primary-600 dark:text-purple-400 mx-auto mb-2" />
-            <p className="text-xs font-medium text-gray-600 dark:text-gray-400">Fast Shipping</p>
+            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
+              <Truck className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
+            </div>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Fast Shipping</p>
           </div>
           <div className="p-3">
-            <FileText className="w-6 h-6 text-primary-600 dark:text-purple-400 mx-auto mb-2" />
-            <p className="text-xs font-medium text-gray-600 dark:text-gray-400">Research Protocols</p>
+            <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
+              <Info className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
+            </div>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Expert Support</p>
           </div>
         </div>
       </section>
@@ -128,12 +134,12 @@ const MobileHome = () => {
           </Link>
           
           <Link
-            to="/protocols"
-            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg"
+            to="/products"
+            className="flex items-center justify-between p-3 bg-gray-50 dark:bg-[#1E1E2E] rounded-lg"
           >
             <div>
-              <h3 className="font-medium text-gray-900 dark:text-white">Research Protocols</h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Download detailed guides</p>
+              <h3 className="font-medium text-gray-900 dark:text-white">Browse All Products</h3>
+              <p className="text-sm text-gray-600 dark:text-[#9CA3AF]">View our complete catalog</p>
             </div>
             <ArrowRight className="w-5 h-5 text-gray-400" />
           </Link>
