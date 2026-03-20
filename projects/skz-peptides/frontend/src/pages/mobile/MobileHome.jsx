@@ -14,15 +14,15 @@ const MobileHome = () => {
 
   return (
     <div className="lg:hidden min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
-      {/* Hero Section - Mobile Optimized */}
+      {/* Hero Section - Personal & Authentic */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white px-4 py-8" style={{ background: 'linear-gradient(135deg, #1E1028 0%, #2D1B69 50%, #1E1028 100%)' }}>
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-3">
-            Research Peptides for 
-            <span className="block" style={{ color: '#C4B5FD' }}>Scientific Studies</span>
+            Just good peptides
+            <span className="block" style={{ color: '#C4B5FD' }}>without the BS</span>
           </h1>
           <p className="mb-6 text-sm leading-relaxed" style={{ color: '#9CA3AF' }}>
-            Quality peptides with proper documentation and straightforward ordering.
+            Real peptides from Malaysia. No fake reviews, no ridiculous prices. Just quality research compounds.
           </p>
           
           <div className="flex flex-col space-y-3">
@@ -54,19 +54,19 @@ const MobileHome = () => {
             <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
               <Shield className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
             </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Documented Quality</p>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Real COAs</p>
           </div>
           <div className="p-3">
             <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
               <Truck className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
             </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Fast Shipping</p>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">From Malaysia</p>
           </div>
           <div className="p-3">
             <div className="w-12 h-12 mx-auto mb-2 rounded-full flex items-center justify-center dark:bg-[rgba(167,139,250,0.08)]">
               <Info className="w-6 h-6 text-primary-600 dark:text-[#A78BFA]" />
             </div>
-            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Expert Support</p>
+            <p className="text-xs font-medium text-gray-600 dark:text-[#9CA3AF]">Real Person</p>
           </div>
         </div>
       </section>
