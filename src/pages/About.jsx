@@ -2,25 +2,21 @@ import { Shield, Zap, FileText, MessageCircle, Coffee, Code } from 'lucide-react
 
 const About = () => {
   const realValues = [
-    {
-      icon: Shield,
-      title: 'Honest Business',
-      description: 'We tell you exactly what you get. No inflated claims, no fake reviews, just quality peptides with proper documentation.'
-    },
+
     {
       icon: FileText,
-      title: 'Real Protocols',
-      description: 'We actually create comprehensive research protocols because we believe in educating our customers, not just selling to them.'
+      title: 'Research-Backed Protocols',
+      description: 'Each protocol is written from personal research and hands-on experience.'
     },
     {
       icon: MessageCircle,
-      title: 'Direct Communication',
-      description: 'Questions? Message @nadojiken directly on Telegram. You get real answers from real people, not chatbots.'
+      title: 'Real Person Available',
+      description: 'Message me directly @nadojiken on Telegram. You\'ll get actual answers, not "please allow 3-5 business days."'
     },
     {
       icon: Zap,
-      title: 'Fast & Simple',
-      description: 'Order online or through our Telegram bot. We ship quickly and keep things straightforward.'
+      title: 'Just Works',
+      description: 'Order on the website or through Telegram. I ship fast and don\'t overcomplicate things.'
     }
   ]
 
@@ -32,8 +28,8 @@ const About = () => {
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold mb-6">About SKZ Peptides</h1>
             <p className="text-xl text-primary-100">
-              A straightforward peptide seller focused on quality products, 
-              honest communication, and actually useful customer support.
+              Just a person who got tired of overpriced peptides with zero useful information.
+              So I started selling them myself.
             </p>
           </div>
         </div>
@@ -48,31 +44,30 @@ const About = () => {
             <div className="prose prose-lg max-w-none text-gray-700">
               <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 space-y-6">
                 <p className="text-lg">
-                  <strong>SKZ Peptides started simple:</strong> We needed quality research peptides 
-                  without the BS marketing, fake reviews, and overpriced "premium" packaging 
-                  that dominates this industry.
+                  <strong>Here's what happened:</strong> I needed peptides for my own research but kept running 
+                  into the same problems everywhere I looked. Either ridiculously expensive with fancy packaging, 
+                  or cheap with zero information about what you're actually getting.
                 </p>
 
                 <p>
-                  Most peptide sellers either give you zero information about their products 
-                  or bombard you with questionable claims. We thought there had to be a better way.
+                  I wanted fair pricing, proper documentation, and someone who could actually answer questions 
+                  about the products. Most importantly, I needed protocols that were written by someone who 
+                  actually uses these compounds.
                 </p>
 
                 <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">What We Actually Do</h3>
+                  <h3 className="text-lg font-semibold text-blue-900 mb-2">So I started doing it differently:</h3>
                   <ul className="space-y-2 text-blue-800">
-                    <li>• Source quality peptides with proper documentation</li>
-                    <li>• Create detailed research protocols (because we actually use them)</li>
-                    <li>• Provide straight answers to your questions</li>
-                    <li>• Ship quickly without unnecessary drama</li>
-                    <li>• Keep prices reasonable because we're not funding a yacht</li>
+                    <li>• Source directly from quality labs with fair pricing</li>
+                    <li>• Write actual research protocols instead of just safety disclaimers</li>
+                    <li>• Answer questions honestly, even if it means you might not buy</li>
+                    <li>• Include everything you need to get started (essential kit)</li>
+                    <li>• Price things fairly instead of "what the market will bear"</li>
                   </ul>
                 </div>
 
-                <p>
-                  We're not trying to be the biggest peptide company. We're trying to be 
-                  the most useful one for people who actually want to do research.
-                </p>
+
+
 
 
               </div>
@@ -85,7 +80,7 @@ const About = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What We Actually Stand For</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">How I Actually Run This</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {realValues.map((value, index) => (
@@ -119,42 +114,27 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">AU (@nadojiken)</h3>
-                  <p className="text-gray-600">Founder & Everything Person</p>
+                  <p className="text-gray-600">Founder & Fellow Researcher</p>
                 </div>
               </div>
               
               <div className="prose max-w-none text-gray-700">
                 <p className="mb-4">
-                  I'm the person behind SKZ Peptides. I source the products, write the protocols, 
-                  answer customer questions, and handle shipping. It's a small operation, which means:
+                  I started SKZ because I couldn't find a Malaysian source I trusted — so I built one myself. 
+                  I'm not just selling these peptides, I use them. Every product in this store is something 
+                  I've personally researched, tested, and believe in.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                  <div>
-                    <h4 className="font-semibold text-green-600 mb-2">✅ Advantages:</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• You always talk to the same person</li>
-                      <li>• Quick decisions and problem-solving</li>
-                      <li>• Personal investment in quality</li>
-                      <li>• No corporate bureaucracy</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-orange-600 mb-2">⚠️ Limitations:</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• Response times might vary (usually 24-48h)</li>
-                      <li>• No 24/7 customer service</li>
-                      <li>• Can't compete with huge inventory</li>
-                      <li>• Limited to what one person can handle</li>
-                    </ul>
-                  </div>
+                <p className="mb-4 font-medium">What that means for you:</p>
+                
+                <div className="text-left">
+                  <h4 className="font-semibold text-green-600 mb-3">✅ Good stuff:</h4>
+                  <ul className="text-sm space-y-2 mb-4">
+                    <li>• I only stock what I'd use myself</li>
+                    <li>• You talk directly to me — no support tickets, no bots</li>
+                    <li>• I'll tell you if something isn't right for your goals</li>
+                  </ul>
                 </div>
-                
-                <p className="mt-6">
-                  <strong>Bottom line:</strong> If you want personal service and honest information, 
-                  you're in the right place. If you need instant corporate support or have huge volume requirements, 
-                  you might be better served elsewhere.
-                </p>
               </div>
             </div>
           </div>
@@ -197,11 +177,15 @@ const About = () => {
             </div>
             
             <div className="mt-8 p-6 bg-primary-700 rounded-lg text-left max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold mb-3">💬 Real Talk About Communication</h3>
-              <p className="text-primary-100 text-sm">
-                I try to answer every message personally, but I'm just one person. If you need immediate 
-                responses, this might not be the best fit. But if you want thoughtful, honest answers 
-                to your questions about peptide research, I'm here for that.
+              <h3 className="text-lg font-semibold mb-3">💬 How I Actually Communicate</h3>
+              <p className="text-primary-100 text-sm mb-3">
+                I read and respond to every message myself. No assistants, no copy-paste responses. 
+                Sometimes that means waiting a bit longer, but you get real answers from someone 
+                who actually knows what they're talking about.
+              </p>
+              <p className="text-primary-100 text-xs italic">
+                Pro tip: Don't message me asking "is this legit?" - just look at the protocols I write 
+                and judge for yourself. Scammers don't usually spend months writing detailed research guides.
               </p>
             </div>
           </div>

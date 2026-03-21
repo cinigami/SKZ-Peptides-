@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Info, Download, FileText } from 'lucide-react'
+import { ArrowLeft, Plus, Minus, ShoppingCart, Shield, Truck, Info, Download, FileText, Package, ShieldAlert, MessageCircle } from 'lucide-react'
 import { products } from '../data/products'
+import { getSafetyData } from '../data/safety'
+import { getTimelineData } from '../data/timeline'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
 import ProductBenefits from '../components/ProductBenefits'
 import MobileProductDetail from './mobile/MobileProductDetail'
+import { buildProductMessage, openWhatsApp } from '../utils/whatsapp'
 
 const ProductDetail = () => {
   const { id } = useParams()
@@ -108,6 +111,27 @@ const ProductDetail = () => {
               </div>
               <p className="text-gray-600">Storage: {product.storage}</p>
               
+              {/* Free Essential Kit - only for peptides, not supplies */}
+              {product.category !== 'Supplies' && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="bg-green-100 p-2 rounded-full">
+                      <Package className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-green-800 mb-1">
+                        FREE Essential Kit Included
+                      </h4>
+                      <div className="flex items-center space-x-4 text-sm text-green-700">
+                        <span>• Bacteriostatic Water</span>
+                        <span>• Insulin Syringe</span>
+                        <span>• Alcohol Swab</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Free Shipping Promotion */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-4">
                 <div className="flex items-center">
@@ -122,19 +146,6 @@ const ProductDetail = () => {
                   </div>
                 </div>
               </div>
-            </div>
-
-            {/* Stock Status */}
-            <div className="flex items-center space-x-2">
-              <div className={`w-3 h-3 rounded-full ${
-                product.inStock > 10 ? 'bg-green-500 dark:bg-purple-500' : 
-                product.inStock > 0 ? 'bg-yellow-500 dark:bg-purple-400' : 'bg-red-500'
-              }`}></div>
-              <span className={`font-medium ${
-                product.inStock > 0 ? 'text-green-700 dark:text-purple-400' : 'text-red-700'
-              }`}>
-                {product.inStock > 0 ? `${product.inStock} in stock` : 'Out of stock'}
-              </span>
             </div>
 
             {/* Description */}
@@ -178,17 +189,44 @@ const ProductDetail = () => {
 
               <button
                 onClick={handleAddToCart}
-                disabled={product.inStock === 0}
-                className={`w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors ${
-                  product.inStock > 0
-                    ? 'bg-primary-600 hover:bg-primary-700 text-white'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
+                className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors bg-primary-600 hover:bg-primary-700 text-white"
               >
                 <ShoppingCart className="w-5 h-5" />
-                <span>{product.inStock > 0 ? 'Add to Cart' : 'Out of Stock'}</span>
+                <span>Add to Cart</span>
+              </button>
+
+              <button
+                onClick={() => openWhatsApp(buildProductMessage(product, quantity))}
+                className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors text-white"
+                style={{ backgroundColor: '#25D366' }}
+              >
+                <MessageCircle className="w-5 h-5" />
+                <span>Order via WhatsApp</span>
               </button>
             </div>
+
+            {/* Lab Testing Badge */}
+            {product.labTesting?.tested && (
+              <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                <div className="flex items-center space-x-3">
+                  <div className="bg-emerald-100 p-2.5 rounded-full">
+                    <Shield className="w-6 h-6 text-emerald-600" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <h4 className="font-semibold text-emerald-900">Third-Party Lab Tested</h4>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-200 text-emerald-800">
+                        ✓ VERIFIED
+                      </span>
+                    </div>
+                    <div className="text-sm text-emerald-700 space-y-0.5">
+                      <p><strong>Purity:</strong> {product.labTesting.purity} — <strong>{product.labTesting.result}</strong></p>
+                      <p>Independently tested by {product.labTesting.lab} • {product.labTesting.testDate}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Trust Badges */}
             <div className="grid grid-cols-3 gap-4 pt-6 border-t border-gray-200">
@@ -216,6 +254,8 @@ const ProductDetail = () => {
                 { id: 'description', name: 'Description' },
                 { id: 'benefits', name: 'Benefits' },
                 { id: 'usage', name: 'Usage' },
+                { id: 'timeline', name: 'What to Expect' },
+                { id: 'safety', name: 'Safety & Side Effects', icon: ShieldAlert },
                 { id: 'disclaimer', name: 'Disclaimer' }
               ].map(tab => (
                 <button
@@ -311,6 +351,177 @@ const ProductDetail = () => {
                 )}
               </div>
             )}
+
+            {activeTab === 'timeline' && (() => {
+              const timeline = getTimelineData(product.id)
+              if (!timeline) return (
+                <div className="text-center py-8 text-gray-500">
+                  <Info className="w-10 h-10 mx-auto mb-3 text-gray-400" />
+                  <p>Timeline data not yet available for this product.</p>
+                </div>
+              )
+              const colorMap = {
+                blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-800', dot: 'bg-blue-500', line: 'border-blue-300' },
+                indigo: { bg: 'bg-indigo-50', border: 'border-indigo-200', text: 'text-indigo-800', dot: 'bg-indigo-500', line: 'border-indigo-300' },
+                purple: { bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-800', dot: 'bg-purple-500', line: 'border-purple-300' },
+                orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-800', dot: 'bg-orange-500', line: 'border-orange-300' },
+                yellow: { bg: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-800', dot: 'bg-amber-500', line: 'border-amber-300' }
+              }
+              return (
+                <div className="space-y-6">
+                  <p className="text-gray-700 text-lg">{timeline.summary}</p>
+
+                  {/* Timeline */}
+                  <div className="relative">
+                    {timeline.phases.map((phase, i) => {
+                      const colors = colorMap[phase.color] || colorMap.blue
+                      return (
+                        <div key={i} className="relative pl-10 pb-8 last:pb-0">
+                          {/* Vertical line */}
+                          {i < timeline.phases.length - 1 && (
+                            <div className={`absolute left-[15px] top-8 bottom-0 w-0.5 ${colors.line} border-l-2 border-dashed`}></div>
+                          )}
+                          {/* Dot */}
+                          <div className={`absolute left-0 top-1 w-8 h-8 rounded-full ${colors.dot} flex items-center justify-center text-white text-sm`}>
+                            {phase.icon}
+                          </div>
+                          {/* Content */}
+                          <div className={`${colors.bg} ${colors.border} border rounded-lg p-4`}>
+                            <div className="flex items-center space-x-3 mb-2">
+                              <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${colors.bg} ${colors.text} border ${colors.border}`}>
+                                {phase.period}
+                              </span>
+                              <h4 className={`font-semibold ${colors.text}`}>{phase.title}</h4>
+                            </div>
+                            <ul className="space-y-1.5">
+                              {phase.effects.map((effect, j) => (
+                                <li key={j} className={`flex items-start space-x-2 text-sm ${colors.text}`}>
+                                  <span className={`mt-1.5 w-1.5 h-1.5 ${colors.dot} rounded-full flex-shrink-0`}></span>
+                                  <span>{effect}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      )
+                    })}
+                  </div>
+
+                  {/* Note */}
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>📌 Note:</strong> {timeline.note}
+                    </p>
+                  </div>
+
+                  {/* Disclaimer */}
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <p className="text-sm text-yellow-700">
+                      <strong>Disclaimer:</strong> These timelines are based on clinical research and literature. Individual results may vary significantly based on dosage, health status, lifestyle, and other factors. This is for informational purposes only and does not constitute medical advice.
+                    </p>
+                  </div>
+                </div>
+              )
+            })()}
+
+            {activeTab === 'safety' && (() => {
+              const safety = getSafetyData(product.id)
+              if (!safety) return (
+                <div className="text-center py-8 text-gray-500">
+                  <ShieldAlert className="w-10 h-10 mx-auto mb-3 text-gray-400" />
+                  <p>Safety data not yet available for this product.</p>
+                </div>
+              )
+              return (
+                <div className="space-y-6">
+                  {/* Common Side Effects */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                      <span className="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      Common Side Effects
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {safety.common.map((item, i) => (
+                        <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-green-50 text-green-800 border border-green-200">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Less Common */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                      <span className="inline-block w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                      Less Common
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {safety.lessCommon.map((item, i) => (
+                        <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-yellow-50 text-yellow-800 border border-yellow-200">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Serious (Rare) */}
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
+                      <span className="inline-block w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                      Serious (Rare)
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {safety.serious.map((item, i) => (
+                        <span key={i} className="inline-flex items-center px-3 py-1.5 rounded-full text-sm bg-red-50 text-red-800 border border-red-200">
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Contraindications */}
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <h4 className="text-lg font-semibold text-red-900 mb-3 flex items-center">
+                      <ShieldAlert className="w-5 h-5 mr-2 text-red-600" />
+                      Who Should Avoid This
+                    </h4>
+                    <ul className="space-y-2">
+                      {safety.contraindications.map((item, i) => (
+                        <li key={i} className="flex items-start space-x-2 text-red-800">
+                          <span className="mt-1.5 w-1.5 h-1.5 bg-red-500 rounded-full flex-shrink-0"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Safety Tips */}
+                  <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
+                    <h4 className="text-lg font-semibold text-primary-900 mb-3 flex items-center">
+                      <Shield className="w-5 h-5 mr-2 text-primary-600" />
+                      Safety Tips
+                    </h4>
+                    <ul className="space-y-2">
+                      {safety.safetyTips.map((item, i) => (
+                        <li key={i} className="flex items-start space-x-2 text-primary-800">
+                          <span className="mt-1.5 w-1.5 h-1.5 bg-primary-500 rounded-full flex-shrink-0"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Disclaimer */}
+                  <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                    <p className="text-sm text-gray-600">
+                      <strong>Disclaimer:</strong> This safety information is provided for educational and research purposes only.
+                      It does not constitute medical advice. Always consult a qualified healthcare professional before use.
+                      Individual responses may vary. Report any adverse reactions to your healthcare provider immediately.
+                    </p>
+                  </div>
+                </div>
+              )
+            })()}
 
             {activeTab === 'disclaimer' && (
               <div className="bg-yellow-50 p-4 rounded-lg">

@@ -4,6 +4,8 @@ import { Trash2, Plus, Minus, ArrowRight, ShoppingBag } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
 import MobileCart from './mobile/MobileCart'
+import WhatsAppButton from '../components/WhatsAppButton'
+import { buildCartMessage, openWhatsApp } from '../utils/whatsapp'
 
 const Cart = () => {
   const { cart, removeFromCart, updateQuantity, cartTotal, clearCart } = useCart()
@@ -200,14 +202,8 @@ const Cart = () => {
                 </div>
               </div>
 
-              {/* Checkout Button */}
-              <Link
-                to="/checkout"
-                className="w-full btn-primary flex items-center justify-center"
-              >
-                Proceed to Checkout
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              {/* WhatsApp Order Button */}
+              <WhatsAppButton onClick={() => openWhatsApp(buildCartMessage(cart, totalWithShipping))} />
 
               {/* Continue Shopping */}
               <Link
@@ -217,14 +213,7 @@ const Cart = () => {
                 Continue Shopping
               </Link>
 
-              {/* Trust Badges */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="text-sm text-gray-600 text-center">
-                  <p className="mb-2">✅ Secure checkout</p>
-                  <p className="mb-2">🚚 Fast shipping</p>
-                  <p>💰 Money-back guarantee</p>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

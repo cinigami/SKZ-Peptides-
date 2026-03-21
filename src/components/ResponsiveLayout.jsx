@@ -1,10 +1,20 @@
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import Header from './Header'
 import MobileHeader from './mobile/MobileHeader'
 import Footer from './Footer'
+import WhatsAppFloatingButton from './WhatsAppFloatingButton'
 
 const ResponsiveLayout = ({ children }) => {
   const [isMobile, setIsMobile] = useState(false)
+  const location = useLocation()
+
+  // Hide floating WA button on product detail & cart pages (they have their own WA buttons)
+  const hideFloatingWA = isMobile && (
+    location.pathname.startsWith('/product/') ||
+    location.pathname === '/cart' ||
+    location.pathname === '/checkout'
+  )
 
   useEffect(() => {
     const checkMobile = () => {
@@ -28,6 +38,9 @@ const ResponsiveLayout = ({ children }) => {
 
       {/* Footer - hide on mobile for bottom nav */}
       {!isMobile && <Footer />}
+
+      {/* Floating WhatsApp Button - hidden on pages with their own WA buttons */}
+      {!hideFloatingWA && <WhatsAppFloatingButton />}
     </div>
   )
 }

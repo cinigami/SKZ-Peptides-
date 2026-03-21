@@ -34,54 +34,165 @@ const HomeModern = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section - Glassmorphism Design */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
+      {/* Hero Section - New Structure */}
+      <section 
+        className="relative min-h-screen flex items-center overflow-hidden"
+        style={{ 
+          background: 'linear-gradient(175deg, #150D25 0%, #0C0C10 45%, #0E0B16 100%)'
+        }}
+      >
+        {/* Left accent line */}
+        <div 
+          className="absolute left-0 top-0 w-[3px] h-full opacity-40"
+          style={{
+            background: 'linear-gradient(to bottom, #7C3AED, transparent 70%)'
+          }}
+        />
         
-        {/* Floating Elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary-300/20 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary-300/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary-200/20 rounded-full blur-3xl animate-float" style={{animationDelay: '4s'}}></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="space-y-8"
+            style={{ paddingLeft: '36px' }}
           >
-            <motion.div variants={itemVariants} className="space-y-4">
-              <h1 className="text-6xl md:text-8xl font-black tracking-tight">
-                <span className="text-gradient-hero">SKZ</span>{' '}
-                <span className="text-gray-900 dark:text-white">Peptides</span>
+            {/* Origin label */}
+            <motion.div variants={itemVariants} className="mb-6">
+              <span 
+                className="uppercase font-medium inline-flex items-center"
+                style={{
+                  fontSize: '0.72rem',
+                  letterSpacing: '0.15em',
+                  color: '#5C5775'
+                }}
+              >
+                <span className="w-3 h-[1px] mr-3" style={{ background: '#7C3AED' }}></span>
+                Malaysia 🇲🇾
+              </span>
+            </motion.div>
+            
+            {/* Main heading */}
+            <motion.div variants={itemVariants} className="mb-8">
+              <h1 
+                className="font-bold leading-tight"
+                style={{
+                  fontSize: 'clamp(3rem, 8vw, 6rem)',
+                  color: '#FFFFFF',
+                  letterSpacing: '-0.03em',
+                  lineHeight: '1.1'
+                }}
+              >
+                Peptides.
               </h1>
+              <h1 
+                className="font-bold leading-tight"
+                style={{
+                  fontSize: 'clamp(3.5rem, 9vw, 7rem)',
+                  color: '#A78BFA',
+                  letterSpacing: '-0.03em',
+                  lineHeight: '1.1'
+                }}
+              >
+                Done Right.
+              </h1>
+            </motion.div>
+            
+            {/* Subtitle */}
+            <motion.p 
+              variants={itemVariants}
+              className="mb-10 leading-relaxed max-w-lg"
+              style={{
+                fontSize: '1.1rem',
+                color: '#8A8599'
+              }}
+            >
+              Because what you put in your body should come from a source you trust. Not a gamble.
+            </motion.p>
+            
+            {/* Buttons */}
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                to="/products"
+                className="font-semibold px-8 py-4 transition-all duration-300 flex items-center justify-center group"
+                style={{ 
+                  background: '#7C3AED', 
+                  color: '#FFFFFF',
+                  borderRadius: '12px'
+                }}
+              >
+                <span>Browse Products</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
               
-              <p className="text-2xl md:text-3xl text-gray-600 dark:text-[#A0AAB8] font-light max-w-4xl mx-auto leading-relaxed">
-                Research peptides for 
-                <span className="accent-text font-semibold"> scientific studies and research</span>
-              </p>
-            </motion.div>
-
-            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link to="/products" className="btn-gradient text-lg px-8 py-4 group">
-                Explore Products
-                <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link to="/about" className="btn-secondary text-lg px-8 py-4 group">
-                Learn More
-                <Beaker className="w-6 h-6 ml-2 group-hover:rotate-12 transition-transform" />
+              <Link
+                to="/about"
+                className="font-medium px-8 py-4 transition-all duration-300 flex items-center justify-center"
+                style={{ 
+                  background: 'transparent', 
+                  border: '1px solid rgba(167, 139, 250, 0.25)', 
+                  color: '#A78BFA',
+                  borderRadius: '12px'
+                }}
+              >
+                <span>About</span>
               </Link>
             </motion.div>
+            
 
 
           </motion.div>
         </div>
 
-
       </section>
+
+      {/* Free Essential Kit Promotion */}
+      <section className="py-16 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-200"
+          >
+            <div className="text-center max-w-4xl mx-auto">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                🧪 FREE Essential Kit with Every Peptide
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Every peptide purchase includes a complete essential research kit at no additional cost
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-2xl">💧</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Bacteriostatic Water</h4>
+                  <p className="text-sm text-gray-600 text-center">3ml sterile vial</p>
+                </div>
+                
+                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-2xl">💉</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Insulin Syringe</h4>
+                  <p className="text-sm text-gray-600 text-center">Precise measurement tool</p>
+                </div>
+                
+                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                    <span className="text-2xl">🧽</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 mb-1">Alcohol Swab</h4>
+                  <p className="text-sm text-gray-600 text-center">Sterile preparation</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+
 
       {/* Featured Products - Modern Grid */}
       <section className="py-20 relative">
@@ -123,11 +234,6 @@ const HomeModern = () => {
                       }}
                     />
                     
-                    {/* Floating badge */}
-                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-primary-700 shadow-lg">
-                      {product.inStock} in stock
-                    </div>
-
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -164,17 +270,7 @@ const HomeModern = () => {
                         <ChevronRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                       </Link>
                       
-                      {product.protocol && (
-                        <a
-                          href={product.protocol}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg text-sm font-medium text-primary-600 bg-primary-50 border border-primary-200 hover:bg-primary-100 transition-colors"
-                        >
-                          <FileText className="w-4 h-4" />
-                          <span>📋 Protocol</span>
-                        </a>
-                      )}
+
                     </div>
                   </div>
                 </div>

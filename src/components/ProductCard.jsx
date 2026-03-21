@@ -30,19 +30,6 @@ const ProductCard = ({ product }) => {
             }}
           />
           
-          {/* Stock badge */}
-          <div className="absolute top-2 right-2">
-            <span className={`px-2 py-1 text-xs font-medium rounded ${
-              product.inStock > 10 
-                ? 'bg-green-100 text-green-800 dark:bg-purple-100 dark:bg-opacity-15 dark:text-purple-400' 
-                : product.inStock > 0 
-                ? 'bg-yellow-100 text-yellow-800 dark:bg-purple-100 dark:bg-opacity-15 dark:text-purple-400' 
-                : 'bg-red-100 text-red-800'
-            }`}>
-              {product.inStock > 0 ? `${product.inStock} in stock` : 'Out of stock'}
-            </span>
-          </div>
-
           {/* Hover overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <Eye className="w-8 h-8 text-white" />
@@ -58,10 +45,26 @@ const ProductCard = ({ product }) => {
             {product.description}
           </p>
           
-          {/* Category badge */}
-          <span className="inline-block px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-purple-600/20 dark:text-purple-400 rounded">
-            {product.category}
-          </span>
+          <div className="flex items-center justify-between">
+            {/* Category badge */}
+            <span className="inline-block px-2 py-1 text-xs font-medium bg-primary-100 text-primary-800 dark:bg-purple-600/20 dark:text-purple-400 rounded">
+              {product.category}
+            </span>
+
+            {/* Free Essential Kit - only for peptides, not supplies */}
+            {product.category !== 'Supplies' && (
+              <span 
+                className="inline-block text-[10px] font-medium px-2 py-1 rounded text-center"
+                style={{
+                  background: 'rgba(34, 197, 94, 0.15)',
+                  border: '1px solid rgba(34, 197, 94, 0.3)',
+                  color: '#22C55E'
+                }}
+              >
+                Free essential kit
+              </span>
+            )}
+          </div>
         </div>
 
 
@@ -80,15 +83,10 @@ const ProductCard = ({ product }) => {
       {/* Add to Cart Button */}
       <button
         onClick={handleAddToCart}
-        disabled={product.inStock === 0}
-        className={`w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors ${
-          product.inStock > 0
-            ? 'btn-primary hover:bg-primary-700'
-            : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-        }`}
+        className="w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors btn-primary hover:bg-primary-700"
       >
         <ShoppingCart className="w-4 h-4" />
-        <span>{product.inStock > 0 ? 'Add to Cart' : 'Out of Stock'}</span>
+        <span>Add to Cart</span>
       </button>
     </motion.div>
   )

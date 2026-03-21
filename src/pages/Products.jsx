@@ -52,8 +52,6 @@ const Products = () => {
           return b.price - a.price
         case 'profit':
           return b.profit - a.profit
-        case 'stock':
-          return b.inStock - a.inStock
         default:
           return a.name.localeCompare(b.name)
       }
@@ -125,7 +123,6 @@ const Products = () => {
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
               <option value="profit">Best Margin</option>
-              <option value="stock">Stock Level</option>
             </select>
 
             {/* View Mode */}
@@ -211,8 +208,6 @@ const ProductListItem = ({ product }) => {
         <p className="text-gray-600 mb-2">{product.description}</p>
         <div className="flex items-center space-x-4 text-sm text-gray-500">
           <span>{product.category}</span>
-          <span>•</span>
-          <span>{product.inStock} in stock</span>
           <span>•</span>
           <span>{product.dosage}</span>
         </div>
