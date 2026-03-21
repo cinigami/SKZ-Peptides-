@@ -5,8 +5,8 @@ const About = () => {
 
     {
       icon: FileText,
-      title: 'Actually Useful Info',
-      description: 'I write the protocols myself because I use them. No copy-paste from forums or AI-generated fluff.'
+      title: 'Research-Backed Protocols',
+      description: 'Each protocol is written from personal research and hands-on experience.'
     },
     {
       icon: MessageCircle,
