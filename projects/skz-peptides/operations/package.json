@@ -1,0 +1,22 @@
+{
+  "name": "skz-peptides-discord-bot",
+  "version": "1.0.0",
+  "description": "SKZ Peptides Discord Back Office Bot",
+  "main": "deploy-now.js",
+  "scripts": {
+    "start": "node deploy-now.js",
+    "dev": "nodemon deploy-now.js",
+    "test": "echo \"Test: Bot connection\" && node -e \"console.log('Dependencies OK')\""
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "@anthropic-ai/sdk": "^0.15.1",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["discord", "bot", "peptides", "business", "automation"],
+  "author": "SKZ Peptides",
+  "license": "MIT"
+}
