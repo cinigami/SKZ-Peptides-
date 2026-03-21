@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SKZ Peptides Shipping Labels</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .label-sheet {
+            width: 210mm;
+            height: 297mm;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .label {
+            width: 63.5mm;
+            height: 38.1mm;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 0;
+            padding: 2mm;
+            box-sizing: border-box;
+            font-size: 8pt;
+            position: relative;
+        }
+        
+        .from-address {
+            font-size: 7pt;
+            margin-bottom: 3mm;
+        }
+        
+        .to-address {
+            font-size: 9pt;
+            font-weight: bold;
+            margin-bottom: 2mm;
+        }
+        
+        .order-info {
+            font-size: 6pt;
+            position: absolute;
+            bottom: 2mm;
+            left: 2mm;
+            right: 2mm;
+        }
+        
+        .handling {
+            font-size: 6pt;
+            color: #666;
+            margin-top: 1mm;
+        }
+        
+        @media print {
+            .label {
+                border: none;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="label-sheet">
+        <!-- Label 1 - Template -->
+        <div class="label">
+            <div class="from-address">
+                <strong>SKZ PEPTIDES</strong><br>
+                [Your Address Line 1]<br>
+                [Your Address Line 2]<br>
+                [Postcode] [City], [State]<br>
+                Malaysia
+            </div>
+            
+            <div class="to-address">
+                [CUSTOMER NAME]<br>
+                [Customer Address Line 1]<br>
+                [Customer Address Line 2]<br>
+                [Postcode] [City], [State]<br>
+                Malaysia
+            </div>
+            
+            <div class="order-info">
+                Order: #[ORDER_ID] | [DATE]<br>
+                <div class="handling">RESEARCH MATERIALS - HANDLE WITH CARE</div>
+            </div>
+        </div>
+        
+        <!-- Repeat this label structure 20 more times for full A4 sheet -->
+        <div class="label">
+            <div class="from-address">
+                <strong>SKZ PEPTIDES</strong><br>
+                [Your Address Line 1]<br>
+                [Your Address Line 2]<br>
+                [Postcode] [City], [State]<br>
+                Malaysia
+            </div>
+            
+            <div class="to-address">
+                [CUSTOMER NAME]<br>
+                [Customer Address Line 1]<br>
+                [Customer Address Line 2]<br>
+                [Postcode] [City], [State]<br>
+                Malaysia
+            </div>
+            
+            <div class="order-info">
+                Order: #[ORDER_ID] | [DATE]<br>
+                <div class="handling">RESEARCH MATERIALS - HANDLE WITH CARE</div>
+            </div>
+        </div>
+        
+        <!-- Continue pattern for remaining labels... -->
+        <!-- You would copy this structure 19 more times for a complete 21-label sheet -->
+        
+    </div>
+</body>
+</html>
