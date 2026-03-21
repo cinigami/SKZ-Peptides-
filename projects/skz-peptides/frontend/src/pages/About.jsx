@@ -114,49 +114,27 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">AU (@nadojiken)</h3>
-                  <p className="text-gray-600">Founder & Everything Person</p>
+                  <p className="text-gray-600">Founder & Fellow Researcher</p>
                 </div>
               </div>
               
               <div className="prose max-w-none text-gray-700">
                 <p className="mb-4">
-                  I handle everything - sourcing, protocol writing, customer questions, packing orders, 
-                  even building this website at 3am when I should be sleeping. Being a one-person show 
-                  has its trade-offs:
+                  I started SKZ because I couldn't find a Malaysian source I trusted — so I built one myself. 
+                  I'm not just selling these peptides, I use them. Every product in this store is something 
+                  I've personally researched, tested, and believe in.
                 </p>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                  <div>
-                    <h4 className="font-semibold text-green-600 mb-2">✅ Good stuff:</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• You always talk to the same person (me)</li>
-                      <li>• I can make decisions instantly</li>
-                      <li>• I actually care if you get good results</li>
-                      <li>• Zero corporate nonsense or bureaucracy</li>
-                      <li>• I use these products myself</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-orange-600 mb-2">⚠️ Reality check:</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• I sleep sometimes, so responses take 6-24h</li>
-                      <li>• No fancy customer service department</li>
-                      <li>• Focus on quality over quantity - smaller product range</li>
-                      <li>• Sometimes I run out of popular items</li>
-                      <li>• I'm in Malaysia (GMT+8 timezone)</li>
-                    </ul>
-                  </div>
+                <p className="mb-4 font-medium">What that means for you:</p>
+                
+                <div className="text-left">
+                  <h4 className="font-semibold text-green-600 mb-3">✅ Good stuff:</h4>
+                  <ul className="text-sm space-y-2 mb-4">
+                    <li>• I only stock what I'd use myself</li>
+                    <li>• You talk directly to me — no support tickets, no bots</li>
+                    <li>• I'll tell you if something isn't right for your goals</li>
+                  </ul>
                 </div>
-                
-                <p className="mt-6">
-                  <strong>Straight up:</strong> If you want someone who'll give you honest advice 
-                  about peptides and actually help you get results, I'm your guy. If you need 
-                  instant responses and corporate polish, probably look elsewhere.
-                </p>
-                
-                <p className="text-sm italic text-gray-600">
-                  (Also, yes, I know "@nadojiken" is a weird username. It's from an old anime. Don't judge.)
-                </p>
               </div>
             </div>
           </div>
