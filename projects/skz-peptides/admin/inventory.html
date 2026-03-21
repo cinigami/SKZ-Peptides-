@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKZ Peptides - Inventory Management</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f7;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            color: #1d1d1f;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            color: #86868b;
+            margin: 5px 0 0 0;
+        }
+        
+        .inventory-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .controls {
+            padding: 20px;
+            border-bottom: 1px solid #e5e5e7;
+            background: #fbfbfd;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .inventory-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .inventory-table th {
+            background: #f6f6f6;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #1d1d1f;
+            border-bottom: 1px solid #e5e5e7;
+        }
+        
+        .inventory-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f2f2f2;
+            color: #1d1d1f;
+        }
+        
+        .inventory-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            color: #7c3aed;
+        }
+        
+        .stock-level {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .stock-high { color: #22c55e; }
+        .stock-medium { color: #f59e0b; }
+        .stock-low { color: #ef4444; }
+        
+        .stock-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .btn-add {
+            background: #22c55e;
+            color: white;
+        }
+        
+        .btn-remove {
+            background: #ef4444;
+            color: white;
+        }
+        
+        .quantity-input {
+            width: 60px;
+            padding: 4px 8px;
+            border: 1px solid #d2d2d7;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .stats {
+            padding: 20px;
+            background: #fbfbfd;
+            border-top: 1px solid #e5e5e7;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e5e5e7;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #7c3aed;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #86868b;
+            margin-top: 5px;
+        }
+        
+        .last-updated {
+            text-align: center;
+            margin-top: 20px;
+            color: #86868b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SKZ Peptides Inventory</h1>
+        <p>Stock Management System - Admin Panel</p>
+    </div>
+    
+    <div class="inventory-container">
+        <div class="controls">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search products..." onkeyup="filterProducts()">
+        </div>
+        
+        <table class="inventory-table" id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Dosage</th>
+                    <th>Stock Level</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-product="retatrutide">
+                    <td class="product-name">Retatrutide</td>
+                    <td>5mg</td>
+                    <td>
+                        <span class="stock-level stock-medium" id="stock-retatrutide">8</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-medium">Medium Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('retatrutide', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-retatrutide" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('retatrutide', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr data-product="ss31">
+                    <td class="product-name">SS-31 (Elamipretide)</td>
+                    <td>10mg</td>
+                    <td>
+                        <span class="stock-level stock-high" id="stock-ss31">20</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-high">High Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('ss31', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-ss31" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('ss31', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr data-product="nad">
+                    <td class="product-name">NAD+</td>
+                    <td>500mg</td>
+                    <td>
+                        <span class="stock-level stock-medium" id="stock-nad">9</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-medium">Medium Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('nad', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-nad" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('nad', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr data-product="glow70">
+                    <td class="product-name">Glow 70</td>
+                    <td>70mg</td>
+                    <td>
+                        <span class="stock-level stock-medium" id="stock-glow70">9</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-medium">Medium Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('glow70', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-glow70" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('glow70', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr data-product="motsc">
+                    <td class="product-name">MOTS-c</td>
+                    <td>40mg</td>
+                    <td>
+                        <span class="stock-level stock-medium" id="stock-motsc">9</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-medium">Medium Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('motsc', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-motsc" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('motsc', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr data-product="bacwater">
+                    <td class="product-name">Bacteriostatic Water</td>
+                    <td>10ml</td>
+                    <td>
+                        <span class="stock-level stock-high" id="stock-bacwater">20</span>
+                        <span style="color: #86868b; margin-left: 5px;">pcs</span>
+                    </td>
+                    <td><span class="status-high">High Stock</span></td>
+                    <td>
+                        <div class="stock-controls">
+                            <button class="btn btn-remove" onclick="updateStock('bacwater', -1)">-</button>
+                            <input type="number" class="quantity-input" id="qty-bacwater" value="1" min="1">
+                            <button class="btn btn-add" onclick="updateStock('bacwater', 1)">+</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalProducts">6</div>
+                    <div class="stat-label">Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalStock">75</div>
+                    <div class="stat-label">Total Units</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="lowStock">0</div>
+                    <div class="stat-label">Low Stock Items</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalValue">RM 0</div>
+                    <div class="stat-label">Inventory Value</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="last-updated">
+        Last updated: <span id="lastUpdated">Just now</span>
+    </div>
+
+    <script>
+        // Stock data
+        let inventory = {
+            retatrutide: 8,
+            ss31: 20,
+            nad: 9,
+            glow70: 9,
+            motsc: 9,
+            bacwater: 20
+        };
+        
+        // Load saved inventory from localStorage
+        function loadInventory() {
+            const saved = localStorage.getItem('skz-inventory');
+            if (saved) {
+                inventory = JSON.parse(saved);
+                updateDisplay();
+            }
+        }
+        
+        // Save inventory to localStorage
+        function saveInventory() {
+            localStorage.setItem('skz-inventory', JSON.stringify(inventory));
+            document.getElementById('lastUpdated').textContent = new Date().toLocaleString();
+        }
+        
+        // Update stock levels
+        function updateStock(product, change) {
+            const quantity = parseInt(document.getElementById('qty-' + product).value) || 1;
+            const actualChange = change * quantity;
+            
+            inventory[product] = Math.max(0, inventory[product] + actualChange);
+            updateDisplay();
+            saveInventory();
+        }
+        
+        // Update display
+        function updateDisplay() {
+            Object.keys(inventory).forEach(product => {
+                const stockElement = document.getElementById('stock-' + product);
+                const stock = inventory[product];
+                stockElement.textContent = stock;
+                
+                // Update stock level colors
+                stockElement.className = 'stock-level ' + getStockClass(stock);
+                
+                // Update status
+                const row = stockElement.closest('tr');
+                const statusElement = row.querySelector('[class*="status-"]');
+                statusElement.textContent = getStockStatus(stock);
+                statusElement.className = 'status-' + getStockClass(stock).replace('stock-', '');
+            });
+            
+            updateStats();
+        }
+        
+        // Get stock class based on level
+        function getStockClass(stock) {
+            if (stock >= 15) return 'stock-high';
+            if (stock >= 5) return 'stock-medium';
+            return 'stock-low';
+        }
+        
+        // Get stock status text
+        function getStockStatus(stock) {
+            if (stock >= 15) return 'High Stock';
+            if (stock >= 5) return 'Medium Stock';
+            if (stock > 0) return 'Low Stock';
+            return 'Out of Stock';
+        }
+        
+        // Update statistics
+        function updateStats() {
+            const totalStock = Object.values(inventory).reduce((sum, stock) => sum + stock, 0);
+            const lowStockItems = Object.values(inventory).filter(stock => stock < 5).length;
+            
+            document.getElementById('totalStock').textContent = totalStock;
+            document.getElementById('lowStock').textContent = lowStockItems;
+        }
+        
+        // Filter products
+        function filterProducts() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const rows = document.querySelectorAll('#inventoryTable tbody tr');
+            
+            rows.forEach(row => {
+                const productName = row.querySelector('.product-name').textContent.toLowerCase();
+                const dosage = row.children[1].textContent.toLowerCase();
+                
+                if (productName.includes(searchTerm) || dosage.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadInventory();
+            updateDisplay();
+        });
+    </script>
+</body>
+</html>
