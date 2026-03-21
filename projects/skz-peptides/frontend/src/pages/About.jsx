@@ -2,11 +2,7 @@ import { Shield, Zap, FileText, MessageCircle, Coffee, Code } from 'lucide-react
 
 const About = () => {
   const realValues = [
-    {
-      icon: Shield,
-      title: 'No BS Policy',
-      description: 'I tell you exactly what you\'re getting. If something is out of stock, backordered, or not great quality, you\'ll know upfront.'
-    },
+
     {
       icon: FileText,
       title: 'Actually Useful Info',
@@ -70,10 +66,7 @@ const About = () => {
                   </ul>
                 </div>
 
-                <p>
-                  This isn't some big operation. It's just me, working out of Malaysia, trying to 
-                  solve the same problems I had when I was looking for reliable peptides.
-                </p>
+
 
 
 
