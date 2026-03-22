@@ -163,25 +163,25 @@ const HomeModern = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">💧</span>
+                <div className="flex flex-col items-center p-6 bg-white rounded-xl border border-green-200">
+                  <div className="w-28 h-28 rounded-xl overflow-hidden mb-4">
+                    <img src="/images/icon-bac-water.png" alt="BAC Water" className="w-full h-full object-contain" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">Bacteriostatic Water</h4>
                   <p className="text-sm text-gray-600 text-center">3ml sterile vial</p>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">💉</span>
+                <div className="flex flex-col items-center p-6 bg-white rounded-xl border border-green-200">
+                  <div className="w-28 h-28 rounded-xl overflow-hidden mb-4">
+                    <img src="/images/icon-syringe.png" alt="Syringe" className="w-full h-full object-contain" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">Insulin Syringe</h4>
                   <p className="text-sm text-gray-600 text-center">Precise measurement tool</p>
                 </div>
                 
-                <div className="flex flex-col items-center p-4 bg-white rounded-xl border border-green-200">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-3">
-                    <span className="text-2xl">🧽</span>
+                <div className="flex flex-col items-center p-6 bg-white rounded-xl border border-green-200">
+                  <div className="w-28 h-28 rounded-xl overflow-hidden mb-4">
+                    <img src="/images/icon-swab.png" alt="Alcohol Swab" className="w-full h-full object-contain" />
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-1">Alcohol Swab</h4>
                   <p className="text-sm text-gray-600 text-center">Sterile preparation</p>
@@ -207,8 +207,7 @@ const HomeModern = () => {
               Featured <span className="text-gradient">Products</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover our most popular research peptides, trusted by fitness enthusiasts 
-              and researchers worldwide for their exceptional quality and results.
+              Our top picks across weight management, anti-aging, healing, and cellular health — handpicked for every research goal.
             </p>
           </motion.div>
 
@@ -292,14 +291,9 @@ const HomeModern = () => {
         </div>
       </section>
 
-      {/* Premium Collection - Glassmorphism Cards */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary-50 via-white to-primary-50"></div>
-        <div className="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-primary-300/30 to-secondary-300/30 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-br from-secondary-300/20 to-primary-300/20 rounded-full blur-3xl"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Best Sellers */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -307,32 +301,25 @@ const HomeModern = () => {
             className="text-center mb-16"
           >
             <h2 className="text-5xl font-bold text-gray-900 mb-6">
-              Research <span className="text-gradient">Collection</span>
+              Best <span className="text-gradient">Sellers</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our research peptides for scientific studies with 
-              proper documentation and consistent quality.
+              The ones our customers keep coming back for. Proven quality. Proven results.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {topProfitProducts.map((product, index) => (
+            {products.filter(p => ['retatrutide-5mg', 'glow70-bpc-ghk-tb', 'nad-500mg'].includes(p.id)).map((product, index) => (
               <motion.div
                 key={product.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                whileHover={{ y: -15, scale: 1.02 }}
-                className="relative group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.15, duration: 0.6 }}
+                whileHover={{ y: -10 }}
+                className="group"
               >
-                <div className="glass rounded-2xl p-8 text-center group-hover:shadow-2xl transition-all duration-500">
-                  {/* Floating "Best Seller" badge */}
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                    Best Seller
-                  </div>
-
-                  {/* Product Image */}
-                  <div className="relative mb-8 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl h-48 flex items-center justify-center overflow-hidden mx-auto">
+                <div className="neuro-card p-6 group-hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                  <div className="relative mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl h-48 flex items-center justify-center overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -341,29 +328,22 @@ const HomeModern = () => {
                         e.target.src = `https://via.placeholder.com/300x200/f3f4f6/9ca3af?text=${encodeURIComponent(product.name)}`
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors">
+                  <div className="space-y-3">
+                    <span className="badge-modern text-xs">{product.category}</span>
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">{product.description}</p>
-                    
-
-
-                    <div className="price-display text-4xl mb-6">
-                      MYR {product.price.toFixed(2)}
+                    <p className="text-gray-600 text-sm leading-relaxed">{product.description}</p>
+                    <div className="flex items-center justify-between pt-2">
+                      <span className="price-display">MYR {product.price.toFixed(2)}</span>
                     </div>
-
-
-
                     <Link
                       to={`/product/${product.id}`}
-                      className="btn-gradient w-full text-lg py-4 group/btn inline-flex items-center justify-center"
+                      className="btn-primary w-full group/btn flex items-center justify-center mt-2"
                     >
-                      <span>Discover More</span>
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                      <span>View Details</span>
+                      <ChevronRight className="w-5 h-5 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                 </div>
@@ -372,6 +352,8 @@ const HomeModern = () => {
           </div>
         </div>
       </section>
+
+
 
       {/* Free Shipping Promotion */}
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-purple-900/20 dark:to-blue-900/20">
@@ -388,7 +370,7 @@ const HomeModern = () => {
                   FREE Shipping on Orders Above RM100
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Fast delivery across Malaysia • Secure packaging • Track your order
+                  Fast delivery across Malaysia • Secure packaging
                 </div>
               </div>
             </div>
@@ -413,11 +395,10 @@ const HomeModern = () => {
             className="space-y-8"
           >
             <h2 className="text-5xl font-bold mb-6">
-              Ready to Start Your Research Journey?
+              Your Journey. Our Standards.
             </h2>
             <p className="text-2xl text-primary-100 leading-relaxed max-w-2xl mx-auto">
-              Research peptides with proper documentation and 
-              straightforward ordering process.
+              Whether you're just starting or scaling up — we've got you covered with verified quality and honest pricing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -426,9 +407,7 @@ const HomeModern = () => {
                 <ArrowRight className="w-6 h-6 ml-2 inline group-hover:translate-x-1 transition-transform" />
               </Link>
               
-              <Link to="/admin" className="border-2 border-white/30 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl backdrop-blur-sm transition-all duration-300 text-lg">
-                View Analytics
-              </Link>
+
             </div>
 
 

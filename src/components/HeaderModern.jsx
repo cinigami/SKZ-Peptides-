@@ -14,7 +14,7 @@ const HeaderModern = () => {
     { name: 'Home', href: '/' },
     { name: 'Products', href: '/products' },
     { name: 'About', href: '/about' },
-    { name: 'Admin', href: '/admin' },
+
   ]
 
   const isActive = (path) => location.pathname === path

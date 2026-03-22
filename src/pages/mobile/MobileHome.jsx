@@ -161,22 +161,22 @@ const MobileHome = () => {
 
           <div className="grid grid-cols-3 gap-3">
             <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full overflow-hidden">
-                <img src="/images/icon-bac-water.png" alt="BAC Water" className="w-full h-full object-cover" />
+              <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
+                <img src="/images/icon-bac-water.png" alt="BAC Water" className="w-full h-full object-contain" />
               </div>
               <p className="text-xs font-semibold text-gray-900">Bacteriostatic Water</p>
               <p className="text-[10px] text-gray-500">3ml sterile vial</p>
             </div>
             <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full overflow-hidden">
-                <img src="/images/icon-syringe.png" alt="Syringe" className="w-full h-full object-cover" />
+              <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
+                <img src="/images/icon-syringe.png" alt="Syringe" className="w-full h-full object-contain" />
               </div>
               <p className="text-xs font-semibold text-gray-900">Insulin Syringe</p>
               <p className="text-[10px] text-gray-500">Precise measurement tool</p>
             </div>
             <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-              <div className="w-12 h-12 mx-auto mb-2 rounded-full overflow-hidden">
-                <img src="/images/icon-swab.png" alt="Alcohol Swab" className="w-full h-full object-cover" />
+              <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
+                <img src="/images/icon-swab.png" alt="Alcohol Swab" className="w-full h-full object-contain" />
               </div>
               <p className="text-xs font-semibold text-gray-900">Alcohol Swab</p>
               <p className="text-[10px] text-gray-500">Sterile preparation</p>
