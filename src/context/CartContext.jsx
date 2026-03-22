@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect } from 'react'
+import { createContext, useContext, useReducer, useEffect, useState } from 'react'
 
 const CartContext = createContext()
 
@@ -64,8 +64,12 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem('skz-cart', JSON.stringify(cart.items))
   }, [cart.items])
 
+  const [toast, setToast] = useState(null)
+
   const addToCart = (product, quantity = 1) => {
     dispatch({ type: 'ADD_TO_CART', product, quantity })
+    setToast({ message: `${product.name} added to cart!`, type: 'success' })
+    setTimeout(() => setToast(null), 2500)
   }
 
   const removeFromCart = (productId) => {
@@ -91,7 +95,8 @@ export const CartProvider = ({ children }) => {
       updateQuantity,
       clearCart,
       cartTotal,
-      itemCount
+      itemCount,
+      toast
     }}>
       {children}
     </CartContext.Provider>

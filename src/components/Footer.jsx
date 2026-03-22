@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2024 SKZ Peptides. All rights reserved.
+              © 2026 SKZ Peptides. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -95,12 +95,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>
-              ⚠️ These products are for research purposes only. Not for human consumption. 
-              Consult a healthcare professional before use.
-            </p>
-          </div>
+
         </div>
       </div>
     </footer>

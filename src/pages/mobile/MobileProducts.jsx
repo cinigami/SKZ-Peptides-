@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Search, X } from 'lucide-react'
+import { Search, X, Truck } from 'lucide-react'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 import { motion } from 'framer-motion'
@@ -40,6 +40,12 @@ const MobileProducts = () => {
       {/* Header */}
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-4">
         <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-3">All Products</h1>
+
+        {/* Free Shipping Banner */}
+        <div className="mb-3 rounded-xl p-2.5 flex items-center gap-2 border border-purple-100" style={{ background: 'linear-gradient(135deg, #faf5ff, #f3e8ff)' }}>
+          <Truck className="w-4 h-4 flex-shrink-0" style={{ color: '#7C3AED' }} />
+          <p className="text-xs text-gray-600"><strong className="text-gray-900">FREE shipping</strong> on orders above RM100</p>
+        </div>
 
         {/* Search Bar */}
         <div className="relative mb-3">

@@ -162,7 +162,7 @@ const Protocols = () => {
           <div className="text-center">
             <h3 className="text-lg font-semibold text-yellow-800 mb-2">⚠️ Research Use Only</h3>
             <p className="text-yellow-700 text-sm">
-              These protocols are for research purposes only. Not intended for human consumption. 
+              These protocols are for research purposes only. 
               Consult qualified professionals for research guidance. SKZ Peptides provides research materials only.
             </p>
           </div>

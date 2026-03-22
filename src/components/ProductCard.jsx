@@ -5,10 +5,12 @@ import { motion } from 'framer-motion'
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart()
+  const isOutOfStock = product.inStock <= 0
+  const isLowStock = product.inStock > 0 && product.inStock <= 3
 
   const handleAddToCart = (e) => {
     e.preventDefault()
-    addToCart(product, 1)
+    if (!isOutOfStock) addToCart(product, 1)
   }
 
   const formatPrice = (price) => `MYR ${price.toFixed(2)}`
@@ -24,16 +26,30 @@ const ProductCard = ({ product }) => {
           <img
             src={product.image}
             alt={product.name}
-            className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+            className={`object-cover w-full h-full group-hover:scale-105 transition-transform duration-300 ${isOutOfStock ? 'grayscale' : ''}`}
             onError={(e) => {
               e.target.src = `https://via.placeholder.com/300x200/f3f4f6/9ca3af?text=${encodeURIComponent(product.name)}`
             }}
           />
           
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-            <Eye className="w-8 h-8 text-white" />
-          </div>
+          {/* Out of Stock overlay */}
+          {isOutOfStock ? (
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span className="bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-lg">OUT OF STOCK</span>
+            </div>
+          ) : (
+            /* Hover overlay */
+            <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <Eye className="w-8 h-8 text-white" />
+            </div>
+          )}
+          
+          {/* Low Stock badge */}
+          {isLowStock && (
+            <span className="absolute top-2 right-2 bg-orange-500 text-white text-xs font-bold px-2 py-1 rounded-md">
+              Low Stock
+            </span>
+          )}
         </div>
 
         {/* Product Info */}
@@ -83,10 +99,11 @@ const ProductCard = ({ product }) => {
       {/* Add to Cart Button */}
       <button
         onClick={handleAddToCart}
-        className="w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors btn-primary hover:bg-primary-700"
+        disabled={isOutOfStock}
+        className={`w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors ${isOutOfStock ? 'bg-gray-400 cursor-not-allowed opacity-60' : 'btn-primary hover:bg-primary-700'}`}
       >
         <ShoppingCart className="w-4 h-4" />
-        <span>Add to Cart</span>
+        <span>{isOutOfStock ? 'Out of Stock' : 'Add to Cart'}</span>
       </button>
     </motion.div>
   )

@@ -61,9 +61,9 @@ const Cart = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Cart Items */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <div className="bg-white rounded-lg shadow-sm">
               <div className="p-6">
                 <div className="flex justify-between items-center mb-6">
@@ -107,7 +107,6 @@ const Cart = () => {
                           {item.name}
                         </Link>
                         <p className="text-sm text-gray-600">{item.category}</p>
-                        <p className="text-sm text-gray-500">{item.dosage}</p>
                       </div>
 
                       {/* Quantity Controls */}
@@ -132,9 +131,6 @@ const Cart = () => {
                         <p className="text-lg font-semibold text-gray-900">
                           {formatPrice(item.price * item.quantity)}
                         </p>
-                        <p className="text-sm text-gray-500">
-                          {formatPrice(item.price)} each
-                        </p>
                       </div>
 
                       {/* Remove Button */}
@@ -152,8 +148,8 @@ const Cart = () => {
           </div>
 
           {/* Order Summary */}
-          <div className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-sm p-6 sticky top-8">
+          <div className="lg:col-span-2">
+            <div className="bg-white rounded-lg shadow-sm p-8 sticky top-8">
               <h2 className="text-lg font-semibold text-gray-900 mb-6">Order Summary</h2>
               
               <div className="space-y-4 mb-6">

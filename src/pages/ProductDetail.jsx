@@ -17,6 +17,8 @@ const ProductDetail = () => {
   const [activeTab, setActiveTab] = useState('description')
   const [isMobile, setIsMobile] = useState(false)
   const { addToCart } = useCart()
+  const isOutOfStock = product ? product.inStock <= 0 : false
+  const isLowStock = product ? product.inStock > 0 && product.inStock <= 3 : false
 
   useEffect(() => {
     const checkMobile = () => {
@@ -97,9 +99,16 @@ const ProductDetail = () => {
           >
             {/* Title and Rating */}
             <div>
-              <span className="inline-block px-3 py-1 text-sm font-medium bg-primary-100 text-primary-800 rounded-full mb-4">
-                {product.category}
-              </span>
+              <div className="flex items-center space-x-2 mb-4">
+                <span className="inline-block px-3 py-1 text-sm font-medium bg-primary-100 text-primary-800 rounded-full">
+                  {product.category}
+                </span>
+                {product.badge && (
+                  <span className="inline-block px-3 py-1 text-sm font-bold bg-green-100 text-green-800 rounded-full border border-green-300">
+                    {product.badge}
+                  </span>
+                )}
+              </div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">{product.name}</h1>
 
             </div>
@@ -110,42 +119,75 @@ const ProductDetail = () => {
                 MYR {product.price.toFixed(2)}
               </div>
               <p className="text-gray-600">Storage: {product.storage}</p>
-              
-              {/* Free Essential Kit - only for peptides, not supplies */}
-              {product.category !== 'Supplies' && (
+
+              {/* Beginner Dosage Highlight */}
+              {product.badge && product.dosage && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
                   <div className="flex items-center space-x-3">
                     <div className="bg-green-100 p-2 rounded-full">
-                      <Package className="w-5 h-5 text-green-600" />
+                      <Info className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-green-800 mb-1">
-                        FREE Essential Kit Included
+                        Beginner Dosing Guide
                       </h4>
-                      <div className="flex items-center space-x-4 text-sm text-green-700">
-                        <span>• Bacteriostatic Water</span>
-                        <span>• Insulin Syringe</span>
-                        <span>• Alcohol Swab</span>
-                      </div>
+                      <p className="text-sm text-green-700">{product.dosage}</p>
+                      <p className="text-xs text-green-600 mt-1">Start low, titrate every 4 weeks based on tolerance. See full protocol for details.</p>
                     </div>
                   </div>
                 </div>
               )}
-
-              {/* Free Shipping Promotion */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mt-4">
-                <div className="flex items-center">
-                  <Truck className="w-5 h-5 text-blue-600 mr-2" />
-                  <div className="text-sm">
-                    <span className="font-medium text-blue-800">
-                      FREE shipping on orders above RM100
-                    </span>
-                    <span className="text-blue-600 ml-1">
-                      • Fast delivery across Malaysia
-                    </span>
+              
+              {/* Free Essential Kit - visual card */}
+              {product.category !== 'Supplies' && (
+                <div className="mt-5 rounded-2xl overflow-hidden shadow-sm border border-purple-100" style={{ background: 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 50%, #ede9fe 100%)' }}>
+                  {/* Banner image */}
+                  <div className="relative h-36 overflow-hidden">
+                    <img src="/images/essential-kit-light.png" alt="Essential Kit" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, transparent 40%, #faf5ff 100%)' }} />
+                    <div className="absolute top-3 left-4">
+                      <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-white shadow-lg" style={{ background: '#7C3AED' }}>FREE WITH PURCHASE</span>
+                    </div>
+                  </div>
+                  {/* Content */}
+                  <div className="px-5 pb-5 -mt-4 relative">
+                    <h4 className="text-gray-900 font-bold text-lg mb-1">Essential Research Kit</h4>
+                    <p className="text-gray-500 text-xs mb-4">Everything you need to get started — included at no extra cost.</p>
+                    <div className="grid grid-cols-3 gap-2">
+                      <div className="bg-white rounded-xl p-3 text-center border border-purple-100 shadow-sm">
+                        <div className="text-lg mb-1">💧</div>
+                        <p className="text-gray-900 text-[11px] font-semibold">BAC Water</p>
+                        <p className="text-gray-400 text-[9px]">3ml sterile</p>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 text-center border border-purple-100 shadow-sm">
+                        <div className="text-lg mb-1">💉</div>
+                        <p className="text-gray-900 text-[11px] font-semibold">Syringe</p>
+                        <p className="text-gray-400 text-[9px]">1ml precision</p>
+                      </div>
+                      <div className="bg-white rounded-xl p-3 text-center border border-purple-100 shadow-sm">
+                        <div className="text-lg mb-1">🧴</div>
+                        <p className="text-gray-900 text-[11px] font-semibold">Alcohol Swab</p>
+                        <p className="text-gray-400 text-[9px]">70% sterile</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Shipping bar */}
+                  <div className="px-5 py-3 flex items-center gap-2 border-t border-purple-100">
+                    <Truck className="w-4 h-4 flex-shrink-0" style={{ color: '#7C3AED' }} />
+                    <p className="text-xs text-gray-500"><strong className="text-gray-900">FREE shipping</strong> on orders above RM100</p>
                   </div>
                 </div>
-              </div>
+              )}
+
+              {/* Free Shipping only - for supplies */}
+              {product.category === 'Supplies' && (
+                <div className="mt-5 rounded-2xl overflow-hidden border border-purple-100 shadow-sm">
+                  <div className="p-3 flex items-center gap-3" style={{ background: '#faf5ff' }}>
+                    <Truck className="w-4 h-4 flex-shrink-0" style={{ color: '#7C3AED' }} />
+                    <p className="text-xs text-gray-500"><strong className="text-gray-900">FREE shipping</strong> on orders above RM100</p>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Description */}
@@ -187,12 +229,25 @@ const ProductDetail = () => {
                 </div>
               </div>
 
+              {isOutOfStock && (
+                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg p-3 text-center">
+                  <span className="text-red-600 dark:text-red-400 font-semibold">Out of Stock</span>
+                  <p className="text-xs text-red-500 dark:text-red-400 mt-1">Contact us via WhatsApp to ask about restock</p>
+                </div>
+              )}
+              {isLowStock && (
+                <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-700 rounded-lg p-2 text-center">
+                  <span className="text-orange-600 dark:text-orange-400 text-sm font-medium">⚠️ Low Stock</span>
+                </div>
+              )}
+
               <button
                 onClick={handleAddToCart}
-                className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors bg-primary-600 hover:bg-primary-700 text-white"
+                disabled={isOutOfStock}
+                className={`w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors text-white ${isOutOfStock ? 'bg-gray-400 cursor-not-allowed opacity-60' : 'bg-primary-600 hover:bg-primary-700'}`}
               >
                 <ShoppingCart className="w-5 h-5" />
-                <span>Add to Cart</span>
+                <span>{isOutOfStock ? 'Out of Stock' : 'Add to Cart'}</span>
               </button>
 
               <button
@@ -233,6 +288,40 @@ const ProductDetail = () => {
                         </p>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Stack Recommendation */}
+            {product.stacksWith && (
+              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                <div className="flex items-start space-x-3">
+                  <div className="bg-indigo-100 p-2.5 rounded-full flex-shrink-0">
+                    <span className="text-xl">{product.stacksWith.emoji}</span>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-1">
+                      <h4 className="font-semibold text-indigo-900">Best Paired With: {product.stacksWith.name}</h4>
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-indigo-200 text-indigo-800">
+                        {product.stacksWith.stackName}
+                      </span>
+                    </div>
+                    <p className="text-sm text-indigo-700 mb-3">{product.stacksWith.description}</p>
+                    <ul className="space-y-1.5 mb-3">
+                      {product.stacksWith.benefits.map((benefit, i) => (
+                        <li key={i} className="flex items-start space-x-2 text-sm text-indigo-700">
+                          <span className="mt-1.5 w-1.5 h-1.5 bg-indigo-500 rounded-full flex-shrink-0"></span>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      to={`/product/${product.stacksWith.productId}`}
+                      className="inline-flex items-center space-x-1 text-sm font-medium text-indigo-600 hover:text-indigo-800 transition-colors"
+                    >
+                      <span>View {product.stacksWith.name} →</span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -540,7 +629,7 @@ const ProductDetail = () => {
                   <div className="text-sm text-yellow-800">
                     <p className="font-semibold mb-2">Important Disclaimer</p>
                     <p>
-                      This product is intended for research purposes only and is not for human consumption. 
+                      This product is intended for research purposes only. 
                       It has not been evaluated by the FDA and is not intended to diagnose, treat, cure, 
                       or prevent any disease. Please consult with a healthcare professional before use.
                     </p>

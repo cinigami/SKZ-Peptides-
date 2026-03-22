@@ -7,8 +7,10 @@ export const products = [
     cost: 39.15,
     profit: 59.85,
     category: 'Weight Management',
-    description: 'Three receptors. One peptide. The most advanced weight management compound available.',
-    features: ['5mg vial', 'Research grade', 'Triple receptor agonist', 'Lyophilized'],
+    badge: '🟢 Perfect for Beginners',
+    description: 'Three receptors. One peptide. The most advanced weight management compound available. The 5mg vial is ideal for beginners — start at 2mg/week and titrate up safely.',
+    dosage: 'Beginner: 2mg once weekly (one vial lasts ~2.5 weeks)',
+    features: ['5mg vial — ideal beginner size', 'Start at 2mg/week, titrate to 4mg/week', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.52% purity (Janoshik verified)', 'One vial lasts ~2.5 weeks at starter dose'],
     benefits: ['Weight management studies', 'Metabolic research', 'Appetite regulation'],
     image: '/images/retatrutide-vial-mockup.png',
     inStock: 8,
@@ -20,29 +22,6 @@ export const products = [
       lab: 'Janoshik Analytical',
       purity: '99.52%',
       testDate: 'June 2025',
-      result: 'PASS — Exceeds labeled content'
-    }
-  },
-  {
-    id: 'ss31-elamipretide-10mg',
-    name: 'SS-31 (Elamipretide) 10mg',
-    price: 89,
-    cost: 34.88,
-    profit: 54.12,
-    category: 'Mitochondrial',
-    description: 'Goes straight to the mitochondria — supports cellular energy, reduces oxidative stress, and protects cell function.',
-    features: ['10mg vial', 'Mitochondrial targeting', 'Research grade', 'High purity'],
-    benefits: ['Mitochondrial function', 'Cellular energy research', 'Cardioprotection studies'],
-    image: '/images/ss31-vial-mockup.png',
-    inStock: 20,
-    storage: 'Refrigerate 2-8°C',
-    protocol: '/protocols/pdf/ss31-protocol.html',
-    protocolTitle: 'SS-31 Research Protocol',
-    labTesting: {
-      tested: true,
-      lab: 'Janoshik Analytical',
-      purity: '99.22%',
-      testDate: 'May 2025',
       result: 'PASS — Exceeds labeled content'
     }
   },
