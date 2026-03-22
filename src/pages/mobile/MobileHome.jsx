@@ -232,7 +232,7 @@ const MobileHome = () => {
                     <div>
                       <h3 className="font-medium text-gray-900 dark:text-white text-sm">{category.name}</h3>
                       <p className="text-xs text-gray-500 dark:text-gray-400">
-                        {products.filter(p => p.category === category.id).length} products
+                        {products.filter(p => p.category === category.id).length} {products.filter(p => p.category === category.id).length === 1 ? 'product' : 'products'}
                       </p>
                     </div>
                   </div>

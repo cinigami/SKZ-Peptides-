@@ -40,11 +40,11 @@ const MobileHeader = () => {
 
             {/* Right side controls */}
             <div className="flex items-center space-x-3">
-              <button className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white" style={{ minWidth: '44px', minHeight: '44px' }}>
+              <button className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center" style={{ minWidth: '44px', minHeight: '44px' }}>
                 <Search className="w-5 h-5" />
               </button>
 
-              <Link to="/cart" className="relative p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white" style={{ minWidth: '44px', minHeight: '44px' }}>
+              <Link to="/cart" className="relative p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center" style={{ minWidth: '44px', minHeight: '44px' }}>
                 <ShoppingCart className="w-5 h-5" />
                 {itemCount > 0 && (
                   <span className="absolute -top-1 -right-1 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold" style={{ backgroundColor: '#7C3AED' }}>
@@ -55,7 +55,7 @@ const MobileHeader = () => {
 
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white"
+                className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center"
                 style={{ minWidth: '44px', minHeight: '44px' }}
               >
                 {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -64,71 +64,73 @@ const MobileHeader = () => {
           </div>
         </div>
 
-        {/* Mobile Menu - Animated slide from right */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.2 }}
-                className="fixed inset-0 bg-black/50 z-40"
-                onClick={() => setIsMenuOpen(false)}
-              />
-              <motion.div
-                initial={{ x: '100%' }}
-                animate={{ x: 0 }}
-                exit={{ x: '100%' }}
-                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                className="fixed top-0 right-0 bottom-0 w-72 z-50 border-l border-white/10"
-                style={{
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  backdropFilter: 'blur(20px)',
-                  WebkitBackdropFilter: 'blur(20px)'
-                }}
-              >
-                <div className="p-4 flex justify-end">
-                  <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="p-2 text-gray-400 hover:text-gray-600"
-                    style={{ minWidth: '44px', minHeight: '44px' }}
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-                <div className="px-4 space-y-1">
-                  {navigation.map((item, index) => {
-                    const Icon = item.icon
-                    return (
-                      <motion.div
-                        key={item.name}
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.08 }}
-                      >
-                        <Link
-                          to={item.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className={`flex items-center space-x-3 px-4 py-4 rounded-xl transition-colors ${
-                            isActive(item.href)
-                              ? 'text-white'
-                              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          }`}
-                          style={isActive(item.href) ? { backgroundColor: '#7C3AED' } : {}}
-                        >
-                          <Icon className="w-5 h-5" />
-                          <span className="font-medium text-base">{item.name}</span>
-                        </Link>
-                      </motion.div>
-                    )
-                  })}
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
       </header>
+
+      {/* Mobile Menu - Full Screen (OUTSIDE header for z-index) */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 overflow-y-auto"
+          style={{ background: '#0d1117', zIndex: 99999 }}
+        >
+              <div className="p-5 flex items-center justify-between border-b border-white/10">
+                <span className="text-white font-bold text-xl">Menu</span>
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 text-gray-400 hover:text-white flex items-center justify-center"
+                  style={{ minWidth: '44px', minHeight: '44px' }}
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="px-5 py-6 space-y-2">
+                <Link
+                  to="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <Home className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Home</span>
+                </Link>
+                <Link
+                  to="/products"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/products') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <Package className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Products</span>
+                </Link>
+                <Link
+                  to="/protocols"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/protocols') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <Info className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Protocols</span>
+                </Link>
+                <Link
+                  to="/about"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/about') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <Info className="w-6 h-6" />
+                  <span className="font-semibold text-lg">About</span>
+                </Link>
+                <Link
+                  to="/cart"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/cart') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <ShoppingCart className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Cart</span>
+                </Link>
+              </div>
+          </div>
+        )}
 
       {/* Mobile Bottom Navigation - Frosted Glass */}
       <nav

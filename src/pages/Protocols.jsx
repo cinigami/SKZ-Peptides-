@@ -65,11 +65,11 @@ const Protocols = () => {
               className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Product Image */}
-              <div className="h-48 bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center">
+              <div className="h-52 bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center p-6">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-32 w-32 object-contain"
+                  className="max-h-full max-w-full object-contain"
                   onError={(e) => {
                     e.target.src = `https://via.placeholder.com/200x150/f3f4f6/9ca3af?text=${encodeURIComponent(product.name)}`
                   }}

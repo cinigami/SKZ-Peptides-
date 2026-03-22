@@ -38,13 +38,13 @@ const MobileProducts = () => {
   return (
     <div className="lg:hidden min-h-screen bg-gray-50 dark:bg-gray-900 pb-20">
       {/* Header */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 px-4 py-4">
-        <h1 className="text-xl font-bold text-gray-900 dark:text-white mb-3">All Products</h1>
-
-        {/* Free Shipping Banner */}
-        <div className="mb-3 rounded-xl p-2.5 flex items-center gap-2 border border-purple-100" style={{ background: 'linear-gradient(135deg, #faf5ff, #f3e8ff)' }}>
-          <Truck className="w-4 h-4 flex-shrink-0" style={{ color: '#7C3AED' }} />
-          <p className="text-xs text-gray-600"><strong className="text-gray-900">FREE shipping</strong> on orders above RM100</p>
+      <div className="bg-white dark:bg-gray-800 px-4 py-4">
+        <div className="flex items-center justify-between mb-2">
+          <h1 className="text-lg font-bold text-gray-900 dark:text-white">All Products</h1>
+          <div className="flex items-center gap-1.5 text-[11px] text-gray-500">
+            <Truck className="w-3.5 h-3.5" style={{ color: '#7C3AED' }} />
+            <span>Free shipping above RM100</span>
+          </div>
         </div>
 
         {/* Search Bar */}
@@ -55,20 +55,20 @@ const MobileProducts = () => {
             placeholder="Search products..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            className="w-full pl-10 pr-4 py-2 text-sm border border-gray-300 dark:border-gray-600 rounded-xl bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
           />
         </div>
 
         {/* Horizontal Scrolling Category Chips */}
-        <div className="flex items-center space-x-2 overflow-x-auto pb-1 -mx-4 px-4 scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
+        <div className="flex items-center space-x-1.5 overflow-x-auto -mx-4 px-4 scrollbar-hide" style={{ WebkitOverflowScrolling: 'touch' }}>
           <button
             onClick={() => setSelectedCategory('')}
-            className="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors"
+            className="flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors"
             style={{
               backgroundColor: !selectedCategory ? '#7C3AED' : 'transparent',
               color: !selectedCategory ? '#FFFFFF' : '#6B7280',
               border: !selectedCategory ? 'none' : '1px solid #D1D5DB',
-              minHeight: '36px'
+              minHeight: '30px'
             }}
           >
             All
@@ -77,12 +77,12 @@ const MobileProducts = () => {
             <button
               key={category}
               onClick={() => setSelectedCategory(selectedCategory === category ? '' : category)}
-              className="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap"
+              className="flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition-colors whitespace-nowrap"
               style={{
                 backgroundColor: selectedCategory === category ? '#7C3AED' : 'transparent',
                 color: selectedCategory === category ? '#FFFFFF' : '#6B7280',
                 border: selectedCategory === category ? 'none' : '1px solid #D1D5DB',
-                minHeight: '36px'
+                minHeight: '30px'
               }}
             >
               {category}
@@ -90,21 +90,10 @@ const MobileProducts = () => {
           ))}
         </div>
 
-        {/* Results count */}
-        <div className="flex items-center justify-between mt-3">
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-2">
+          <span className="text-xs text-gray-400">
             {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''}
           </span>
-          {hasActiveFilters && (
-            <button
-              onClick={clearFilters}
-              className="text-sm font-medium flex items-center"
-              style={{ color: '#7C3AED' }}
-            >
-              <X className="w-3 h-3 mr-1" />
-              Clear
-            </button>
-          )}
         </div>
       </div>
 
