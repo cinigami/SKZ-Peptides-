@@ -39,10 +39,8 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/products" className="hover:text-white transition-colors">All Products</Link></li>
+              <li><Link to="/protocols" className="hover:text-white transition-colors">Protocols</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link to="/shipping" className="hover:text-white transition-colors">Shipping Info</Link></li>
             </ul>
           </div>
 
@@ -50,9 +48,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link to="/products?category=Growth%20Hormone" className="hover:text-white transition-colors">Growth Hormone</Link></li>
+              <li><Link to="/products?category=Weight%20Management" className="hover:text-white transition-colors">Weight Management</Link></li>
+              <li><Link to="/products?category=Anti-Aging" className="hover:text-white transition-colors">Anti-Aging</Link></li>
               <li><Link to="/products?category=Healing" className="hover:text-white transition-colors">Healing & Recovery</Link></li>
-              <li><Link to="/products?category=Cosmetic" className="hover:text-white transition-colors">Cosmetic</Link></li>
+              <li><Link to="/products?category=Mitochondrial" className="hover:text-white transition-colors">Mitochondrial Health</Link></li>
               <li><Link to="/products?category=Supplies" className="hover:text-white transition-colors">Supplies</Link></li>
             </ul>
           </div>

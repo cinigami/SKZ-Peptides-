@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Search, X, Truck } from 'lucide-react'
+import { useSearchParams } from 'react-router-dom'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 import { motion } from 'framer-motion'
@@ -7,7 +8,18 @@ import { motion } from 'framer-motion'
 const MobileProducts = () => {
   const [filteredProducts, setFilteredProducts] = useState(products)
   const [searchTerm, setSearchTerm] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('')
+  const [searchParams] = useSearchParams()
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || '')
+
+  // Sync category from URL params when navigating
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category')
+    if (categoryFromUrl) {
+      setSelectedCategory(categoryFromUrl)
+    } else {
+      setSelectedCategory('')
+    }
+  }, [searchParams])
 
   const categories = [...new Set(products.map(product => product.category))]
 

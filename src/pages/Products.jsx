@@ -25,6 +25,14 @@ const Products = () => {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
+  // Sync category from URL params when navigating
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category')
+    if (categoryFromUrl) {
+      setSelectedCategory(categoryFromUrl)
+    }
+  }, [searchParams])
+
   // Filter and sort products
   useEffect(() => {
     let filtered = products
