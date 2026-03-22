@@ -130,6 +130,109 @@ const ProductBenefits = ({ product }) => {
           ]
         }
 
+      case 'nad-500mg':
+        return {
+          title: 'NAD+ Research Benefits',
+          subtitle: 'Essential Coenzyme for Cellular Energy, Repair & Longevity',
+          primaryBenefits: [
+            {
+              icon: Zap,
+              title: 'Cellular Energy & ATP Production',
+              description: 'NAD+ is a key driver of ATP production — the body\'s energy currency. Replenishing NAD+ levels boosts mitochondrial efficiency, reducing fatigue and increasing stamina without stimulants.',
+              metrics: ['Enhanced ATP production', 'Sustained energy without crashes', 'Reduced chronic fatigue', 'Improved physical stamina']
+            },
+            {
+              icon: Shield,
+              title: 'DNA Repair & Anti-Aging',
+              description: 'NAD+ activates sirtuins — the "longevity genes" — which are essential for DNA repair, cellular maintenance, and slowing age-related decline. NAD+ levels drop 50%+ between ages 40-60.',
+              metrics: ['Sirtuin activation (longevity genes)', '50%+ NAD+ decline reversed', 'Enhanced DNA damage repair', 'Telomere protection support']
+            },
+            {
+              icon: Brain,
+              title: 'Cognitive Function & Neuroprotection',
+              description: 'NAD+ supports neuronal health, neuroplasticity, and neurotransmitter production. Users report improved memory, sharper focus, and reduced brain fog.',
+              metrics: ['Improved mental clarity & focus', 'Enhanced memory retention', 'Reduced brain fog', 'Neuroplasticity support']
+            },
+            {
+              icon: Heart,
+              title: 'Cardiovascular & Metabolic Health',
+              description: 'Research shows NAD+ repletion can normalize insulin signaling, lower blood pressure, and improve neurovascular coupling for heart and metabolic health.',
+              metrics: ['Improved insulin signaling', 'Blood pressure regulation', 'Enhanced metabolic function', 'Cardiovascular protection']
+            },
+            {
+              icon: Activity,
+              title: 'Inflammation & Recovery',
+              description: 'NAD+ regulates inflammatory pathways and supports cellular repair, helping the body recover faster and reducing chronic inflammation linked to aging.',
+              metrics: ['Reduced chronic inflammation', 'Faster recovery from stress', 'Enhanced immune regulation', 'Improved skin health & collagen']
+            }
+          ],
+          mechanism: {
+            title: 'NAD+ Cellular Mechanism',
+            description: 'NAD+ is a coenzyme found in every living cell. It serves as an electron carrier in metabolic reactions and activates key enzymes (sirtuins, PARPs, CD38) that regulate aging, DNA repair, and energy production.',
+            pathways: [
+              'Mitochondrial electron transport chain — drives ATP synthesis',
+              'Sirtuin activation (SIRT1-7) — regulates gene expression & longevity',
+              'PARP enzyme activation — enables DNA damage repair',
+              'CD38 regulation — modulates immune response & NAD+ consumption',
+              'Circadian rhythm support — influences sleep-wake cycle regulation'
+            ]
+          },
+          timeline: [
+            { phase: 'Immediately', effects: 'Energy boost, mental clarity, warmth/flushing (improved circulation)' },
+            { phase: 'Week 1-2', effects: 'Consistent energy, better focus, improved sleep quality' },
+            { phase: 'Week 3-4', effects: 'Mood and vitality improvements, reduced inflammation' },
+            { phase: 'Month 2-3+', effects: 'Deep cellular repair, stress resilience, sustained anti-aging benefits' }
+          ]
+        }
+
+      case 'glow70-bpc-ghk-tb':
+        return {
+          title: 'GLOW 70 Research Benefits',
+          subtitle: 'Triple Peptide Blend — BPC-157 + GHK-Cu + TB-500 for Complete Regeneration',
+          primaryBenefits: [
+            {
+              icon: Heart,
+              title: 'Accelerated Healing & Tissue Repair',
+              description: 'BPC-157 promotes angiogenesis (new blood vessels) and activates growth hormone receptors for tendon, ligament, muscle, and gut repair. TB-500 enhances cell migration to injury sites.',
+              metrics: ['Tendon & ligament repair', 'Muscle injury recovery', 'Gut lining protection (BPC-157)', 'Accelerated wound closure']
+            },
+            {
+              icon: Shield,
+              title: 'Anti-Inflammatory & Immune Support',
+              description: 'All three peptides work synergistically to reduce inflammation. TB-500 facilitates immune cell trafficking while BPC-157 stabilizes the gut-immune axis.',
+              metrics: ['Reduced chronic inflammation', 'Joint & tendon pain relief', 'Immune system modulation (TB-500)', 'Gut health restoration']
+            },
+            {
+              icon: Zap,
+              title: 'Skin Rejuvenation & Collagen Synthesis',
+              description: 'GHK-Cu stimulates collagen Type I & III production, elastin synthesis, and glycosaminoglycan production for firmer, glowing skin with reduced wrinkles.',
+              metrics: ['Enhanced collagen production', 'Reduced fine lines & wrinkles', 'Improved skin firmness & elasticity', 'Enhanced skin radiance & glow']
+            },
+            {
+              icon: Activity,
+              title: 'Comprehensive Tissue Regeneration',
+              description: 'The "Wolverine Stack" — three peptides targeting different repair pathways for faster, more complete recovery than any single peptide alone.',
+              metrics: ['Synergistic triple-action healing', 'Faster recovery from injuries', 'Tissue remodeling & strengthening', 'Hair growth support (GHK-Cu)']
+            }
+          ],
+          mechanism: {
+            title: 'Triple Peptide Synergy',
+            description: 'GLOW 70 combines three complementary peptides that target different healing pathways simultaneously for comprehensive regenerative effects.',
+            pathways: [
+              'BPC-157: Angiogenesis + nitric oxide pathway → blood flow & gut healing',
+              'GHK-Cu: Collagen/elastin stimulation + antioxidant → skin & tissue repair',
+              'TB-500: Actin regulation + cell migration → wound healing & flexibility',
+              'Combined: Multi-pathway activation for accelerated whole-body repair'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Reduced pain & inflammation, better digestion, skin hydration' },
+            { phase: 'Week 2-4', effects: 'Improved mobility, joint comfort, skin texture improvement' },
+            { phase: 'Week 4-8', effects: 'Significant tissue regeneration, visible skin glow, collagen synthesis' },
+            { phase: 'Week 8-12+', effects: 'Full recovery, reduced wrinkles, hair growth, sustained healing' }
+          ]
+        }
+
       default:
         return {
           title: 'Research Benefits',
@@ -199,26 +302,6 @@ const ProductBenefits = ({ product }) => {
             <div key={index} className="flex items-center space-x-3">
               <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
               <span className="text-sm text-gray-600">{pathway}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Timeline */}
-      <div>
-        <h4 className="text-lg font-semibold text-gray-900 mb-4">Research Timeline</h4>
-        <div className="space-y-4">
-          {benefits.timeline.map((phase, index) => (
-            <div key={index} className="flex space-x-4">
-              <div className="flex-shrink-0">
-                <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-medium text-primary-600">{index + 1}</span>
-                </div>
-              </div>
-              <div>
-                <h5 className="font-semibold text-gray-900">{phase.phase}</h5>
-                <p className="text-sm text-gray-600">{phase.effects}</p>
-              </div>
             </div>
           ))}
         </div>

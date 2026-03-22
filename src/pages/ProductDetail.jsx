@@ -207,21 +207,31 @@ const ProductDetail = () => {
 
             {/* Lab Testing Badge */}
             {product.labTesting?.tested && (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="bg-emerald-100 p-2.5 rounded-full">
-                    <Shield className="w-6 h-6 text-emerald-600" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-1">
-                      <h4 className="font-semibold text-emerald-900">Third-Party Lab Tested</h4>
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-emerald-200 text-emerald-800">
-                        ✓ VERIFIED
-                      </span>
+              <div className="relative overflow-hidden rounded-2xl border border-emerald-200/60" style={{ background: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%)' }}>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-300/20 rounded-full blur-2xl -translate-y-8 translate-x-8" />
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-emerald-400/10 rounded-full blur-xl translate-y-6 -translate-x-6" />
+                <div className="relative p-5">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-14 h-14 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #059669, #10b981)' }}>
+                        <Shield className="w-7 h-7 text-white" />
+                      </div>
                     </div>
-                    <div className="text-sm text-emerald-700 space-y-0.5">
-                      <p><strong>Purity:</strong> {product.labTesting.purity} — <strong>{product.labTesting.result}</strong></p>
-                      <p>Independently tested by {product.labTesting.lab} • {product.labTesting.testDate}</p>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center flex-wrap gap-2 mb-2">
+                        <h4 className="text-lg font-bold text-emerald-950 tracking-tight">Third-Party Lab Tested</h4>
+                        <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-sm">
+                          ✓ VERIFIED
+                        </span>
+                      </div>
+                      <div className="space-y-1.5">
+                        <p className="text-base font-semibold text-emerald-800">
+                          Purity: {product.labTesting.purity} — <span className="text-emerald-700">{product.labTesting.result}</span>
+                        </p>
+                        <p className="text-sm text-emerald-600/80">
+                          Independently tested by <strong>{product.labTesting.lab}</strong> • {product.labTesting.testDate}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -298,7 +308,7 @@ const ProductDetail = () => {
                 <div>
                   <h4 className="text-lg font-semibold mb-4">Research Guidelines</h4>
                   <div className="space-y-4 text-gray-700">
-                    <p><strong>Recommended Dosage:</strong> {product.dosage}</p>
+                    <p><strong>Recommended Dosage:</strong> See research protocol</p>
                     <p><strong>Reconstitution:</strong> Use bacteriostatic water for injection</p>
                     <p><strong>Administration:</strong> For research purposes only</p>
                     <p><strong>Storage:</strong> {product.storage}</p>

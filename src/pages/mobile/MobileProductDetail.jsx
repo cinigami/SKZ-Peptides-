@@ -235,21 +235,29 @@ const MobileProductDetail = () => {
 
       {/* Lab Testing Badge */}
       {product.labTesting?.tested && (
-        <div className="bg-emerald-50 dark:bg-emerald-900/20 border border-emerald-200 dark:border-emerald-800 rounded-lg mx-4 mt-4 p-4">
-          <div className="flex items-center space-x-3">
-            <div className="bg-emerald-100 dark:bg-emerald-800 p-2 rounded-full flex-shrink-0">
-              <Shield className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-            </div>
-            <div className="flex-1">
-              <div className="flex items-center space-x-2 mb-1">
-                <h4 className="font-semibold text-emerald-900 dark:text-emerald-100 text-sm">Third-Party Lab Tested</h4>
-                <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-bold bg-emerald-200 dark:bg-emerald-700 text-emerald-800 dark:text-emerald-200">
-                  ✓ VERIFIED
-                </span>
+        <div className="mx-4 mt-4 relative overflow-hidden rounded-2xl border border-emerald-200/60 dark:border-emerald-700/40" style={{ background: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 50%, #a7f3d0 100%)' }}>
+          <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-300/20 rounded-full blur-2xl -translate-y-6 translate-x-6" />
+          <div className="relative p-4">
+            <div className="flex items-start space-x-3">
+              <div className="flex-shrink-0">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #059669, #10b981)' }}>
+                  <Shield className="w-5 h-5 text-white" />
+                </div>
               </div>
-              <p className="text-xs text-emerald-700 dark:text-emerald-300">
-                <strong>Purity: {product.labTesting.purity}</strong> • {product.labTesting.lab} • {product.labTesting.testDate}
-              </p>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center flex-wrap gap-1.5 mb-1.5">
+                  <h4 className="text-sm font-bold text-emerald-950 tracking-tight">Third-Party Lab Tested</h4>
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-600 text-white">
+                    ✓ VERIFIED
+                  </span>
+                </div>
+                <p className="text-xs font-semibold text-emerald-800 mb-0.5">
+                  Purity: {product.labTesting.purity} — {product.labTesting.result}
+                </p>
+                <p className="text-[11px] text-emerald-600/80">
+                  {product.labTesting.lab} • {product.labTesting.testDate}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -430,7 +438,7 @@ const MobileProductDetail = () => {
                 <div className="space-y-0">
                   <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
                     <span className="text-gray-600 dark:text-gray-400 text-sm">Recommended Dosage</span>
-                    <span className="font-medium text-gray-900 dark:text-white text-sm">{product.dosage || 'See protocol'}</span>
+                    <span className="font-medium text-gray-900 dark:text-white text-sm">See research protocol</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-200 dark:border-gray-600">
                     <span className="text-gray-600 dark:text-gray-400 text-sm">Reconstitution</span>

@@ -36,6 +36,8 @@ export const products = [
     image: '/images/ss31-vial-mockup.png',
     inStock: 20,
     storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/ss31-protocol.html',
+    protocolTitle: 'SS-31 Research Protocol',
     labTesting: {
       tested: true,
       lab: 'Janoshik Analytical',
@@ -57,6 +59,8 @@ export const products = [
     image: '/images/nad-vial-mockup.png',
     inStock: 9,
     storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/nad-protocol.html',
+    protocolTitle: 'NAD+ Research Protocol',
     labTesting: {
       tested: true,
       lab: 'Janoshik Analytical',
@@ -78,6 +82,8 @@ export const products = [
     image: '/images/glow70-vial-mockup.png',
     inStock: 10,
     storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/glow70-protocol.html',
+    protocolTitle: 'GLOW 70 Research Protocol',
   },
   {
     id: 'motsc-40mg',
