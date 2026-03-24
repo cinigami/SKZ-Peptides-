@@ -244,37 +244,6 @@ const MobileHome = () => {
       </motion.section>
 
       {/* Free Essential Kit - Compact Horizontal Card */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="px-4 py-2"
-      >
-        <div
-          className="rounded-xl overflow-hidden flex items-center"
-          style={{
-            background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.08), rgba(16, 185, 129, 0.08))',
-            border: '1px solid rgba(34, 197, 94, 0.2)'
-          }}
-        >
-          <div className="p-4 flex-1">
-            <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">FREE Essential Kit</h3>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mb-2">Included with every peptide purchase</p>
-            <div className="flex items-center space-x-3">
-              <span className="inline-flex items-center text-[10px] font-medium text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded-full">💧 Bac Water</span>
-              <span className="inline-flex items-center text-[10px] font-medium text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded-full">💉 Syringe</span>
-              <span className="inline-flex items-center text-[10px] font-medium text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 px-2 py-0.5 rounded-full">🧽 Swab</span>
-            </div>
-          </div>
-          <div className="pr-4">
-            <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-              <Package className="w-6 h-6 text-green-600 dark:text-green-400" />
-            </div>
-          </div>
-        </div>
-      </motion.section>
-
       {/* Featured Products - 2 Column Grid */}
       <motion.section
         variants={containerVariants}
