@@ -17,22 +17,52 @@ const AdminOrders = () => {
   const [form, setForm] = useState({
     customerName: '',
     customerPhone: '',
-    products: '',
-    total: '',
     notes: '',
   })
+  const [selectedProducts, setSelectedProducts] = useState([])
+
+  const addProduct = (productId) => {
+    const product = products.find(p => p.id === productId)
+    if (!product) return
+    const existing = selectedProducts.find(sp => sp.id === productId)
+    if (existing) {
+      setSelectedProducts(selectedProducts.map(sp => 
+        sp.id === productId ? { ...sp, qty: sp.qty + 1 } : sp
+      ))
+    } else {
+      setSelectedProducts([...selectedProducts, { id: product.id, name: product.name, price: product.price, qty: 1 }])
+    }
+  }
+
+  const updateProductQty = (productId, qty) => {
+    if (qty <= 0) {
+      setSelectedProducts(selectedProducts.filter(sp => sp.id !== productId))
+    } else {
+      setSelectedProducts(selectedProducts.map(sp => 
+        sp.id === productId ? { ...sp, qty } : sp
+      ))
+    }
+  }
+
+  const removeProduct = (productId) => {
+    setSelectedProducts(selectedProducts.filter(sp => sp.id !== productId))
+  }
+
+  const orderTotal = selectedProducts.reduce((sum, sp) => sum + sp.price * sp.qty, 0)
+  const productsText = selectedProducts.map(sp => `${sp.name} x${sp.qty}`).join(', ')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (!form.customerName.trim()) return
+    if (!form.customerName.trim() || selectedProducts.length === 0) return
     addOrder({
       customerName: form.customerName,
       customerPhone: form.customerPhone,
-      products: form.products,
-      total: +form.total || 0,
+      products: productsText,
+      total: orderTotal,
       notes: form.notes,
     })
-    setForm({ customerName: '', customerPhone: '', products: '', total: '', notes: '' })
+    setForm({ customerName: '', customerPhone: '', notes: '' })
+    setSelectedProducts([])
     setShowForm(false)
   }
 
@@ -96,25 +126,47 @@ const AdminOrders = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Products</label>
-                <textarea
-                  value={form.products}
-                  onChange={(e) => setForm(f => ({ ...f, products: e.target.value }))}
-                  rows={2}
-                  placeholder="e.g. Retatrutide 5mg x2, NAD+ 500mg x1"
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500"
-                />
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Products *</label>
+                <select
+                  onChange={(e) => { if (e.target.value) { addProduct(e.target.value); e.target.value = '' } }}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500 text-sm"
+                >
+                  <option value="">+ Add product...</option>
+                  {products.filter(p => p.category !== 'Supplies').map(p => (
+                    <option key={p.id} value={p.id}>{p.name} — RM{p.price.toFixed(2)}</option>
+                  ))}
+                  <optgroup label="Supplies">
+                    {products.filter(p => p.category === 'Supplies').map(p => (
+                      <option key={p.id} value={p.id}>{p.name} — RM{p.price.toFixed(2)}</option>
+                    ))}
+                  </optgroup>
+                </select>
+
+                {/* Selected Products */}
+                {selectedProducts.length > 0 && (
+                  <div className="mt-2 space-y-2">
+                    {selectedProducts.map(sp => (
+                      <div key={sp.id} className="flex items-center justify-between bg-gray-50 dark:bg-gray-700 rounded-lg px-3 py-2">
+                        <span className="text-sm text-gray-900 dark:text-white font-medium">{sp.name}</span>
+                        <div className="flex items-center gap-2">
+                          <button type="button" onClick={() => updateProductQty(sp.id, sp.qty - 1)} className="w-6 h-6 flex items-center justify-center bg-gray-200 dark:bg-gray-600 rounded text-xs font-bold text-gray-700 dark:text-gray-200">−</button>
+                          <span className="text-sm font-semibold text-gray-900 dark:text-white w-6 text-center">{sp.qty}</span>
+                          <button type="button" onClick={() => updateProductQty(sp.id, sp.qty + 1)} className="w-6 h-6 flex items-center justify-center bg-gray-200 dark:bg-gray-600 rounded text-xs font-bold text-gray-700 dark:text-gray-200">+</button>
+                          <span className="text-sm text-gray-500 dark:text-gray-400 w-20 text-right">RM{(sp.price * sp.qty).toFixed(2)}</span>
+                          <button type="button" onClick={() => removeProduct(sp.id)} className="text-red-400 hover:text-red-600 ml-1">
+                            <X className="w-3.5 h-3.5" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Total (MYR)</label>
-                <input
-                  type="number"
-                  step="0.01"
-                  min="0"
-                  value={form.total}
-                  onChange={(e) => setForm(f => ({ ...f, total: e.target.value }))}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-purple-500"
-                />
+
+              {/* Auto-calculated Total */}
+              <div className="flex items-center justify-between bg-purple-50 dark:bg-purple-900/20 rounded-lg px-4 py-3">
+                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Total</span>
+                <span className="text-lg font-bold text-purple-700 dark:text-purple-300">RM {orderTotal.toFixed(2)}</span>
               </div>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Notes</label>
