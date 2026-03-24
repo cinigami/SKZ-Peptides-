@@ -113,7 +113,7 @@ const About = () => {
                   <Coffee className="w-8 h-8 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">AU (@nadojiken)</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Ruby</h3>
                   <p className="text-gray-600">Founder & Fellow Researcher</p>
                 </div>
               </div>
@@ -125,16 +125,7 @@ const About = () => {
                   I've personally researched, tested, and believe in.
                 </p>
                 
-                <p className="mb-4 font-medium">What that means for you:</p>
-                
-                <div className="text-left">
-                  <h4 className="font-semibold text-green-600 mb-3">✅ Good stuff:</h4>
-                  <ul className="text-sm space-y-2 mb-4">
-                    <li>• I only stock what I'd use myself</li>
-                    <li>• You talk directly to me — no support tickets, no bots</li>
-                    <li>• I'll tell you if something isn't right for your goals</li>
-                  </ul>
-                </div>
+
               </div>
             </div>
           </div>
