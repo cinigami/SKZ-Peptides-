@@ -16,7 +16,7 @@ const About = () => {
     {
       icon: Zap,
       title: 'Just Works',
-      description: 'Order on the website or through Telegram. I ship fast and don\'t overcomplicate things.'
+      description: 'Order on the website or through WhatsApp. I ship fast and don\'t overcomplicate things.'
     }
   ]
 
@@ -150,20 +150,20 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-primary-700 p-6 rounded-lg">
                 <MessageCircle className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Telegram</h3>
+                <h3 className="text-lg font-semibold mb-2">WhatsApp</h3>
                 <p className="text-primary-100 text-sm mb-3">
-                  Message @nadojiken directly. This is usually the fastest way to reach me.
+                  Message me directly on WhatsApp. This is usually the fastest way to reach me.
                 </p>
-                <p className="text-xs text-primary-200">Response time: Usually same day</p>
+                <a href="https://wa.me/60143801203" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">+60 14-380 1203</a>
               </div>
               
               <div className="bg-primary-700 p-6 rounded-lg">
-                <Code className="w-8 h-8 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Telegram Bot</h3>
+                <MessageCircle className="w-8 h-8 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold mb-2">Instagram</h3>
                 <p className="text-primary-100 text-sm mb-3">
-                  Use our bot for browsing products and placing orders 24/7.
+                  Follow us @skzpeptides for updates and product drops.
                 </p>
-                <p className="text-xs text-primary-200">Available: Always</p>
+                <a href="https://instagram.com/skzpeptides" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">@skzpeptides</a>
               </div>
               
               <div className="bg-primary-700 p-6 rounded-lg">
