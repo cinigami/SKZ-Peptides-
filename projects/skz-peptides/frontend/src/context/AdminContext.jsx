@@ -124,6 +124,15 @@ export function AdminProvider({ children }) {
       createdAt: new Date().toISOString(),
     }
     setOrders(prev => [newOrder, ...prev])
+    // Deduct stock for each product in the order
+    if (order.items && Array.isArray(order.items)) {
+      order.items.forEach(item => {
+        setProducts(prev => prev.map(p => {
+          if (p.id !== item.id) return p
+          return { ...p, inStock: Math.max(0, p.inStock - item.qty) }
+        }))
+      })
+    }
   }, [])
 
   const updateOrderStatus = useCallback((orderId, status) => {
