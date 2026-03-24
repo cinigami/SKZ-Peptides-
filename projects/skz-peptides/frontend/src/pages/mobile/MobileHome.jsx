@@ -150,13 +150,13 @@ const MobileHome = () => {
       {/* Free Promotions */}
       <section className="px-4 py-6 space-y-4">
         {/* FREE Essential Kit - Professional Design */}
-        <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-4">
-            <h3 className="font-bold text-gray-900 text-center mb-2">
-              FREE Essential Kit
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 overflow-hidden">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-4">
+            <h3 className="font-bold text-gray-900 dark:text-white text-center mb-2">
+              🧪 FREE Essential Kit with Every Peptide
             </h3>
-            <p className="text-xs text-gray-600 text-center mb-3">
-              Complete research supplies included with every peptide purchase
+            <p className="text-xs text-gray-600 dark:text-gray-300 text-center mb-3">
+              Every peptide purchase includes a complete essential research kit at no additional cost
             </p>
           </div>
           
@@ -168,7 +168,7 @@ const MobileHome = () => {
                   <div className="w-3 h-4 bg-blue-400 rounded-sm"></div>
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 text-xs">Bacteriostatic Water</p>
+                  <p className="font-medium text-gray-900 dark:text-white text-xs">Bacteriostatic Water</p>
                   <p className="text-gray-500 text-xs">3ml sterile vial</p>
                 </div>
               </div>
@@ -179,7 +179,7 @@ const MobileHome = () => {
                   <div className="w-4 h-1 bg-gray-600 rounded-full"></div>
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 text-xs">Insulin Syringe</p>
+                  <p className="font-medium text-gray-900 dark:text-white text-xs">Insulin Syringe</p>
                   <p className="text-gray-500 text-xs">1ml precision dosing</p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ const MobileHome = () => {
                   <div className="w-3 h-3 bg-white border border-gray-300 rounded"></div>
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 text-xs">Alcohol Prep Pad</p>
+                  <p className="font-medium text-gray-900 dark:text-white text-xs">Alcohol Prep Pad</p>
                   <p className="text-gray-500 text-xs">Sterile 70% isopropyl</p>
                 </div>
               </div>
