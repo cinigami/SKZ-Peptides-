@@ -175,19 +175,7 @@ const About = () => {
                 <p className="text-xs text-primary-200">Always online</p>
               </div>
             </div>
-            
-            <div className="mt-8 p-6 bg-primary-700 rounded-lg text-left max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold mb-3">💬 How I Actually Communicate</h3>
-              <p className="text-primary-100 text-sm mb-3">
-                I read and respond to every message myself. No assistants, no copy-paste responses. 
-                Sometimes that means waiting a bit longer, but you get real answers from someone 
-                who actually knows what they're talking about.
-              </p>
-              <p className="text-primary-100 text-xs italic">
-                Pro tip: Don't message me asking "is this legit?" - just look at the protocols I write 
-                and judge for yourself. Scammers don't usually spend months writing detailed research guides.
-              </p>
-            </div>
+
           </div>
         </div>
       </section>
