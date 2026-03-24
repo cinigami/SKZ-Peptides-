@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: MessageCircle,
       title: 'Real Person Available',
-      description: 'Message me directly @nadojiken on Telegram. You\'ll get actual answers, not "please allow 3-5 business days."'
+      description: 'WhatsApp me anytime for questions, orders, or consultation.'
     },
     {
       icon: Zap,
