@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTS-c Research Protocol - SKZ Peptides</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            -webkit-text-size-adjust: 100%;
+        }
+        p { font-size: 15px; line-height: 1.6; }
+        @media print {
+            body { margin: 0; padding: 15px; }
+            .no-print { display: none; }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { margin: 0; font-size: 2.2em; }
+        .header p { margin: 8px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+        h1 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 8px; margin: 25px 0 15px 0; }
+        h2 { color: #667eea; margin-top: 30px; margin-bottom: 12px; border-left: 4px solid #667eea; padding-left: 12px; background: rgba(102, 126, 234, 0.05); padding: 8px 12px; border-radius: 0 6px 6px 0; }
+        h3 { color: #4facfe; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; }
+        h4 { font-size: 1em; }
+        .info-box { background: #f8f9ff; border: 1px solid #e3f2fd; border-left: 4px solid #2196f3; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .warning { background: #fff8e1; border: 1px solid #ffcc02; border-left: 4px solid #ff9800; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .danger { background: #fff5f5; border: 1px solid #feb2b2; border-left: 4px solid #e53e3e; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .success { background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        ul, ol { margin: 12px 0; padding-left: 22px; font-size: 15px; }
+        li { margin: 6px 0; font-size: 15px; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .footer { text-align: center; margin-top: 40px; padding: 25px; background: #f8f9ff; border-radius: 12px; border: 1px solid #e3f2fd; }
+        .print-btn { display: block; margin: 15px 0 15px auto; background: #667eea; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
+        .print-btn:hover { background: #5a6fd8; }
+            /* Watermark */
+        .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+        .watermark::before { content: "SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES"; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; transform: rotate(-35deg); font-size: 36px; font-weight: 800; color: rgba(124, 58, 237, 0.25); letter-spacing: 8px; line-height: 100px; white-space: nowrap; word-spacing: 40px; user-select: none; -webkit-user-select: none; }
+        @media print { .watermark { position: fixed; } .watermark::before { color: rgba(124, 58, 237, 0.28); } }
+            .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); pointer-events: none; z-index: 0; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 60px; overflow: hidden; }
+        body > *:not(.watermark) { position: relative; z-index: 1; }
+        .watermark span { font-size: 48px; font-weight: 900; color: rgba(102, 126, 234, 0.04); white-space: nowrap; transform: rotate(-35deg); display: inline-block; letter-spacing: 5px; }
+    </style>
+</head>
+<body>
+    <div class="watermark"><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span></div>
+
+    <div class="header">
+        <h1>🧬 SKZ PEPTIDES</h1>
+        <p>Research Protocol: MOTS-c 40mg</p>
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print PDF</button>
+
+    <h1>🧬 MOTS-c 40mg Research Protocol</h1>
+
+    <div class="info-box">
+        <h3>📋 Product Information</h3>
+        <ul>
+            <li><strong>Product:</strong> SKZ Peptides MOTS-c 40mg</li>
+            <li><strong>Full Name:</strong> Mitochondrial Open Reading Frame of the 12S rRNA-c</li>
+            <li><strong>Category:</strong> Mitochondrial-Derived Peptide (MDP)</li>
+            <li><strong>Purity:</strong> ≥99% (Janoshik Analytical verified)</li>
+            <li><strong>Form:</strong> Lyophilized powder</li>
+            <li><strong>Storage:</strong> 2-8°C refrigerated</li>
+        </ul>
+    </div>
+
+    <h2>🔬 How MOTS-c Works</h2>
+    <p>MOTS-c is a 16-amino-acid peptide encoded in the mitochondrial genome. It acts as a metabolic regulator through the following mechanisms:</p>
+    <ul>
+        <li><strong>AMPK Pathway Activation:</strong> Activates AMP-activated protein kinase, the body's master metabolic switch</li>
+        <li><strong>Glucose Regulation:</strong> Enhances cellular glucose uptake and insulin sensitivity</li>
+        <li><strong>Fat Metabolism:</strong> Promotes fat oxidation and shifts energy utilization</li>
+        <li><strong>Mitochondrial Function:</strong> Improves mitochondrial efficiency and ATP production</li>
+        <li><strong>Exercise Mimetic:</strong> Replicates some molecular benefits of exercise at the cellular level</li>
+        <li><strong>Stress Response:</strong> Activates adaptive cellular stress response pathways</li>
+    </ul>
+
+    <h2>🔬 Reconstitution Protocol</h2>
+
+    <h3>Materials Needed:</h3>
+    <ul>
+        <li>1x MOTS-c 40mg vial</li>
+        <li>Bacteriostatic Water (BAC Water)</li>
+        <li>Insulin syringes (29G-31G)</li>
+        <li>Alcohol swabs</li>
+        <li>Sterile work environment</li>
+    </ul>
+
+    <h3>Step-by-Step Reconstitution:</h3>
+    <ol>
+        <li><strong>Preparation</strong>
+            <ul>
+                <li>Wash hands thoroughly</li>
+                <li>Clean work surface with alcohol</li>
+                <li>Allow vials to reach room temperature (10-15 minutes)</li>
+                <li>Remove protective caps from both vials</li>
+            </ul>
+        </li>
+        <li><strong>Sterilize</strong>
+            <ul>
+                <li>Wipe rubber stoppers of both vials with fresh alcohol swabs</li>
+                <li>Allow to air dry for 30-60 seconds</li>
+                <li>Do NOT blow on or wipe dry</li>
+            </ul>
+        </li>
+        <li><strong>Reconstitution</strong>
+            <ul>
+                <li>Draw 2mL BAC Water into a sterile syringe</li>
+                <li>Insert needle into MOTS-c vial at an angle</li>
+                <li>Inject BAC Water slowly down the inside wall of the vial</li>
+                <li>Do NOT spray directly onto powder</li>
+                <li>Gently swirl or roll between palms — do NOT shake</li>
+                <li>Allow to dissolve completely (2-5 minutes) until solution is clear</li>
+            </ul>
+        </li>
+        <li><strong>Label &amp; Store</strong>
+            <ul>
+                <li>Label vial with: MOTS-c, concentration, date reconstituted</li>
+                <li>Store immediately at 2-8°C (refrigerator)</li>
+                <li>Protect from light</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Concentration Reference:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>BAC Water Added</th>
+                <th>Concentration</th>
+                <th>5mg per injection</th>
+                <th>10mg per injection</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1mL</td>
+                <td>40mg/mL</td>
+                <td>0.125mL (12.5 units)</td>
+                <td>0.25mL (25 units)</td>
+            </tr>
+            <tr>
+                <td><strong>2mL (recommended)</strong></td>
+                <td><strong>20mg/mL</strong></td>
+                <td><strong>0.25mL (25 units)</strong></td>
+                <td><strong>0.5mL (50 units)</strong></td>
+            </tr>
+            <tr>
+                <td>4mL</td>
+                <td>10mg/mL</td>
+                <td>0.5mL (50 units)</td>
+                <td>1.0mL (100 units)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>📊 Research Dosing Guidelines</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Dose per Injection</th>
+                <th>Frequency</th>
+                <th>Weekly Total</th>
+                <th>Cycle Length</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Beginner</strong></td>
+                <td>5mg (0.25mL / 25 units)</td>
+                <td>2x per week</td>
+                <td>10mg/week</td>
+                <td>4-8 weeks</td>
+            </tr>
+            <tr>
+                <td><strong>Intermediate</strong></td>
+                <td>5mg (0.25mL / 25 units)</td>
+                <td>3x per week</td>
+                <td>15mg/week</td>
+                <td>8-12 weeks</td>
+            </tr>
+            <tr>
+                <td><strong>Advanced</strong></td>
+                <td>10mg (0.5mL / 50 units)</td>
+                <td>2-3x per week</td>
+                <td>20-30mg/week</td>
+                <td>8-12 weeks</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="success">
+        <h4>💡 How Long Does One 40mg Vial Last?</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Protocol</th>
+                    <th>Weekly Usage</th>
+                    <th>Vial Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beginner (5mg × 2/week)</td>
+                    <td>10mg/week</td>
+                    <td>~4 weeks</td>
+                </tr>
+                <tr>
+                    <td>Intermediate (5mg × 3/week)</td>
+                    <td>15mg/week</td>
+                    <td>~2.5 weeks</td>
+                </tr>
+                <tr>
+                    <td>Advanced (10mg × 2/week)</td>
+                    <td>20mg/week</td>
+                    <td>~2 weeks</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>⏰ Administration Schedule</h2>
+    <div class="info-box">
+        <h4>Timing:</h4>
+        <ul>
+            <li><strong>Best time:</strong> Morning, before or after exercise</li>
+            <li><strong>Frequency:</strong> 2-3x per week (e.g., Mon/Wed/Fri or Mon/Thu)</li>
+            <li><strong>Duration:</strong> 8-12 week research cycles</li>
+            <li><strong>Rest period:</strong> 4-6 weeks off between cycles recommended</li>
+        </ul>
+
+        <h4>Injection Sites (Subcutaneous):</h4>
+        <ul>
+            <li><strong>Preferred:</strong> Lower abdomen (2 inches from navel)</li>
+            <li><strong>Alternative:</strong> Upper thigh, back of arm</li>
+            <li><strong>Needle:</strong> 29G-31G insulin syringe</li>
+            <li><strong>Depth:</strong> 4-6mm subcutaneous</li>
+            <li><strong>Rotate injection sites</strong> each session to prevent tissue irritation</li>
+        </ul>
+    </div>
+
+    <h3>Injection Steps:</h3>
+    <ol>
+        <li>Clean injection site with alcohol swab, let dry</li>
+        <li>Draw correct dose from reconstituted vial</li>
+        <li>Pinch skin at injection site</li>
+        <li>Insert needle at 45-90° angle</li>
+        <li>Inject slowly and steadily</li>
+        <li>Hold for 5-10 seconds before withdrawing</li>
+        <li>Do not massage the site</li>
+    </ol>
+
+    <h2>📈 What to Expect — Results Timeline</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Phase</th>
+                <th>Timeline</th>
+                <th>Expected Observations</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>🌱 Adaptation</strong></td>
+                <td>Week 1-2</td>
+                <td>Subtle energy increase, slightly faster workout recovery, AMPK pathway activation begins</td>
+            </tr>
+            <tr>
+                <td><strong>🔥 Early Shifts</strong></td>
+                <td>Week 3-4</td>
+                <td>Noticeable energy improvement, early glucose uptake changes, insulin sensitivity beginning to improve</td>
+            </tr>
+            <tr>
+                <td><strong>🏃 Performance</strong></td>
+                <td>Week 5-8</td>
+                <td>Enhanced endurance, efficient fat utilization, fewer post-meal energy crashes, improved fasting glucose</td>
+            </tr>
+            <tr>
+                <td><strong>💪 Composition</strong></td>
+                <td>Week 9-12</td>
+                <td>Body composition changes visible, reduced fat mass, preserved lean muscle, peak exercise benefits</td>
+            </tr>
+            <tr>
+                <td><strong>⭐ Optimization</strong></td>
+                <td>Month 3+</td>
+                <td>Metabolic system at peak efficiency, sustained vitality, long-term metabolic resilience</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>🔍 Research Monitoring</h2>
+    <h3>Weekly Measurements:</h3>
+    <ul>
+        <li>Body weight and composition (if available)</li>
+        <li>Fasting blood glucose (if monitoring)</li>
+        <li>Energy levels throughout the day (1-10 scale)</li>
+        <li>Exercise performance metrics (distance, reps, recovery time)</li>
+        <li>Sleep quality and duration</li>
+        <li>Appetite and food intake changes</li>
+    </ul>
+
+    <h3>Monthly Assessments:</h3>
+    <ul>
+        <li>Progress photos</li>
+        <li>Body measurements (waist, hip, thigh)</li>
+        <li>Insulin sensitivity markers (if available)</li>
+        <li>Overall well-being and vitality assessment</li>
+        <li>Exercise capacity comparison (endurance tests)</li>
+    </ul>
+
+    <h2>🏋️ Maximizing Results</h2>
+    <div class="success">
+        <h4>MOTS-c works best when paired with an active lifestyle:</h4>
+        <ul>
+            <li><strong>Exercise:</strong> Combine with regular cardio + resistance training — MOTS-c amplifies the benefits of exercise</li>
+            <li><strong>Diet:</strong> Balanced nutrition with adequate protein supports lean mass preservation</li>
+            <li><strong>Sleep:</strong> 7-9 hours — recovery happens during sleep</li>
+            <li><strong>Hydration:</strong> Stay well-hydrated, especially on injection days</li>
+            <li><strong>Consistency:</strong> Stick to the schedule — cumulative effects build over weeks</li>
+        </ul>
+    </div>
+
+    <h2>⚠️ Important Safety Considerations</h2>
+    <div class="warning">
+        <h4>Potential Research Observations:</h4>
+        <ul>
+            <li>Mild injection site irritation, redness, or swelling</li>
+            <li>Temporary fatigue or energy fluctuations</li>
+            <li>Headache or lightheadedness</li>
+            <li>Mild GI symptoms (nausea, bloating)</li>
+            <li>Heart palpitations (less common)</li>
+            <li>Insomnia (less common)</li>
+            <li>Appetite changes</li>
+        </ul>
+    </div>
+
+    <div class="danger">
+        <h4>🚫 Contraindications — Who Should NOT Use:</h4>
+        <ul>
+            <li>Under 18 years of age</li>
+            <li>Pregnancy or breastfeeding</li>
+            <li>Active cancer diagnosis (contradictory research on cancer risk)</li>
+            <li>Severe kidney or liver disease</li>
+            <li>Risk of hypoglycemia</li>
+        </ul>
+
+        <h4>⚠️ Drug Interactions — Use Caution If Taking:</h4>
+        <ul>
+            <li><strong>Metformin</strong> or other AMPK-activating drugs (both activate AMPK — may compound effects)</li>
+            <li><strong>Insulin-sensitizing drugs</strong> (thiazolidinediones) — blood sugar may drop</li>
+            <li><strong>Aspirin</strong> and other over-the-counter AMPK activators</li>
+            <li>Any diabetes medication — dosages may need adjustment</li>
+        </ul>
+        <p><strong>⚡ If on any diabetes medication, monitor blood sugar closely and consult your healthcare provider.</strong></p>
+    </div>
+
+    <h2>📚 Storage & Handling</h2>
+    <div class="info-box">
+        <h4>Powder (Unreconstituted):</h4>
+        <ul>
+            <li>Store at 2-8°C (refrigerator) — stable for 2+ years</li>
+            <li>Can be frozen at -20°C for up to 3 years</li>
+            <li>Protect from light and moisture</li>
+        </ul>
+
+        <h4>Reconstituted Solution:</h4>
+        <ul>
+            <li>Store at 2-8°C (refrigerator)</li>
+            <li>Use within 21-28 days for optimal potency</li>
+            <li>Protect from light</li>
+            <li>Do not freeze reconstituted solution</li>
+            <li>Discard if solution becomes cloudy or contains particles</li>
+        </ul>
+    </div>
+
+    <h2>💡 Pro Research Tips</h2>
+    <ol>
+        <li><strong>Start Low, Go Slow</strong> — Begin with 5mg 2x/week and assess tolerance before increasing</li>
+        <li><strong>Time It Right</strong> — Morning or pre-workout injections leverage natural metabolic rhythms</li>
+        <li><strong>Pair with Exercise</strong> — MOTS-c is an exercise mimetic, but works BEST alongside actual training</li>
+        <li><strong>Monitor Blood Sugar</strong> — Especially if pre-diabetic or on glucose-lowering medications</li>
+        <li><strong>Keep a Research Log</strong> — Track energy, exercise performance, body composition, and side effects</li>
+        <li><strong>Cycle Properly</strong> — 8-12 weeks on, 4-6 weeks off to prevent tolerance</li>
+        <li><strong>Don't Stack Blindly</strong> — Be cautious combining with other AMPK activators (metformin, berberine)</li>
+    </ol>
+
+    <h2>🔬 Research Background</h2>
+    <p><strong>MOTS-c</strong> (Mitochondrial Open Reading Frame of the 12S rRNA-c) is a 16-amino-acid peptide encoded within the mitochondrial genome. Discovered in 2015 by Dr. Changhan David Lee at USC, it represents a new class of signaling molecules — mitochondrial-derived peptides (MDPs).</p>
+    
+    <p>Key research findings:</p>
+    <ul>
+        <li>Activates AMPK, the body's master metabolic regulator</li>
+        <li>Enhances glucose metabolism and insulin sensitivity in animal models</li>
+        <li>Improves exercise capacity and endurance</li>
+        <li>Supports healthy aging by combating age-related metabolic decline</li>
+        <li>Acts as an "exercise mimetic" — replicating some molecular benefits of physical activity</li>
+        <li>Analog CB4211 shown to be "safe and well tolerated" in human trials</li>
+    </ul>
+
+    <div class="warning">
+        <h3>⚠️ DISCLAIMER</h3>
+        <p>This protocol is for research and educational purposes only. MOTS-c is not FDA-approved for any medical condition. Individual responses may vary significantly. Consult qualified healthcare professionals before use. SKZ Peptides provides research materials only.</p>
+    </div>
+
+    <div class="footer">
+        <h3>SKZ Peptides — Professional Research Support</h3>
+        <p><strong>📧 Email:</strong> support@skzpeptides.com</p>
+        <p><strong>📱 Telegram:</strong> @nadojiken</p>
+        <p><strong>🌐 Website:</strong> skzpeptides.netlify.app</p>
+        <p style="margin-top: 15px; font-size: 0.9em; color: #999;">
+            Protocol Version 2.0 — March 2026
+        </p>
+    </div>
+
+    <script>
+        function generatePDF() {
+            window.print();
+        }
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
