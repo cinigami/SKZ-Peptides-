@@ -21,12 +21,7 @@ const MobileHeader = () => {
     <>
       {/* Mobile Header - Frosted Glass */}
       <header
-        className="lg:hidden sticky top-0 z-50 border-b border-white/10"
-        style={{
-          background: 'rgba(255, 255, 255, 0.8)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)'
-        }}
+        className="lg:hidden sticky top-0 z-50 border-b border-white/10 dark:border-gray-800 bg-white/80 dark:bg-black/90 backdrop-blur-xl"
       >
         <div className="px-4 py-3">
           <div className="flex justify-between items-center">
@@ -134,12 +129,7 @@ const MobileHeader = () => {
 
       {/* Mobile Bottom Navigation - Frosted Glass */}
       <nav
-        className="lg:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-white/10"
-        style={{
-          background: 'rgba(255, 255, 255, 0.85)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)'
-        }}
+        className="lg:hidden fixed bottom-0 left-0 right-0 z-50 border-t border-white/10 dark:border-gray-800 bg-white/85 dark:bg-black/90 backdrop-blur-xl"
       >
         <div className="flex items-center justify-around py-2">
           {navigation.map((item) => {
