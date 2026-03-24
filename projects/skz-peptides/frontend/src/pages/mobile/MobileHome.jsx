@@ -102,7 +102,7 @@ const MobileHome = () => {
               color: '#8A8599'
             }}
           >
-            Because what you put in your body should come from a source you trust. Not a gamble.
+            Because what you put in your body should come from a source you trust.
           </motion.p>
 
           <motion.div variants={itemVariants} className="flex flex-col space-y-3 mb-8">
@@ -143,43 +143,37 @@ const MobileHome = () => {
         viewport={{ once: true }}
         className="px-4 pt-6 pb-2"
       >
-        <div
-          className="rounded-2xl p-6"
-          style={{
-            background: '#F0FDF9',
-            border: '1px solid #D1FAE5'
-          }}
-        >
+        <div className="rounded-2xl p-6 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800">
           <div className="text-center mb-5">
-            <h2 className="text-lg font-bold text-gray-900 flex items-center justify-center gap-2">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white flex items-center justify-center gap-2">
               🧪 FREE Essential Kit with Every Peptide
             </h2>
-            <p className="text-sm text-gray-500 mt-1">
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
               Every peptide purchase includes a complete essential research kit at no additional cost
             </p>
           </div>
 
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-white rounded-xl p-3 text-center shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
               <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
                 <img src="/images/icon-bac-water.png" alt="BAC Water" className="w-full h-full object-contain" />
               </div>
-              <p className="text-xs font-semibold text-gray-900">Bacteriostatic Water</p>
-              <p className="text-[10px] text-gray-500">3ml sterile vial</p>
+              <p className="text-xs font-semibold text-gray-900 dark:text-white">Bacteriostatic Water</p>
+              <p className="text-[10px] text-gray-500 dark:text-gray-400">3ml sterile vial</p>
             </div>
-            <div className="bg-white rounded-xl p-3 text-center shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
               <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
                 <img src="/images/icon-syringe.png" alt="Syringe" className="w-full h-full object-contain" />
               </div>
-              <p className="text-xs font-semibold text-gray-900">Insulin Syringe</p>
-              <p className="text-[10px] text-gray-500">Precise measurement tool</p>
+              <p className="text-xs font-semibold text-gray-900 dark:text-white">Insulin Syringe</p>
+              <p className="text-[10px] text-gray-500 dark:text-gray-400">Precise measurement tool</p>
             </div>
-            <div className="bg-white rounded-xl p-3 text-center shadow-sm">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-3 text-center shadow-sm">
               <div className="w-16 h-16 mx-auto mb-2 rounded-lg overflow-hidden">
                 <img src="/images/icon-swab.png" alt="Alcohol Swab" className="w-full h-full object-contain" />
               </div>
-              <p className="text-xs font-semibold text-gray-900">Alcohol Swab</p>
-              <p className="text-[10px] text-gray-500">Sterile preparation</p>
+              <p className="text-xs font-semibold text-gray-900 dark:text-white">Alcohol Swab</p>
+              <p className="text-[10px] text-gray-500 dark:text-gray-400">Sterile preparation</p>
             </div>
           </div>
         </div>
