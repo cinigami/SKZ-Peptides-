@@ -3,7 +3,7 @@ import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag } from 'lucide-react'
 import { useCart } from '../../context/CartContext'
 
 const MobileCart = () => {
-  const { cart, updateQuantity, removeFromCart, getCartTotal, itemCount } = useCart()
+  const { cart, updateQuantity, removeFromCart, cartTotal, itemCount } = useCart()
 
   const formatPrice = (price) => `MYR ${price.toFixed(2)}`
 
@@ -144,7 +144,7 @@ const MobileCart = () => {
             Subtotal ({itemCount} items)
           </span>
           <span className="text-xl font-bold text-gray-900 dark:text-white">
-            {formatPrice(getCartTotal())}
+            {formatPrice(cartTotal)}
           </span>
         </div>
 
