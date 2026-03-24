@@ -39,10 +39,8 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link to="/products" className="hover:text-white transition-colors">All Products</Link></li>
+              <li><Link to="/protocols" className="hover:text-white transition-colors">Protocols</Link></li>
               <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
-              <li><Link to="/shipping" className="hover:text-white transition-colors">Shipping Info</Link></li>
             </ul>
           </div>
 
@@ -50,9 +48,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Categories</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link to="/products?category=Growth%20Hormone" className="hover:text-white transition-colors">Growth Hormone</Link></li>
+              <li><Link to="/products?category=Weight%20Management" className="hover:text-white transition-colors">Weight Management</Link></li>
+              <li><Link to="/products?category=Anti-Aging" className="hover:text-white transition-colors">Anti-Aging</Link></li>
               <li><Link to="/products?category=Healing" className="hover:text-white transition-colors">Healing & Recovery</Link></li>
-              <li><Link to="/products?category=Cosmetic" className="hover:text-white transition-colors">Cosmetic</Link></li>
+              <li><Link to="/products?category=Mitochondrial" className="hover:text-white transition-colors">Mitochondrial Health</Link></li>
               <li><Link to="/products?category=Supplies" className="hover:text-white transition-colors">Supplies</Link></li>
             </ul>
           </div>
@@ -81,7 +80,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2024 SKZ Peptides. All rights reserved.
+              © 2026 SKZ Peptides. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
@@ -95,12 +94,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="mt-4 text-xs text-gray-500 text-center">
-            <p>
-              ⚠️ These products are for research purposes only. Not for human consumption. 
-              Consult a healthcare professional before use.
-            </p>
-          </div>
+
         </div>
       </div>
     </footer>

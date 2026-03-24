@@ -14,12 +14,11 @@ const Protocols = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Research <span className="text-gradient">Protocols</span>
+          <h1 className="text-4xl font-bold mb-4" style={{ color: '#7C3AED' }}>
+            Research Protocols
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Detailed research protocols for our peptides. 
-            Clear documentation to guide your research work.
+            Everything you need to know before you start — dosing guides, reconstitution steps, and usage documentation for every product we carry.
           </p>
         </motion.div>
 
@@ -31,19 +30,19 @@ const Protocols = () => {
           className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12"
         >
           <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <Beaker className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+            <Beaker className="w-12 h-12 mx-auto mb-4" style={{ color: '#7C3AED' }} />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Scientific Accuracy</h3>
             <p className="text-gray-600">Research-grade protocols based on current scientific literature</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <Shield className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+            <Shield className="w-12 h-12 mx-auto mb-4" style={{ color: '#7C3AED' }} />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Safety First</h3>
             <p className="text-gray-600">Comprehensive safety guidelines and monitoring recommendations</p>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-sm text-center">
-            <Zap className="w-12 h-12 text-primary-600 mx-auto mb-4" />
+            <Zap className="w-12 h-12 mx-auto mb-4" style={{ color: '#7C3AED' }} />
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Optimized Results</h3>
             <p className="text-gray-600">Proven dosing schedules and administration protocols</p>
           </div>
@@ -65,11 +64,11 @@ const Protocols = () => {
               className="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow"
             >
               {/* Product Image */}
-              <div className="h-48 bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center">
+              <div className="h-52 bg-gradient-to-br from-primary-50 to-secondary-50 flex items-center justify-center p-6">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="h-32 w-32 object-contain"
+                  className="max-h-full max-w-full object-contain"
                   onError={(e) => {
                     e.target.src = `https://via.placeholder.com/200x150/f3f4f6/9ca3af?text=${encodeURIComponent(product.name)}`
                   }}
@@ -126,28 +125,23 @@ const Protocols = () => {
           className="bg-white rounded-lg p-8 mt-12"
         >
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Professional Research Support</h2>
-            <p className="text-gray-600 mb-6">
-              Our research protocols are developed by experienced researchers and updated regularly 
-              based on the latest scientific findings. Each protocol provides comprehensive guidance 
-              for safe and effective peptide research.
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#7C3AED' }}>Beyond the Vial.</h2>
+            <p className="text-gray-600 mb-8 text-lg">
+              Buying peptides is step one. Knowing how to use them properly? That's where we come in.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">📋 Detailed Protocols</h4>
-                <p className="text-gray-600">Step-by-step instructions for every aspect of peptide research</p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">🔬 Research Grade</h4>
-                <p className="text-gray-600">Protocols designed for serious research applications</p>
-              </div>
-              
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">💬 Expert Support</h4>
-                <p className="text-gray-600">Contact our team for protocol questions and guidance</p>
-              </div>
+            <div className="rounded-xl p-6 border" style={{ background: 'linear-gradient(135deg, #faf5ff, #f3e8ff)', borderColor: '#e9d5ff' }}>
+              <h4 className="font-bold text-lg mb-2" style={{ color: '#7C3AED' }}>💬 Expert Support</h4>
+              <p className="text-gray-600 mb-4">Got questions? WhatsApp us for a free consultation</p>
+              <a
+                href="https://wa.me/60174127407?text=Hi%20SKZ%20Peptides%2C%20I%20have%20a%20question"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all hover:opacity-90"
+                style={{ background: '#7C3AED' }}
+              >
+                Chat with us on WhatsApp
+              </a>
             </div>
           </div>
         </motion.div>
@@ -162,7 +156,7 @@ const Protocols = () => {
           <div className="text-center">
             <h3 className="text-lg font-semibold text-yellow-800 mb-2">⚠️ Research Use Only</h3>
             <p className="text-yellow-700 text-sm">
-              These protocols are for research purposes only. Not intended for human consumption. 
+              These protocols are for research purposes only. 
               Consult qualified professionals for research guidance. SKZ Peptides provides research materials only.
             </p>
           </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import { Filter, Grid, List, Search } from 'lucide-react'
+import { Filter, Grid, List, Search, Truck } from 'lucide-react'
 import { products, categories } from '../data/products'
 import ProductCard from '../components/ProductCard'
 import MobileProducts from './mobile/MobileProducts'
@@ -24,6 +24,14 @@ const Products = () => {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Sync category from URL params when navigating
+  useEffect(() => {
+    const categoryFromUrl = searchParams.get('category')
+    if (categoryFromUrl) {
+      setSelectedCategory(categoryFromUrl)
+    }
+  }, [searchParams])
 
   // Filter and sort products
   useEffect(() => {
@@ -52,8 +60,6 @@ const Products = () => {
           return b.price - a.price
         case 'profit':
           return b.profit - a.profit
-        case 'stock':
-          return b.inStock - a.inStock
         default:
           return a.name.localeCompare(b.name)
       }
@@ -85,6 +91,12 @@ const Products = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Premium quality peptides for your research needs
           </p>
+        </div>
+
+        {/* Free Shipping Banner */}
+        <div className="mb-6 rounded-xl p-3 flex items-center gap-3 border border-purple-100" style={{ background: 'linear-gradient(135deg, #faf5ff, #f3e8ff)' }}>
+          <Truck className="w-5 h-5 flex-shrink-0" style={{ color: '#7C3AED' }} />
+          <p className="text-sm text-gray-600"><strong className="text-gray-900">FREE shipping</strong> on orders above RM100 • Fast delivery across Malaysia</p>
         </div>
 
         {/* Search and Filters */}
@@ -125,7 +137,6 @@ const Products = () => {
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
               <option value="profit">Best Margin</option>
-              <option value="stock">Stock Level</option>
             </select>
 
             {/* View Mode */}
@@ -211,8 +222,6 @@ const ProductListItem = ({ product }) => {
         <p className="text-gray-600 mb-2">{product.description}</p>
         <div className="flex items-center space-x-4 text-sm text-gray-500">
           <span>{product.category}</span>
-          <span>•</span>
-          <span>{product.inStock} in stock</span>
           <span>•</span>
           <span>{product.dosage}</span>
         </div>

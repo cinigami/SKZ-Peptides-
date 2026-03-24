@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOW 70 Research Protocol - SKZ Peptides</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            -webkit-text-size-adjust: 100%;
+        }
+        p { font-size: 15px; line-height: 1.6; }
+        @media print {
+            body { margin: 0; padding: 15px; }
+            .no-print { display: none; }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { margin: 0; font-size: 2.2em; }
+        .header p { margin: 8px 0 0 0; font-size: 1.1em; opacity: 0.9; }
+        h1 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 8px; margin: 25px 0 15px 0; }
+        h2 { color: #667eea; margin-top: 30px; margin-bottom: 12px; border-left: 4px solid #667eea; padding-left: 12px; background: rgba(102, 126, 234, 0.05); padding: 8px 12px; border-radius: 0 6px 6px 0; }
+        h3 { color: #4facfe; margin-top: 20px; margin-bottom: 10px; font-size: 1.1em; }
+        h4 { font-size: 1em; }
+        .info-box { background: #f8f9ff; border: 1px solid #e3f2fd; border-left: 4px solid #2196f3; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .warning { background: #fff8e1; border: 1px solid #ffcc02; border-left: 4px solid #ff9800; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .danger { background: #fff5f5; border: 1px solid #feb2b2; border-left: 4px solid #e53e3e; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        .success { background: #f0fff4; border: 1px solid #c6f6d5; border-left: 4px solid #38a169; border-radius: 6px; padding: 15px; margin: 15px 0; }
+        ul, ol { margin: 12px 0; padding-left: 22px; font-size: 15px; }
+        li { margin: 6px 0; font-size: 15px; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .footer { text-align: center; margin-top: 40px; padding: 25px; background: #f8f9ff; border-radius: 12px; border: 1px solid #e3f2fd; }
+        .print-btn { display: block; margin: 15px 0 15px auto; background: #667eea; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
+        .print-btn:hover { background: #5a6fd8; }
+        .component-badge { display: inline-block; background: #667eea; color: white; padding: 3px 10px; border-radius: 12px; font-size: 0.85em; font-weight: 600; margin: 2px; }
+            /* Watermark */
+        .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+        .watermark::before { content: "SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES"; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; transform: rotate(-35deg); font-size: 36px; font-weight: 800; color: rgba(124, 58, 237, 0.25); letter-spacing: 8px; line-height: 100px; white-space: nowrap; word-spacing: 40px; user-select: none; -webkit-user-select: none; }
+        @media print { .watermark { position: fixed; } .watermark::before { color: rgba(124, 58, 237, 0.28); } }
+            .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); pointer-events: none; z-index: 0; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 60px; overflow: hidden; }
+        body > *:not(.watermark) { position: relative; z-index: 1; }
+        .watermark span { font-size: 48px; font-weight: 900; color: rgba(102, 126, 234, 0.04); white-space: nowrap; transform: rotate(-35deg); display: inline-block; letter-spacing: 5px; }
+    </style>
+</head>
+<body>
+    <div class="watermark"><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span></div>
+
+    <div class="header">
+        <h1>🧬 SKZ PEPTIDES</h1>
+        <p>Research Protocol: GLOW 70 (BPC-157 + GHK-Cu + TB-500)</p>
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print PDF</button>
+
+    <h1>✨ GLOW 70 Research Protocol</h1>
+
+    <div class="info-box">
+        <h3>📋 Product Information</h3>
+        <ul>
+            <li><strong>Product:</strong> SKZ Peptides GLOW 70mg Blend</li>
+            <li><strong>Category:</strong> Healing &amp; Regeneration</li>
+            <li><strong>Composition:</strong>
+                <br><span class="component-badge">BPC-157 10mg</span>
+                <span class="component-badge">GHK-Cu 50mg</span>
+                <span class="component-badge">TB-500 10mg</span>
+            </li>
+            <li><strong>Total Content:</strong> 70mg per vial</li>
+            <li><strong>Form:</strong> Lyophilized powder</li>
+            <li><strong>Storage:</strong> 2-8°C refrigerated</li>
+        </ul>
+    </div>
+
+    <h2>🔬 How GLOW 70 Works — Triple Synergy</h2>
+    <p><strong>GLOW 70</strong> combines three of the most researched healing peptides into a single vial — often called the <strong>"Wolverine Stack"</strong> for its comprehensive regenerative profile. Each component works through distinct but complementary mechanisms:</p>
+
+    <h3>🩹 BPC-157 (Body Protection Compound) — 10mg</h3>
+    <ul>
+        <li><strong>Angiogenesis:</strong> Promotes new blood vessel formation, improving blood supply to damaged tissues</li>
+        <li><strong>Gut Healing:</strong> Protects and repairs gastrointestinal lining — stomach ulcers, leaky gut, IBS</li>
+        <li><strong>Tendon &amp; Ligament:</strong> Accelerates tendon-to-bone healing and ligament repair</li>
+        <li><strong>Anti-inflammatory:</strong> Modulates inflammatory response without immunosuppression</li>
+        <li><strong>Nitric Oxide System:</strong> Regulates NO pathway for vascular and tissue protection</li>
+    </ul>
+
+    <h3>🧴 GHK-Cu (Copper Peptide) — 50mg</h3>
+    <ul>
+        <li><strong>Collagen &amp; Elastin:</strong> Stimulates production of collagen I, III and elastin — the building blocks of skin</li>
+        <li><strong>Antioxidant:</strong> Powerful antioxidant that activates SOD (superoxide dismutase) and reduces free radical damage</li>
+        <li><strong>Skin Remodeling:</strong> Promotes glycosaminoglycan synthesis for skin firmness and hydration</li>
+        <li><strong>Hair Growth:</strong> Increases hair follicle size and stimulates hair growth</li>
+        <li><strong>Gene Expression:</strong> Modulates over 4,000 genes — resetting gene expression toward a younger, healthier state</li>
+    </ul>
+
+    <h3>🔄 TB-500 (Thymosin Beta-4) — 10mg</h3>
+    <ul>
+        <li><strong>Cell Migration:</strong> Promotes cell migration to injury sites for faster repair</li>
+        <li><strong>Tissue Remodeling:</strong> Supports tissue regeneration including muscle, tendon, and skin</li>
+        <li><strong>Anti-fibrotic:</strong> Reduces scar tissue formation by regulating actin polymerization</li>
+        <li><strong>Anti-inflammatory:</strong> Reduces inflammation at injury sites</li>
+        <li><strong>Cardiac Protection:</strong> Research shows protective effects on cardiac tissue after injury</li>
+    </ul>
+
+    <div class="success">
+        <h4>🤝 The Synergy Effect</h4>
+        <p>Together, these three peptides work on different phases of the healing cascade: BPC-157 initiates repair and creates blood supply, GHK-Cu provides the building blocks for new tissue, and TB-500 mobilizes cells to the site and reduces scarring. The combined effect is greater than any single peptide alone.</p>
+    </div>
+
+    <h2>🔬 Reconstitution Protocol</h2>
+
+    <h3>Materials Needed:</h3>
+    <ul>
+        <li>1x GLOW 70 (70mg blend) vial</li>
+        <li>Bacteriostatic Water (BAC Water)</li>
+        <li>Insulin syringes (29G-31G)</li>
+        <li>Alcohol swabs</li>
+        <li>Sterile work environment</li>
+    </ul>
+
+    <h3>Step-by-Step Reconstitution:</h3>
+    <ol>
+        <li><strong>Preparation</strong>
+            <ul>
+                <li>Wash hands thoroughly</li>
+                <li>Clean work surface with alcohol</li>
+                <li>Allow vials to reach room temperature (10-15 minutes)</li>
+                <li>Remove protective caps from both vials</li>
+            </ul>
+        </li>
+        <li><strong>Sterilize</strong>
+            <ul>
+                <li>Wipe rubber stoppers of both vials with fresh alcohol swabs</li>
+                <li>Allow to air dry for 30-60 seconds</li>
+                <li>Do NOT blow on or wipe dry</li>
+            </ul>
+        </li>
+        <li><strong>Reconstitution</strong>
+            <ul>
+                <li>Draw 2mL BAC Water into a sterile syringe</li>
+                <li>Insert needle into GLOW 70 vial at an angle</li>
+                <li>Inject BAC Water slowly down the inside wall of the vial</li>
+                <li>Do NOT spray directly onto powder</li>
+                <li>Gently swirl or roll between palms — do NOT shake</li>
+                <li>Allow to dissolve completely (3-5 minutes) until solution is clear</li>
+                <li><strong>Note:</strong> Solution may have a slight blue-green tint from the copper peptide — this is normal</li>
+            </ul>
+        </li>
+        <li><strong>Label &amp; Store</strong>
+            <ul>
+                <li>Label vial with: GLOW 70, concentration, date reconstituted</li>
+                <li>Store immediately at 2-8°C (refrigerator)</li>
+                <li>Protect from light</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Concentration Reference:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>BAC Water Added</th>
+                <th>Concentration</th>
+                <th>0.3mL injection</th>
+                <th>0.5mL injection</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1mL</td>
+                <td>70mg/mL</td>
+                <td>21mg per injection</td>
+                <td>35mg per injection</td>
+            </tr>
+            <tr>
+                <td><strong>2mL (recommended)</strong></td>
+                <td><strong>35mg/mL</strong></td>
+                <td><strong>10.5mg per injection</strong></td>
+                <td><strong>17.5mg per injection</strong></td>
+            </tr>
+            <tr>
+                <td>3mL</td>
+                <td>23.3mg/mL</td>
+                <td>7mg per injection</td>
+                <td>11.7mg per injection</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <h4>📐 Per-Component Breakdown (at 2mL reconstitution = 35mg/mL):</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Volume</th>
+                    <th>Total Dose</th>
+                    <th>BPC-157</th>
+                    <th>GHK-Cu</th>
+                    <th>TB-500</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0.3mL (30 units)</td>
+                    <td>10.5mg</td>
+                    <td>1.5mg</td>
+                    <td>7.5mg</td>
+                    <td>1.5mg</td>
+                </tr>
+                <tr>
+                    <td><strong>0.5mL (50 units)</strong></td>
+                    <td><strong>17.5mg</strong></td>
+                    <td><strong>2.5mg</strong></td>
+                    <td><strong>12.5mg</strong></td>
+                    <td><strong>2.5mg</strong></td>
+                </tr>
+                <tr>
+                    <td>1.0mL (100 units)</td>
+                    <td>35mg</td>
+                    <td>5mg</td>
+                    <td>25mg</td>
+                    <td>5mg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>📊 Research Dosing Guidelines</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Dose per Injection</th>
+                <th>Volume (35mg/mL)</th>
+                <th>Frequency</th>
+                <th>Cycle Length</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Beginner</strong></td>
+                <td>10-17mg</td>
+                <td>0.3-0.5mL (30-50 units)</td>
+                <td>Once daily</td>
+                <td>4-8 weeks</td>
+            </tr>
+            <tr>
+                <td><strong>Standard</strong></td>
+                <td>17.5mg</td>
+                <td>0.5mL (50 units)</td>
+                <td>Once daily</td>
+                <td>4-8 weeks</td>
+            </tr>
+            <tr>
+                <td><strong>Advanced</strong></td>
+                <td>17.5-35mg</td>
+                <td>0.5-1.0mL (50-100 units)</td>
+                <td>Once daily</td>
+                <td>8-12 weeks</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <h4>🎯 Cycle Recommendations by Goal:</h4>
+        <ul>
+            <li><strong>Injury Healing:</strong> 4-8 weeks at standard dose → 4 weeks off → reassess</li>
+            <li><strong>Skin Rejuvenation:</strong> 8-12 weeks at beginner-standard dose → 4 weeks off</li>
+            <li><strong>General Recovery:</strong> 4-6 weeks at beginner dose → 4 weeks off</li>
+            <li><strong>Always take 4 weeks off between cycles</strong></li>
+        </ul>
+    </div>
+
+    <div class="success">
+        <h4>💡 How Long Does One 70mg Vial Last?</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Protocol</th>
+                    <th>Daily Usage</th>
+                    <th>Vial Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Beginner (0.3mL/day = 10.5mg)</td>
+                    <td>10.5mg/day</td>
+                    <td>~6-7 days</td>
+                </tr>
+                <tr>
+                    <td>Standard (0.5mL/day = 17.5mg)</td>
+                    <td>17.5mg/day</td>
+                    <td>~4 days</td>
+                </tr>
+                <tr>
+                    <td>Advanced (1.0mL/day = 35mg)</td>
+                    <td>35mg/day</td>
+                    <td>~2 days</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Tip:</strong> A 4-week standard cycle requires approximately 7 vials. Plan inventory accordingly.</p>
+    </div>
+
+    <h2>⏰ Administration Schedule</h2>
+    <div class="info-box">
+        <h4>Timing:</h4>
+        <ul>
+            <li><strong>Best time:</strong> Morning or before bed</li>
+            <li><strong>Split dosing (advanced):</strong> Can split daily dose into AM/PM injections</li>
+            <li><strong>Frequency:</strong> Once daily (or twice if splitting dose)</li>
+            <li><strong>Duration:</strong> 4-12 weeks depending on goal</li>
+            <li><strong>Rest period:</strong> 4 weeks off between cycles</li>
+        </ul>
+
+        <h4>Injection Sites (Subcutaneous):</h4>
+        <ul>
+            <li><strong>Preferred:</strong> Lower abdomen (2 inches from navel)</li>
+            <li><strong>Alternative:</strong> Upper thigh, back of arm</li>
+            <li><strong>For skin benefits:</strong> Inject near target area when possible</li>
+            <li><strong>Needle:</strong> 29G-31G insulin syringe</li>
+            <li><strong>Depth:</strong> 4-6mm subcutaneous</li>
+            <li><strong>Rotate injection sites</strong> each session to prevent tissue irritation</li>
+        </ul>
+    </div>
+
+    <h3>Injection Steps:</h3>
+    <ol>
+        <li>Clean injection site with alcohol swab, let dry</li>
+        <li>Draw correct dose from reconstituted vial</li>
+        <li>Pinch skin at injection site</li>
+        <li>Insert needle at 45-90° angle</li>
+        <li>Inject slowly and steadily</li>
+        <li>Hold for 5-10 seconds before withdrawing</li>
+        <li>Do not massage the site</li>
+    </ol>
+
+    <h2>⚠️ Important Safety Considerations</h2>
+    <div class="warning">
+        <h4>Potential Research Observations:</h4>
+        <ul>
+            <li>Injection site reactions — redness, mild swelling, temporary discomfort</li>
+            <li>Mild nausea (usually first few days only)</li>
+            <li>Dizziness or lightheadedness</li>
+            <li>Headache</li>
+            <li>Skin breakouts / acne (from GHK-Cu stimulating skin turnover — common in acne-prone individuals)</li>
+        </ul>
+    </div>
+
+    <div class="danger">
+        <h4>⚠️ "Copper Uglies" Warning</h4>
+        <p>GHK-Cu (copper peptide) can cause a temporary skin purging phase sometimes called <strong>"copper uglies"</strong> — where skin may look worse before it gets better. This typically occurs in weeks 1-3 and includes:</p>
+        <ul>
+            <li>Increased breakouts or acne flare-ups</li>
+            <li>Temporary skin redness or irritation</li>
+            <li>Slight swelling or puffiness</li>
+        </ul>
+        <p><strong>This is a normal part of the skin remodeling process.</strong> The skin is accelerating cell turnover and collagen production. Most users see significant improvement after week 3-4. If symptoms are severe, reduce dose by 50% until they resolve.</p>
+    </div>
+
+    <div class="danger">
+        <h4>🚫 Who Should Avoid:</h4>
+        <ul>
+            <li>Pregnancy or breastfeeding</li>
+            <li>Active cancer diagnosis — BPC-157 promotes angiogenesis which may feed tumors</li>
+            <li>Under 18 years of age</li>
+            <li>Wilson's disease or copper metabolism disorders (due to GHK-Cu)</li>
+            <li>Known allergy to copper or any peptide component</li>
+        </ul>
+
+        <h4>⚠️ Drug Interactions — Use Caution With:</h4>
+        <ul>
+            <li><strong>Strong acids (AHAs/BHAs):</strong> Glycolic acid, salicylic acid — may degrade copper peptide if applied topically near injection site</li>
+            <li><strong>High-strength Vitamin C serums:</strong> Can interfere with copper peptide activity</li>
+            <li><strong>Retinoids (tretinoin, retinol):</strong> Combined with copper peptide may cause excessive skin irritation</li>
+            <li><strong>Note:</strong> These interactions are primarily relevant for topical use near injection sites. Systemic interactions are minimal.</li>
+        </ul>
+    </div>
+
+    <div class="success">
+        <h4>✅ Safety Tips:</h4>
+        <ul>
+            <li><strong>Start low</strong> — Begin with 0.3mL to assess tolerance to all 3 peptides simultaneously</li>
+            <li><strong>Rotate injection sites</strong> — Prevents localized tissue irritation</li>
+            <li><strong>Don't exceed recommended copper peptide dose</strong> — More GHK-Cu is not always better; excessive copper can be pro-oxidant</li>
+            <li><strong>Be patient with skin changes</strong> — "Copper uglies" are temporary; real improvements show weeks 4-8</li>
+            <li><strong>Separate topical actives</strong> — If using AHAs/retinoids topically, apply them at a different time of day from injection</li>
+        </ul>
+    </div>
+
+    <h2>📚 Storage & Handling</h2>
+    <div class="info-box">
+        <h4>Powder (Unreconstituted):</h4>
+        <ul>
+            <li>Store at 2-8°C (refrigerator) — stable for 2+ years</li>
+            <li>Can be frozen at -20°C for extended storage</li>
+            <li>Protect from light and moisture</li>
+        </ul>
+
+        <h4>Reconstituted Solution:</h4>
+        <ul>
+            <li>Store at 2-8°C (refrigerator)</li>
+            <li>Use within 21-28 days for optimal potency</li>
+            <li>Protect from light — copper peptide is light-sensitive</li>
+            <li>Do not freeze reconstituted solution</li>
+            <li>Slight blue-green tint is normal (from copper); discard if cloudy or has particles</li>
+        </ul>
+    </div>
+
+    <h2>🔍 Research Monitoring</h2>
+    <h3>Weekly Measurements:</h3>
+    <ul>
+        <li>Skin quality — texture, firmness, hydration, glow</li>
+        <li>Injury healing progress (if applicable) — pain level, range of motion</li>
+        <li>Injection site reactions (note severity)</li>
+        <li>Acne/breakout tracking (especially weeks 1-3)</li>
+        <li>Hair quality changes (thickness, growth rate)</li>
+        <li>Energy and recovery after exercise</li>
+    </ul>
+
+    <h3>Monthly Assessments:</h3>
+    <ul>
+        <li>Progress photos (same lighting, same angle)</li>
+        <li>Skin elasticity and wrinkle depth comparison</li>
+        <li>Scar appearance (if targeting scar healing)</li>
+        <li>Joint and tendon comfort levels</li>
+        <li>Overall well-being assessment</li>
+    </ul>
+
+    <h2>💡 Pro Research Tips</h2>
+    <ol>
+        <li><strong>Start Low, Assess All Three</strong> — You're introducing 3 peptides simultaneously. Begin at 0.3mL for the first 3-5 days</li>
+        <li><strong>Expect the Purge</strong> — "Copper uglies" in weeks 1-3 are normal. Don't quit early</li>
+        <li><strong>Inject Near the Problem</strong> — For localized healing (knee injury, facial skin), injecting closer to the target area can improve results</li>
+        <li><strong>Be Consistent</strong> — Daily dosing at the same time yields best results</li>
+        <li><strong>Support with Nutrition</strong> — Vitamin C, zinc, and protein support collagen synthesis</li>
+        <li><strong>Document Everything</strong> — Take before/after photos. Changes are gradual and easy to miss day-to-day</li>
+        <li><strong>Respect the Copper</strong> — Don't exceed recommended doses. GHK-Cu is potent — more is not always better</li>
+        <li><strong>Cycle Properly</strong> — 4-12 weeks on, 4 weeks off. Let your body consolidate the healing</li>
+    </ol>
+
+    <h2>🔬 Research Background</h2>
+    <p><strong>GLOW 70</strong> combines three extensively researched peptides, each with decades of scientific literature:</p>
+
+    <ul>
+        <li><strong>BPC-157:</strong> Derived from human gastric juice protein. Over 100 published studies showing healing effects on tendons, ligaments, gut, brain, and cardiovascular tissue. Discovered by Dr. Predrag Sikirit at University of Zagreb.</li>
+        <li><strong>GHK-Cu:</strong> Naturally occurring copper tripeptide. Discovered by Dr. Loren Pickart. Found in human plasma, saliva, and urine. Levels decline from 200ng/mL at age 20 to 80ng/mL at age 60. Over 60 published studies on wound healing and gene modulation.</li>
+        <li><strong>TB-500:</strong> Synthetic version of Thymosin Beta-4, a 43-amino acid peptide found in all human cells. Research shows effects on wound healing, tissue repair, cardiac protection, and anti-inflammatory properties. Originally studied for equine muscle repair.</li>
+    </ul>
+
+    <div class="warning">
+        <h3>⚠️ DISCLAIMER</h3>
+        <p>This protocol is for research and educational purposes only. BPC-157, GHK-Cu, and TB-500 are not FDA-approved for any medical condition. Not intended for unsupervised human use. Individual responses may vary significantly. Consult qualified healthcare professionals before use. SKZ Peptides provides research materials only.</p>
+    </div>
+
+    <div class="footer">
+        <h3>SKZ Peptides — Professional Research Support</h3>
+        <p><strong>📧 Email:</strong> support@skzpeptides.com</p>
+        <p><strong>📱 Telegram:</strong> @nadojiken</p>
+        <p><strong>🌐 Website:</strong> skzpeptides.com</p>
+        <p style="margin-top: 15px; font-size: 0.9em; color: #999;">
+            Protocol Version 2.0 — March 2026
+        </p>
+    </div>
+
+    <script>
+        function generatePDF() {
+            window.print();
+        }
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>

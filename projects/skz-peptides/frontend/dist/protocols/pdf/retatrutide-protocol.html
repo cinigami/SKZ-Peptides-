@@ -2,17 +2,22 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Retatrutide Research Protocol - SKZ Peptides</title>
     <style>
+        *, *::before, *::after { box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 15px;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background: white;
+            -webkit-text-size-adjust: 100%;
         }
+        p { font-size: 15px; line-height: 1.6; }
         @media print {
             body { margin: 0; padding: 15px; }
             .no-print { display: none; }
@@ -33,23 +38,39 @@
         h3 { color: #4facfe; margin-top: 20px; margin-bottom: 10px; }
         .info-box { background: #f8f9ff; border: 1px solid #e3f2fd; border-left: 4px solid #2196f3; border-radius: 6px; padding: 15px; margin: 15px 0; }
         .warning { background: #fff8e1; border: 1px solid #ffcc02; border-left: 4px solid #ff9800; border-radius: 6px; padding: 15px; margin: 15px 0; }
-        ul, ol { margin: 12px 0; padding-left: 22px; }
-        li { margin: 6px 0; }
+        ul, ol { margin: 12px 0; padding-left: 22px; font-size: 15px; }
+        li { margin: 6px 0; font-size: 15px; line-height: 1.5; }
+        h3 { font-size: 1.1em; }
+        h4 { font-size: 1em; }
         table { width: 100%; border-collapse: collapse; margin: 15px 0; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
         th { background: #667eea; color: white; padding: 12px; text-align: left; font-weight: 600; }
         td { padding: 10px 12px; border-bottom: 1px solid #eee; }
         tr:nth-child(even) { background: #f9f9f9; }
         .footer { text-align: center; margin-top: 40px; padding: 25px; background: #f8f9ff; border-radius: 12px; border: 1px solid #e3f2fd; }
-        .print-btn { position: fixed; top: 20px; right: 20px; background: #667eea; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
+        .print-btn { display: block; margin: 15px 0 15px auto; background: #667eea; color: white; border: none; padding: 12px 20px; border-radius: 6px; cursor: pointer; font-size: 14px; box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3); }
         .print-btn:hover { background: #5a6fd8; }
+            /* Watermark */
+        .watermark { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+        .watermark::before { content: "SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES • SKZ PEPTIDES"; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; transform: rotate(-35deg); font-size: 36px; font-weight: 800; color: rgba(124, 58, 237, 0.25); letter-spacing: 8px; line-height: 100px; white-space: nowrap; word-spacing: 40px; user-select: none; -webkit-user-select: none; }
+        @media print { .watermark { position: fixed; } .watermark::before { color: rgba(124, 58, 237, 0.28); } }
+            .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); pointer-events: none; z-index: 0; position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 60px; overflow: hidden; }
+        body > *:not(.watermark) { position: relative; z-index: 1; }
+        .watermark span { font-size: 48px; font-weight: 900; color: rgba(102, 126, 234, 0.04); white-space: nowrap; transform: rotate(-35deg); display: inline-block; letter-spacing: 5px; }
     </style>
 </head>
 <body>
-    <button class="print-btn no-print" onclick="window.print()">🖨️ Print PDF</button>
+    <div class="watermark"><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span><span>SKZ PEPTIDES</span></div>
 
     <div class="header">
         <h1>🧬 SKZ PEPTIDES</h1>
         <p>Research Protocol: Retatrutide 5mg</p>
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ Print PDF</button>
+
+    <!-- Protocol Infographic -->
+    <div style="text-align: center; margin: 20px 0;">
+        <img src="/images/retatrutide-protocol-infographic.png" alt="Retatrutide 5mg Protocol Infographic" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);" />
     </div>
 
     <h1>🧬 Retatrutide 5mg Research Protocol</h1>
@@ -96,54 +117,93 @@
         <li><strong>Final Concentration</strong>
             <ul>
                 <li>5mg in 2mL = 2.5mg/mL (2500mcg/mL)</li>
-                <li>Each 0.1mL contains 250mcg</li>
-                <li>Each 0.2mL contains 500mcg</li>
+                <li>2mg dose = 0.8mL (80 units)</li>
+                <li>4mg dose = 1.6mL (160 units — split into 2 draws of 80 units each)</li>
+                <li><strong>Tip:</strong> For higher doses (4mg+), reconstitute with 1mL BAC Water instead → 5mg/mL concentration, making 4mg = 0.8mL</li>
             </ul>
         </li>
     </ol>
 
     <h2>📊 Research Dosing Guidelines</h2>
 
+    <div class="info-box">
+        <p><strong>💡 Based on Phase 2/3 clinical trial protocols.</strong> Always start at the lowest dose and titrate up every 4 weeks based on tolerance. If GI side effects are significant, stay at current dose for an additional 2-4 weeks before increasing.</p>
+    </div>
+
     <table>
         <thead>
             <tr>
                 <th>Level</th>
-                <th>Week 1-2</th>
-                <th>Week 3-4</th>
+                <th>Week 1-4</th>
                 <th>Week 5-8</th>
+                <th>Week 9-12</th>
+                <th>Week 13+</th>
                 <th>Frequency</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Beginner</strong></td>
-                <td>0.25mg (0.1mL)</td>
-                <td>0.5mg (0.2mL)</td>
-                <td>0.75mg (0.3mL)</td>
+                <td><strong>Standard</strong></td>
+                <td>2mg (0.8mL / 80 units)</td>
+                <td>4mg (1.6mL / 160 units)</td>
+                <td>4mg maintenance</td>
+                <td>4mg maintenance</td>
                 <td>Once weekly</td>
             </tr>
             <tr>
-                <td><strong>Intermediate</strong></td>
-                <td>0.5mg (0.2mL)</td>
-                <td>1.0mg (0.4mL)</td>
-                <td>1.5mg (0.6mL)</td>
+                <td><strong>Moderate</strong></td>
+                <td>2mg (0.8mL / 80 units)</td>
+                <td>4mg (1.6mL / 160 units)</td>
+                <td>8mg</td>
+                <td>8-9mg maintenance</td>
                 <td>Once weekly</td>
             </tr>
             <tr>
-                <td><strong>Advanced</strong></td>
-                <td colspan="3">1.0-2.5mg weekly (maintenance)</td>
+                <td><strong>Aggressive</strong></td>
+                <td>2mg (0.8mL / 80 units)</td>
+                <td>4mg (1.6mL / 160 units)</td>
+                <td>8mg</td>
+                <td>12mg (max)</td>
                 <td>Once weekly</td>
             </tr>
         </tbody>
     </table>
 
+    <div class="info-box">
+        <h4>💡 How Long Does One 5mg Vial Last?</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dose Phase</th>
+                    <th>Weekly Dose</th>
+                    <th>Vial Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Starting (2mg/week)</td>
+                    <td>2mg</td>
+                    <td>~2.5 weeks</td>
+                </tr>
+                <tr>
+                    <td>Mid-range (4mg/week)</td>
+                    <td>4mg</td>
+                    <td>~1.25 weeks</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Note:</strong> For higher dose phases (8-12mg), multiple vials per week may be needed. Consider stocking accordingly.</p>
+    </div>
+
     <h2>⏰ Administration Schedule</h2>
     <div class="info-box">
         <h4>Timing:</h4>
         <ul>
-            <li><strong>Best time:</strong> Morning, fasted state</li>
-            <li><strong>Frequency:</strong> Once weekly, same day each week</li>
-            <li><strong>Duration:</strong> 12-16 week research cycles</li>
+            <li><strong>Option 1 — Morning:</strong> Manage nausea during waking hours, steady energy throughout the day</li>
+            <li><strong>Option 2 — Before Bed (recommended):</strong> Sleep through mild nausea/GI side effects, wake up with appetite suppression already active</li>
+            <li><strong>Key rule:</strong> Pick one time and stay consistent — same day, same time each week</li>
+            <li><strong>Frequency:</strong> Once weekly</li>
+            <li><strong>Duration:</strong> 24-48 week research cycles (clinical trials run 48-72 weeks)</li>
         </ul>
 
         <h4>Injection Sites:</h4>
@@ -175,12 +235,14 @@
 
     <h2>⚠️ Important Considerations</h2>
     <div class="warning">
-        <h4>Contraindications:</h4>
+        <h4>🚫 Who Should Avoid:</h4>
         <ul>
-            <li>Not suitable for subjects under 18</li>
-            <li>Pregnancy/breastfeeding</li>
+            <li>Under 18 years of age</li>
+            <li>Pregnant or breastfeeding</li>
             <li>Active eating disorders</li>
             <li>Severe gastrointestinal conditions</li>
+            <li>History of pancreatitis</li>
+            <li>Personal/family history of medullary thyroid carcinoma</li>
         </ul>
 
         <h4>Potential Research Observations:</h4>
@@ -223,7 +285,7 @@
 
     <div class="warning">
         <h3>⚠️ DISCLAIMER</h3>
-        <p>This protocol is for research purposes only. Not intended for human consumption. Consult qualified professionals for research guidance. SKZ Peptides provides research materials only.</p>
+        <p>This protocol is for research and educational purposes only. Consult qualified professionals for guidance. Individual responses may vary. SKZ Peptides provides research materials only.</p>
     </div>
 
     <div class="footer">
