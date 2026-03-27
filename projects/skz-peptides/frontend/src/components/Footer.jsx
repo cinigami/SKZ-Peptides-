@@ -61,10 +61,6 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Why Choose Us</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <Shield className="footer-icon w-5 h-5 text-primary-500 dark:text-purple-400" />
-                <span className="text-sm text-gray-400">Secure Payments</span>
-              </div>
-              <div className="flex items-center space-x-3">
                 <Truck className="footer-icon w-5 h-5 text-primary-500 dark:text-purple-400" />
                 <span className="text-sm text-gray-400">Fast Shipping</span>
               </div>
