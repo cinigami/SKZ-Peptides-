@@ -35,7 +35,7 @@ const Cart = () => {
           <p className="text-lg text-gray-600 mb-8">
             Looks like you haven't added any products to your cart yet.
           </p>
-          <Link to="/products" className="btn-primary">
+          <Link to="/products" className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl shadow-lg transition-colors">
             Shop Products
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
