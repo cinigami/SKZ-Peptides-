@@ -78,23 +78,11 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex justify-center items-center">
             <p className="text-sm text-gray-400">
               © 2026 SKZ Peptides. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/disclaimer" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Disclaimer
-              </Link>
-            </div>
           </div>
-
         </div>
       </div>
     </footer>
