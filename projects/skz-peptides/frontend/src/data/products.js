@@ -224,14 +224,14 @@ export const products = [
     id: 'metabolic-stack',
     name: '⚡ Metabolic Stack',
     price: 449,
-    cost: 200,
-    profit: 249,
+    cost: 214,
+    profit: 235,
     category: 'Bundles',
-    badge: '🔥 Complete System',
-    description: 'Complete metabolic enhancement stack combining our most powerful weight management compounds. Save RM137 versus individual purchases.',
-    dosage: 'Follow individual product protocols',
-    features: ['RT10 10mg + RT20 20mg bundle', 'Complete metabolic system', 'Save RM137 vs individual', 'Advanced + Premium formulations', 'Extended research duration'],
-    benefits: ['Comprehensive metabolic research', 'Maximum weight management potential', 'Cost-effective bundle pricing'],
+    badge: '🔥 Maximum Fat Burning',
+    description: 'Ultimate fat burning combo: RT20 (weight loss) + MOTS-c (metabolic boost) for maximum effect. 4-week supply with FREE essential kit. Save RM75 versus individual purchases.',
+    dosage: 'RT20: 5mg/week × 4 weeks | MOTS-c: 10mg/week × 4 weeks',
+    features: ['RT20 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Save RM75 vs individual', 'FREE essential kit included'],
+    benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Complete 4-week protocol'],
     image: '/images/metabolic-stack-bundle.png',
     inStock: 0,
     storage: 'Refrigerate 2-8°C',
@@ -243,8 +243,8 @@ export const products = [
       date: '2026-03-15',
       batch: 'STACK-240315'
     },
-    bundleContents: ['RT10 10mg', 'RT20 20mg'],
-    bundleSavings: 137
+    bundleContents: ['RT20 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
+    bundleSavings: 75
   },
 
   {
