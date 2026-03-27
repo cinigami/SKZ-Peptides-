@@ -100,10 +100,10 @@ const ProductCard = ({ product }) => {
       <button
         onClick={handleAddToCart}
         disabled={isOutOfStock}
-        className={`w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors ${isOutOfStock ? 'bg-gray-400 cursor-not-allowed opacity-60' : 'btn-primary hover:bg-primary-700'}`}
+        className={`w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors ${isOutOfStock ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'btn-primary hover:bg-primary-700'}`}
       >
         <ShoppingCart className="w-4 h-4" />
-        <span>{isOutOfStock ? 'Out of Stock' : 'Add to Cart'}</span>
+        <span>{isOutOfStock ? 'Register your interest' : 'Add to Cart'}</span>
       </button>
     </motion.div>
   )

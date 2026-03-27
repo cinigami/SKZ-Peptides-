@@ -116,15 +116,172 @@ export const products = [
     inStock: 10,
     dosage: 'As needed for mixing',
     storage: 'Room temperature',
+  },
+
+  // ==================== PHASE 2 PRODUCTS ====================
+  {
+    id: 'rt10-10mg',
+    name: 'RT10 10mg',
+    price: 189,
+    cost: 85,
+    profit: 104,
+    category: 'Weight Management',
+    badge: '🔥 Advanced Formula',
+    description: 'Enhanced Retatrutide formulation with optimized bioavailability. Higher concentration for experienced users seeking maximum efficacy.',
+    dosage: 'Advanced: 4-8mg once weekly (one vial lasts 1-2.5 weeks)',
+    features: ['10mg vial — advanced concentration', 'Enhanced bioavailability', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.7% purity', 'Optimized for experienced users'],
+    benefits: ['Advanced weight management research', 'Enhanced metabolic studies', 'Superior appetite regulation'],
+    image: '/images/rt10-vial-mockup.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/rt10-protocol.html',
+    protocolTitle: 'RT10 Advanced Protocol',
+    labTesting: {
+      purity: '99.7%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'RT10-240315'
+    }
+  },
+
+  {
+    id: 'rt20-20mg',
+    name: 'RT20 20mg',
+    price: 299,
+    cost: 135,
+    profit: 164,
+    category: 'Weight Management',
+    badge: '💎 Premium Grade',
+    description: 'Premium high-concentration Retatrutide for research requiring maximum potency. Professional-grade formulation with extended research duration.',
+    dosage: 'Premium: 8-12mg once weekly (one vial lasts 1.5-2.5 weeks)',
+    features: ['20mg vial — maximum concentration', 'Premium grade formulation', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.8% purity', 'Extended research duration'],
+    benefits: ['Premium weight management research', 'Maximum potency studies', 'Professional-grade appetite regulation'],
+    image: '/images/rt20-vial-mockup.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/rt20-protocol.html',
+    protocolTitle: 'RT20 Premium Protocol',
+    labTesting: {
+      purity: '99.8%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'RT20-240315'
+    }
+  },
+
+  {
+    id: 'glutathione-1200mg',
+    name: 'Glutathione 1200mg',
+    price: 129,
+    cost: 55,
+    profit: 74,
+    category: 'Anti-Aging',
+    badge: '✨ Master Antioxidant',
+    description: 'Premium glutathione for cellular protection and anti-aging research. The body\'s master antioxidant for comprehensive cellular defense.',
+    dosage: 'Research: 200-400mg twice weekly',
+    features: ['1200mg high-concentration vial', 'Master antioxidant compound', 'Cellular protection research', 'Premium grade purity', 'Extended research supply'],
+    benefits: ['Cellular protection studies', 'Anti-aging research', 'Oxidative stress investigation'],
+    image: '/images/glutathione-vial-mockup.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/glutathione-protocol.html',
+    protocolTitle: 'Glutathione Research Protocol',
+    labTesting: {
+      purity: '99.5%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'GSH-240315'
+    }
+  },
+
+  {
+    id: 'ghk-cu-100mg',
+    name: 'GHK-Cu 100mg',
+    price: 89,
+    cost: 35,
+    profit: 54,
+    category: 'Anti-Aging',
+    badge: '🧬 Copper Peptide',
+    description: 'Copper peptide complex for skin regeneration and anti-aging research. Renowned for its role in collagen synthesis and tissue repair studies.',
+    dosage: 'Research: 2-5mg daily',
+    features: ['100mg research vial', 'Copper peptide complex', 'Collagen synthesis research', 'Tissue repair studies', 'Anti-aging applications'],
+    benefits: ['Skin regeneration research', 'Collagen synthesis studies', 'Tissue repair investigation'],
+    image: '/images/ghk-cu-vial-mockup.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/ghk-cu-protocol.html',
+    protocolTitle: 'GHK-Cu Research Protocol',
+    labTesting: {
+      purity: '99.3%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'GHK-240315'
+    }
+  },
+
+  // ==================== PHASE 2 BUNDLES ====================
+  {
+    id: 'metabolic-stack',
+    name: '⚡ Metabolic Stack',
+    price: 449,
+    cost: 200,
+    profit: 249,
+    category: 'Bundles',
+    badge: '🔥 Complete System',
+    description: 'Complete metabolic enhancement stack combining our most powerful weight management compounds. Save RM137 versus individual purchases.',
+    dosage: 'Follow individual product protocols',
+    features: ['RT10 10mg + RT20 20mg bundle', 'Complete metabolic system', 'Save RM137 vs individual', 'Advanced + Premium formulations', 'Extended research duration'],
+    benefits: ['Comprehensive metabolic research', 'Maximum weight management potential', 'Cost-effective bundle pricing'],
+    image: '/images/metabolic-stack-bundle.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/metabolic-stack-protocol.html',
+    protocolTitle: 'Metabolic Stack Protocol',
+    labTesting: {
+      purity: 'See individual products',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'STACK-240315'
+    },
+    bundleContents: ['RT10 10mg', 'RT20 20mg'],
+    bundleSavings: 137
+  },
+
+  {
+    id: 'glow-stack',
+    name: '💎 Glow Stack',
+    price: 179,
+    cost: 90,
+    profit: 89,
+    category: 'Bundles',
+    badge: '✨ Anti-Aging Combo',
+    description: 'Premium anti-aging stack for comprehensive cellular protection and skin regeneration research. Save RM39 versus individual purchases.',
+    dosage: 'Follow individual product protocols',
+    features: ['Glutathione 1200mg + GHK-Cu 100mg', 'Complete anti-aging system', 'Save RM39 vs individual', 'Master antioxidant + copper peptide', 'Comprehensive cellular protection'],
+    benefits: ['Complete anti-aging research', 'Cellular protection + regeneration', 'Cost-effective bundle pricing'],
+    image: '/images/glow-stack-bundle.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/glow-stack-protocol.html',
+    protocolTitle: 'Glow Stack Protocol',
+    labTesting: {
+      purity: 'See individual products',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'GLOW-240315'
+    },
+    bundleContents: ['Glutathione 1200mg', 'GHK-Cu 100mg'],
+    bundleSavings: 39
   }
 ]
 
 export const categories = [
   { id: 'all', name: 'All Products' },
   { id: 'Weight Management', name: 'Weight Management' },
-  { id: 'Mitochondrial', name: 'Mitochondrial Health' },
   { id: 'Anti-Aging', name: 'Anti-Aging' },
+  { id: 'Mitochondrial', name: 'Mitochondrial Health' },
   { id: 'Healing', name: 'Healing & Recovery' },
+  { id: 'Bundles', name: 'Bundles' },
   { id: 'Supplies', name: 'Supplies' }
 ]
 
