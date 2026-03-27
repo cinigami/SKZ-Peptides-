@@ -151,13 +151,13 @@ const About = () => {
               <div className="bg-primary-700 p-6 rounded-lg">
                 <MessageCircle className="w-8 h-8 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold mb-2">Instagram / Threads</h3>
-                <p className="text-primary-100 text-sm mb-3">
-                  Follow @skzpeptides for updates and product drops.
+                <p className="text-primary-100 text-sm mb-4">
+                  Follow @skzpeptidesmy for updates and product drops.
                 </p>
-                <div className="flex space-x-3">
-                  <a href="https://instagram.com/skzpeptides" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">Instagram</a>
+                <div className="flex items-center justify-center space-x-3">
+                  <a href="https://instagram.com/skzpeptidesmy" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">Instagram</a>
                   <span className="text-primary-300">•</span>
-                  <a href="https://threads.net/@skzpeptides" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">Threads</a>
+                  <a href="https://threads.net/@skzpeptidesmy" target="_blank" rel="noopener noreferrer" className="text-xs text-primary-200 hover:text-white">Threads</a>
                 </div>
               </div>
               
