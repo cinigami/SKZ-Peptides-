@@ -1,17 +1,19 @@
 import { useState, useRef } from 'react'
-import { LayoutDashboard, Package, ShoppingBag, ClipboardList, LogOut, Download, Upload } from 'lucide-react'
+import { LayoutDashboard, Package, ShoppingBag, ClipboardList, TrendingUp, LogOut, Download, Upload } from 'lucide-react'
 import { AdminProvider, useAdmin } from '../context/AdminContext'
 import AdminLogin from '../components/admin/AdminLogin'
 import AdminDashboard from '../components/admin/AdminDashboard'
 import AdminInventory from '../components/admin/AdminInventory'
 import AdminProducts from '../components/admin/AdminProducts'
 import AdminOrders from '../components/admin/AdminOrders'
+import AdminSales from '../components/admin/AdminSales'
 
 const tabs = [
   { id: 'dashboard', name: 'Dashboard', icon: LayoutDashboard },
   { id: 'inventory', name: 'Inventory', icon: Package },
   { id: 'products', name: 'Products', icon: ShoppingBag },
   { id: 'orders', name: 'Orders', icon: ClipboardList },
+  { id: 'sales', name: 'Sales', icon: TrendingUp },
 ]
 
 function AdminPanel() {
@@ -109,6 +111,7 @@ function AdminPanel() {
         {activeTab === 'inventory' && <AdminInventory />}
         {activeTab === 'products' && <AdminProducts />}
         {activeTab === 'orders' && <AdminOrders />}
+        {activeTab === 'sales' && <AdminSales />}
       </div>
     </div>
   )
