@@ -32,16 +32,6 @@ const AdminSales = () => {
 
   const filteredOrders = getFilteredOrders()
 
-  // Calculate metrics
-  const metrics = {
-    totalRevenue: filteredOrders.reduce((sum, order) => sum + order.total, 0),
-    totalOrders: filteredOrders.length,
-    averageOrderValue: filteredOrders.length > 0 ? filteredOrders.reduce((sum, order) => sum + order.total, 0) / filteredOrders.length : 0,
-    completedOrders: filteredOrders.filter(order => order.status === 'Delivered').length,
-    pendingOrders: filteredOrders.filter(order => order.status === 'Pending').length,
-    totalProfit: productSales.reduce((sum, product) => sum + product.profit, 0),
-  }
-
   // Product sales analysis
   const productSales = products.map(product => {
     const productOrders = filteredOrders.filter(order => 
@@ -61,6 +51,16 @@ const AdminSales = () => {
       profit: totalSold * (product.price - product.cost),
     }
   }).sort((a, b) => b.revenue - a.revenue)
+
+  // Calculate metrics (after productSales is defined)
+  const metrics = {
+    totalRevenue: filteredOrders.reduce((sum, order) => sum + order.total, 0),
+    totalOrders: filteredOrders.length,
+    averageOrderValue: filteredOrders.length > 0 ? filteredOrders.reduce((sum, order) => sum + order.total, 0) / filteredOrders.length : 0,
+    completedOrders: filteredOrders.filter(order => order.status === 'Delivered').length,
+    pendingOrders: filteredOrders.filter(order => order.status === 'Pending').length,
+    totalProfit: productSales.reduce((sum, product) => sum + product.profit, 0),
+  }
 
   // Top customers
   const customerAnalysis = filteredOrders.reduce((acc, order) => {
