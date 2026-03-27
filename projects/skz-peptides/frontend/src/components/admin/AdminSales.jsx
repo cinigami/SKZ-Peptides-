@@ -39,6 +39,7 @@ const AdminSales = () => {
     averageOrderValue: filteredOrders.length > 0 ? filteredOrders.reduce((sum, order) => sum + order.total, 0) / filteredOrders.length : 0,
     completedOrders: filteredOrders.filter(order => order.status === 'Delivered').length,
     pendingOrders: filteredOrders.filter(order => order.status === 'Pending').length,
+    totalProfit: productSales.reduce((sum, product) => sum + product.profit, 0),
   }
 
   // Product sales analysis
@@ -119,7 +120,7 @@ const AdminSales = () => {
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4">
         <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-lg">
@@ -176,6 +177,18 @@ const AdminSales = () => {
             <div>
               <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Pending</p>
               <p className="text-lg font-bold text-gray-900 dark:text-white">{metrics.pendingOrders}</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+          <div className="flex items-center gap-3">
+            <div className="p-2 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg">
+              <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <div>
+              <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Total Profit</p>
+              <p className="text-lg font-bold text-gray-900 dark:text-white">RM {metrics.totalProfit.toFixed(2)}</p>
             </div>
           </div>
         </div>
