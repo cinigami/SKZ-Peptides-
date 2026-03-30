@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ShoppingCart, Eye } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 import { motion } from 'framer-motion'
+import { buildWhatsAppUrl } from '../utils/whatsapp'
 
 const ProductCard = ({ product }) => {
   const { addToCart } = useCart()
@@ -10,7 +11,14 @@ const ProductCard = ({ product }) => {
 
   const handleAddToCart = (e) => {
     e.preventDefault()
-    if (!isOutOfStock) addToCart(product, 1)
+    if (isOutOfStock) {
+      // Redirect to WhatsApp for interest registration
+      const message = `Hi! I'm interested in ${product.name} (${formatPrice(product.price)}). Please notify me when it's back in stock.`
+      const whatsappUrl = buildWhatsAppUrl(message)
+      window.open(whatsappUrl, '_blank')
+    } else {
+      addToCart(product, 1)
+    }
   }
 
   const formatPrice = (price) => `MYR ${price.toFixed(2)}`
@@ -99,7 +107,6 @@ const ProductCard = ({ product }) => {
       {/* Add to Cart Button */}
       <button
         onClick={handleAddToCart}
-        disabled={isOutOfStock}
         className={`w-full flex items-center justify-center space-x-2 py-2 px-4 rounded-lg font-medium transition-colors ${isOutOfStock ? 'bg-orange-500 hover:bg-orange-600 text-white' : 'btn-primary hover:bg-primary-700'}`}
       >
         <ShoppingCart className="w-4 h-4" />
