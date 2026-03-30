@@ -120,6 +120,31 @@ export const products = [
 
   // ==================== PHASE 2 PRODUCTS ====================
   {
+    id: 'retatrutide-20mg',
+    name: 'Retatrutide 20mg',
+    price: 299,
+    cost: 135,
+    profit: 164,
+    category: 'Weight Management',
+    badge: '💎 Premium Grade',
+    description: 'Premium high-concentration Retatrutide for research requiring maximum potency. Professional-grade formulation for advanced users.',
+    dosage: 'Advanced: 5mg/week × 4 weeks (one vial lasts 4 weeks)',
+    features: ['20mg vial — premium concentration', 'Professional grade formulation', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.8% purity', '4-week research duration'],
+    benefits: ['Premium weight management research', 'Maximum potency studies', 'Professional-grade appetite regulation'],
+    image: '/images/retatrutide-20mg-vial-mockup.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/retatrutide-20mg-protocol.html',
+    protocolTitle: 'Retatrutide 20mg Protocol',
+    labTesting: {
+      purity: '99.8%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'RET20-240315'
+    }
+  },
+
+  {
     id: 'glutathione-1200mg',
     name: 'Glutathione 1200mg',
     price: 129,
@@ -174,13 +199,13 @@ export const products = [
     id: 'metabolic-stack',
     name: '⚡ Metabolic Stack',
     price: 449,
-    cost: 117.95,
-    profit: 331.05,
+    cost: 213.95,
+    profit: 235.05,
     category: 'Bundles',
     badge: '🔥 Maximum Fat Burning',
-    description: 'Ultimate fat burning combo: Retatrutide 5mg (weight loss) + MOTS-c 40mg (metabolic boost) for maximum effect. Complete system with FREE essential kit. Save RM125 versus individual purchases.',
-    dosage: 'Retatrutide: 2-4mg/week | MOTS-c: 10mg/week × 4 weeks',
-    features: ['Retatrutide 5mg + MOTS-c 40mg bundle', 'Complete metabolic system', 'Weight loss + metabolic enhancement', 'Save RM125 vs individual', 'FREE essential kit included'],
+    description: 'Ultimate fat burning combo: Retatrutide 20mg (weight loss) + MOTS-c 40mg (metabolic boost) for maximum effect. 4-week complete system with FREE essential kit.',
+    dosage: 'Retatrutide: 5mg/week × 4 weeks | MOTS-c: 10mg/week × 4 weeks',
+    features: ['Retatrutide 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Premium concentrations', 'FREE essential kit included'],
     benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Perfect starter + booster combo'],
     image: '/images/metabolic-stack-bundle.png',
     inStock: 0,
@@ -193,8 +218,8 @@ export const products = [
       date: '2026-03-15',
       batch: 'STACK-240315'
     },
-    bundleContents: ['Retatrutide 5mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
-    bundleSavings: 125
+    bundleContents: ['Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
+    bundleSavings: 75
   },
 
   {
