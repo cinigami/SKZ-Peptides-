@@ -46,6 +46,90 @@ const ProductBenefits = ({ product }) => {
           ]
         }
 
+      case 'retatrutide-10mg':
+        return {
+          title: 'Retatrutide 10mg Research Benefits',
+          subtitle: 'Triple Agonist Peptide for Advanced Metabolic Research',
+          primaryBenefits: [
+            {
+              icon: TrendingUp,
+              title: 'Weight Management Research',
+              description: 'Studies show 15-25% body weight reduction over 12 weeks with significant appetite suppression (70-85% reduction in hunger ratings).',
+              metrics: ['15-25% weight reduction', '70-85% appetite suppression', 'Sustained effects throughout cycle']
+            },
+            {
+              icon: Heart,
+              title: 'Glucose Homeostasis',
+              description: 'Enhanced insulin sensitivity with 15-30% improvement in glucose levels and 1.0-2.0% HbA1c reduction.',
+              metrics: ['15-30% glucose improvement', '40-60% insulin sensitivity boost', '50-70% reduced glucose spikes']
+            },
+            {
+              icon: Activity,
+              title: 'Cardiovascular Health',
+              description: 'Comprehensive cardiovascular improvements including lipid profile optimization and blood pressure benefits.',
+              metrics: ['20-35% LDL reduction', '30-50% triglyceride improvement', '5-15 mmHg BP reduction']
+            }
+          ],
+          mechanism: {
+            title: 'Triple Receptor Mechanism',
+            description: 'Targets GLP-1 (40%), GIP (30%), and glucagon receptors (25%) simultaneously for comprehensive metabolic effects.',
+            pathways: [
+              'Incretin system activation for glucose regulation',
+              'Neural appetite signaling modulation',
+              'Metabolic rate enhancement and thermogenesis',
+              'Enhanced fat oxidation and energy expenditure'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Initial appetite reduction, early weight loss, improved postprandial glucose' },
+            { phase: 'Week 3-6', effects: 'Steady weight reduction (1-2 lbs/week), enhanced sleep quality, stable energy' },
+            { phase: 'Week 7-12', effects: 'Continued loss with metabolic adaptation, optimized cardiovascular markers' },
+            { phase: 'Week 12+', effects: 'Maintenance phase with stable appetite control and sustained benefits' }
+          ]
+        }
+
+      case 'retatrutide-20mg':
+        return {
+          title: 'Retatrutide 20mg Research Benefits',
+          subtitle: 'Triple Agonist Peptide for Advanced Metabolic Research',
+          primaryBenefits: [
+            {
+              icon: TrendingUp,
+              title: 'Weight Management Research',
+              description: 'Studies show 15-25% body weight reduction over 12 weeks with significant appetite suppression (70-85% reduction in hunger ratings).',
+              metrics: ['15-25% weight reduction', '70-85% appetite suppression', 'Sustained effects throughout cycle']
+            },
+            {
+              icon: Heart,
+              title: 'Glucose Homeostasis',
+              description: 'Enhanced insulin sensitivity with 15-30% improvement in glucose levels and 1.0-2.0% HbA1c reduction.',
+              metrics: ['15-30% glucose improvement', '40-60% insulin sensitivity boost', '50-70% reduced glucose spikes']
+            },
+            {
+              icon: Activity,
+              title: 'Cardiovascular Health',
+              description: 'Comprehensive cardiovascular improvements including lipid profile optimization and blood pressure benefits.',
+              metrics: ['20-35% LDL reduction', '30-50% triglyceride improvement', '5-15 mmHg BP reduction']
+            }
+          ],
+          mechanism: {
+            title: 'Triple Receptor Mechanism',
+            description: 'Targets GLP-1 (40%), GIP (30%), and glucagon receptors (25%) simultaneously for comprehensive metabolic effects.',
+            pathways: [
+              'Incretin system activation for glucose regulation',
+              'Neural appetite signaling modulation',
+              'Metabolic rate enhancement and thermogenesis',
+              'Enhanced fat oxidation and energy expenditure'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Initial appetite reduction, early weight loss, improved postprandial glucose' },
+            { phase: 'Week 3-6', effects: 'Steady weight reduction (1-2 lbs/week), enhanced sleep quality, stable energy' },
+            { phase: 'Week 7-12', effects: 'Continued loss with metabolic adaptation, optimized cardiovascular markers' },
+            { phase: 'Week 12+', effects: 'Maintenance phase with stable appetite control and sustained benefits' }
+          ]
+        }
+
       case 'motsc-40mg':
         return {
           title: 'MOTS-c Research Benefits',
