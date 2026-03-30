@@ -120,6 +120,31 @@ export const products = [
 
   // ==================== PHASE 2 PRODUCTS ====================
   {
+    id: 'retatrutide-10mg',
+    name: 'Retatrutide 10mg',
+    price: 189,
+    cost: 85,
+    profit: 104,
+    category: 'Weight Management',
+    badge: '🔥 Advanced Formula',
+    description: 'Enhanced Retatrutide formulation with optimized bioavailability. Higher concentration for experienced users seeking maximum efficacy.',
+    dosage: 'Advanced: 4-8mg once weekly (one vial lasts 1-2.5 weeks)',
+    features: ['10mg vial — advanced concentration', 'Enhanced bioavailability', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.7% purity', 'Optimized for experienced users'],
+    benefits: ['Advanced weight management research', 'Enhanced metabolic studies', 'Superior appetite regulation'],
+    image: '/images/retatrutide-10mg-skz.png',
+    inStock: 0,
+    storage: 'Refrigerate 2-8°C',
+    protocol: '/protocols/pdf/retatrutide-10mg-protocol.html',
+    protocolTitle: 'Retatrutide 10mg Protocol',
+    labTesting: {
+      purity: '99.7%',
+      lab: 'Janoshik',
+      date: '2026-03-15',
+      batch: 'RET10-240315'
+    }
+  },
+
+  {
     id: 'retatrutide-20mg',
     name: 'Retatrutide 20mg',
     price: 299,
