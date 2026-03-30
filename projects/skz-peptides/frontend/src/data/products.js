@@ -181,7 +181,7 @@ export const products = [
     dosage: '',
     features: ['1200mg high-concentration vial', 'Master antioxidant compound', 'Cellular protection research', 'Premium grade purity', 'Extended research supply'],
     benefits: ['Cellular protection studies', 'Anti-aging research', 'Oxidative stress investigation'],
-    image: '/images/glutathione-1200mg-skz.png',
+    image: '/images/glutathione-1200mg-skz-v2.png',
     inStock: 0,
     storage: 'Refrigerate 2-8°C',
     protocol: '/protocols/pdf/glutathione-protocol.html',
