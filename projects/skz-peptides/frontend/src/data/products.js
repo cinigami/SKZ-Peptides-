@@ -120,56 +120,6 @@ export const products = [
 
   // ==================== PHASE 2 PRODUCTS ====================
   {
-    id: 'rt10-10mg',
-    name: 'RT10 Retatrutide 10mg',
-    price: 189,
-    cost: 85,
-    profit: 104,
-    category: 'Weight Management',
-    badge: '🔥 Advanced Formula',
-    description: 'Enhanced Retatrutide formulation with optimized bioavailability. Higher concentration for experienced users seeking maximum efficacy.',
-    dosage: 'Advanced: 4-8mg once weekly (one vial lasts 1-2.5 weeks)',
-    features: ['10mg vial — advanced concentration', 'Enhanced bioavailability', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.7% purity', 'Optimized for experienced users'],
-    benefits: ['Advanced weight management research', 'Enhanced metabolic studies', 'Superior appetite regulation'],
-    image: '/images/rt10-vial-mockup.png',
-    inStock: 0,
-    storage: 'Refrigerate 2-8°C',
-    protocol: '/protocols/pdf/rt10-protocol.html',
-    protocolTitle: 'RT10 Advanced Protocol',
-    labTesting: {
-      purity: '99.7%',
-      lab: 'Janoshik',
-      date: '2026-03-15',
-      batch: 'RT10-240315'
-    }
-  },
-
-  {
-    id: 'rt20-20mg',
-    name: 'RT20 Retatrutide 20mg',
-    price: 299,
-    cost: 135,
-    profit: 164,
-    category: 'Weight Management',
-    badge: '💎 Premium Grade',
-    description: 'Premium high-concentration Retatrutide for research requiring maximum potency. Professional-grade formulation with extended research duration.',
-    dosage: 'Premium: 8-12mg once weekly (one vial lasts 1.5-2.5 weeks)',
-    features: ['20mg vial — maximum concentration', 'Premium grade formulation', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.8% purity', 'Extended research duration'],
-    benefits: ['Premium weight management research', 'Maximum potency studies', 'Professional-grade appetite regulation'],
-    image: '/images/rt20-vial-mockup.png',
-    inStock: 0,
-    storage: 'Refrigerate 2-8°C',
-    protocol: '/protocols/pdf/rt20-protocol.html',
-    protocolTitle: 'RT20 Premium Protocol',
-    labTesting: {
-      purity: '99.8%',
-      lab: 'Janoshik',
-      date: '2026-03-15',
-      batch: 'RT20-240315'
-    }
-  },
-
-  {
     id: 'glutathione-1200mg',
     name: 'Glutathione 1200mg',
     price: 129,
@@ -224,14 +174,14 @@ export const products = [
     id: 'metabolic-stack',
     name: '⚡ Metabolic Stack',
     price: 449,
-    cost: 214,
-    profit: 235,
+    cost: 117.95,
+    profit: 331.05,
     category: 'Bundles',
     badge: '🔥 Maximum Fat Burning',
-    description: 'Ultimate fat burning combo: RT20 (weight loss) + MOTS-c (metabolic boost) for maximum effect. 4-week supply with FREE essential kit. Save RM75 versus individual purchases.',
-    dosage: 'RT20: 5mg/week × 4 weeks | MOTS-c: 10mg/week × 4 weeks',
-    features: ['RT20 Retatrutide 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Save RM75 vs individual', 'FREE essential kit included'],
-    benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Complete 4-week protocol'],
+    description: 'Ultimate fat burning combo: Retatrutide 5mg (weight loss) + MOTS-c 40mg (metabolic boost) for maximum effect. Complete system with FREE essential kit. Save RM125 versus individual purchases.',
+    dosage: 'Retatrutide: 2-4mg/week | MOTS-c: 10mg/week × 4 weeks',
+    features: ['Retatrutide 5mg + MOTS-c 40mg bundle', 'Complete metabolic system', 'Weight loss + metabolic enhancement', 'Save RM125 vs individual', 'FREE essential kit included'],
+    benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Perfect starter + booster combo'],
     image: '/images/metabolic-stack-bundle.png',
     inStock: 0,
     storage: 'Refrigerate 2-8°C',
@@ -243,8 +193,8 @@ export const products = [
       date: '2026-03-15',
       batch: 'STACK-240315'
     },
-    bundleContents: ['RT20 Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
-    bundleSavings: 75
+    bundleContents: ['Retatrutide 5mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
+    bundleSavings: 125
   },
 
   {
