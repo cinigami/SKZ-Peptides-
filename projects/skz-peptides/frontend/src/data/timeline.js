@@ -349,6 +349,150 @@ const timelineData = {
       }
     ],
     note: 'Best results when paired with regular physical activity. MOTS-c enhances your body\'s response to exercise — it\'s not a replacement for it. Consistent use for 3+ months recommended.'
+  },
+
+  'retatrutide-10mg': {
+    summary: 'Progressive weight management results over 24-48 weeks. GI side effects typically ease after the first few weeks as the body adjusts.',
+    phases: [
+      {
+        period: 'Week 1-2',
+        title: 'Initial Adaptation',
+        icon: '🌱',
+        color: 'blue',
+        effects: [
+          'Appetite suppression begins within 24-72 hours',
+          'Feel satisfied with smaller portions',
+          'Decreased cravings',
+          'Mild nausea may occur (temporary)',
+          'Slight increase in energy expenditure'
+        ]
+      },
+      {
+        period: 'Week 3-4',
+        title: 'Early Results',
+        icon: '📉',
+        color: 'indigo',
+        effects: [
+          'Consistent appetite control',
+          'Initial weight loss ~2-4% body weight',
+          'Clothes start feeling looser',
+          'Glucagon activation increases fat metabolism',
+          'Side effects typically diminish'
+        ]
+      },
+      {
+        period: 'Week 5-12',
+        title: 'Steady Progress',
+        icon: '⚖️',
+        color: 'purple',
+        effects: [
+          'Sustained weight loss of 1-2 lbs per week',
+          'Total loss ~5-10% body weight',
+          'Improved energy and mood',
+          'Better sleep quality',
+          'Reduced inflammation markers'
+        ]
+      },
+      {
+        period: 'Week 13-24',
+        title: 'Peak Benefits',
+        icon: '🎯',
+        color: 'pink',
+        effects: [
+          'Weight loss plateau or gradual continued loss',
+          'Total loss ~8-15% body weight',
+          'Significantly improved metabolic markers',
+          'Enhanced insulin sensitivity',
+          'Stable appetite control'
+        ]
+      },
+      {
+        period: 'Week 25+',
+        title: 'Long-term Maintenance',
+        icon: '🏆',
+        color: 'rose',
+        effects: [
+          'Weight maintenance becomes easier',
+          'Total loss ~10-20% body weight',
+          'Improved cardiovascular health',
+          'Better relationship with food',
+          'Consider maintenance dosing strategy'
+        ]
+      }
+    ],
+    note: 'Individual results vary. Best results achieved with lifestyle modifications including balanced nutrition and regular physical activity.'
+  },
+
+  'retatrutide-20mg': {
+    summary: 'Progressive weight management results over 24-48 weeks. GI side effects typically ease after the first few weeks as the body adjusts.',
+    phases: [
+      {
+        period: 'Week 1-2',
+        title: 'Initial Adaptation',
+        icon: '🌱',
+        color: 'blue',
+        effects: [
+          'Appetite suppression begins within 24-72 hours',
+          'Feel satisfied with smaller portions',
+          'Decreased cravings',
+          'Mild nausea may occur (temporary)',
+          'Slight increase in energy expenditure'
+        ]
+      },
+      {
+        period: 'Week 3-4',
+        title: 'Early Results',
+        icon: '📉',
+        color: 'indigo',
+        effects: [
+          'Consistent appetite control',
+          'Initial weight loss ~2-4% body weight',
+          'Clothes start feeling looser',
+          'Glucagon activation increases fat metabolism',
+          'Side effects typically diminish'
+        ]
+      },
+      {
+        period: 'Week 5-12',
+        title: 'Steady Progress',
+        icon: '⚖️',
+        color: 'purple',
+        effects: [
+          'Sustained weight loss of 1-2 lbs per week',
+          'Total loss ~5-10% body weight',
+          'Improved energy and mood',
+          'Better sleep quality',
+          'Reduced inflammation markers'
+        ]
+      },
+      {
+        period: 'Week 13-24',
+        title: 'Peak Benefits',
+        icon: '🎯',
+        color: 'pink',
+        effects: [
+          'Weight loss plateau or gradual continued loss',
+          'Total loss ~8-15% body weight',
+          'Significantly improved metabolic markers',
+          'Enhanced insulin sensitivity',
+          'Stable appetite control'
+        ]
+      },
+      {
+        period: 'Week 25+',
+        title: 'Long-term Maintenance',
+        icon: '🏆',
+        color: 'rose',
+        effects: [
+          'Weight maintenance becomes easier',
+          'Total loss ~10-20% body weight',
+          'Improved cardiovascular health',
+          'Better relationship with food',
+          'Consider maintenance dosing strategy'
+        ]
+      }
+    ],
+    note: 'Individual results vary. Best results achieved with lifestyle modifications including balanced nutrition and regular physical activity.'
   }
 }
 

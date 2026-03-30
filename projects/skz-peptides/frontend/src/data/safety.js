@@ -222,6 +222,120 @@ const safetyData = {
       'Store properly after opening',
       'Discard after 28 days once opened'
     ]
+  },
+  
+  'retatrutide-10mg': {
+    common: [
+      'Nausea (most common, especially weeks 1-2)',
+      'Decreased appetite',
+      'Diarrhea',
+      'Vomiting',
+      'Constipation',
+      'Mild headache',
+      'Fatigue',
+      'Injection site reactions — redness, itching, small nodules (5-15%)',
+      'Increased resting heart rate (+5-10 bpm, peaks ~week 24 then tapers)'
+    ],
+    lessCommon: [
+      'Dizziness',
+      'Abdominal discomfort',
+      'Heart rhythm changes (~6% in clinical trials vs 3% placebo)',
+      'Liver enzyme increases (rare, ~1% — overall liver markers stay stable)',
+      'Gallbladder issues (~1.1% in Phase 2 trials)'
+    ],
+    serious: [
+      'Pancreatitis (~0.4% in trials — discontinue if severe abdominal pain)',
+      'Severe nausea/vomiting leading to dehydration',
+      'Allergic reactions',
+      'Potential bone fracture risk with rapid weight loss (under study)'
+    ],
+    contraindications: [
+      'Under 18',
+      'Pregnant/breastfeeding',
+      'Type 1 diabetes',
+      'History of pancreatitis',
+      'Severe gastroparesis',
+      'History of medullary thyroid carcinoma',
+      'Multiple Endocrine Neoplasia type 2'
+    ],
+    interactions: [
+      'Monitor blood sugar if diabetic (may reduce need for other medications)',
+      'May slow gastric emptying — take other medications 1-2 hours before or after',
+      'Alcohol may increase GI side effects',
+      'MAOIs may increase cardiovascular effects'
+    ],
+    monitoring: [
+      'Weigh weekly, track side effects',
+      'Blood glucose if diabetic',
+      'Liver enzymes if at risk',
+      'Heart rate monitoring (can increase)',
+      'Blood pressure (may decrease with weight loss)'
+    ],
+    tips: [
+      'Start with smaller, frequent meals',
+      'Stay hydrated (>2L water daily)',
+      'Take with food to reduce nausea',
+      'Rotate injection sites',
+      'Report severe abdominal pain immediately',
+      'Weight loss should be gradual (~1-2% body weight per week)'
+    ]
+  },
+
+  'retatrutide-20mg': {
+    common: [
+      'Nausea (most common, especially weeks 1-2)',
+      'Decreased appetite',
+      'Diarrhea',
+      'Vomiting',
+      'Constipation',
+      'Mild headache',
+      'Fatigue',
+      'Injection site reactions — redness, itching, small nodules (5-15%)',
+      'Increased resting heart rate (+5-10 bpm, peaks ~week 24 then tapers)'
+    ],
+    lessCommon: [
+      'Dizziness',
+      'Abdominal discomfort',
+      'Heart rhythm changes (~6% in clinical trials vs 3% placebo)',
+      'Liver enzyme increases (rare, ~1% — overall liver markers stay stable)',
+      'Gallbladder issues (~1.1% in Phase 2 trials)'
+    ],
+    serious: [
+      'Pancreatitis (~0.4% in trials — discontinue if severe abdominal pain)',
+      'Severe nausea/vomiting leading to dehydration',
+      'Allergic reactions',
+      'Potential bone fracture risk with rapid weight loss (under study)'
+    ],
+    contraindications: [
+      'Under 18',
+      'Pregnant/breastfeeding',
+      'Type 1 diabetes',
+      'History of pancreatitis',
+      'Severe gastroparesis',
+      'History of medullary thyroid carcinoma',
+      'Multiple Endocrine Neoplasia type 2'
+    ],
+    interactions: [
+      'Monitor blood sugar if diabetic (may reduce need for other medications)',
+      'May slow gastric emptying — take other medications 1-2 hours before or after',
+      'Alcohol may increase GI side effects',
+      'MAOIs may increase cardiovascular effects'
+    ],
+    monitoring: [
+      'Weigh weekly, track side effects',
+      'Blood glucose if diabetic',
+      'Liver enzymes if at risk',
+      'Heart rate monitoring (can increase)',
+      'Blood pressure (may decrease with weight loss)'
+    ],
+    tips: [
+      'Start with smaller, frequent meals',
+      'Stay hydrated (>2L water daily)',
+      'Take with food to reduce nausea',
+      'Rotate injection sites',
+      'Report severe abdominal pain immediately',
+      'Weight loss should be gradual (~1-2% body weight per week)'
+    ]
   }
 }
 
