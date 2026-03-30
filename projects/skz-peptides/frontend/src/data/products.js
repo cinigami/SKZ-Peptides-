@@ -232,7 +232,7 @@ export const products = [
     dosage: '',
     features: ['Retatrutide 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Premium concentrations', 'FREE essential kit included'],
     benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Perfect starter + booster combo'],
-    image: '/images/metabolic-stack-bundle.png',
+    image: '/images/metabolic-stack-bundle-skz.png',
     inStock: 0,
     storage: 'Refrigerate 2-8°C',
     protocol: '/protocols/pdf/metabolic-stack-protocol.html',
