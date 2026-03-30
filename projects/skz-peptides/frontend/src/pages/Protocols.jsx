@@ -3,7 +3,15 @@ import { products } from '../data/products'
 import { motion } from 'framer-motion'
 
 const Protocols = () => {
-  const productsWithProtocols = products.filter(product => product.protocol)
+  // Exclude Phase 2 products from protocols page
+  const phase2ProductIds = [
+    'retatrutide-10mg', 'retatrutide-20mg', 'glutathione-1200mg', 
+    'ghk-cu-100mg', 'metabolic-stack', 'glow-stack'
+  ]
+  
+  const productsWithProtocols = products.filter(product => 
+    product.protocol && !phase2ProductIds.includes(product.id)
+  )
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
