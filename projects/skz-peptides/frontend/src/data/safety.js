@@ -222,6 +222,92 @@ const safetyData = {
       'Store properly after opening',
       'Discard after 28 days once opened'
     ]
+  },
+
+  'retatrutide-10mg': {
+    common: [
+      'Nausea (most common, especially weeks 1-2)',
+      'Decreased appetite',
+      'Diarrhea',
+      'Vomiting',
+      'Constipation',
+      'Mild headache',
+      'Fatigue',
+      'Injection site reactions — redness, itching, small nodules (5-15%)',
+      'Increased resting heart rate (+5-10 bpm, peaks ~week 24 then tapers)'
+    ],
+    lessCommon: [
+      'Dizziness',
+      'Abdominal discomfort',
+      'Heart rhythm changes (~6% in clinical trials vs 3% placebo)',
+      'Liver enzyme increases (rare, ~1% — overall liver markers stay stable)',
+      'Gallbladder issues (~1.1% in Phase 2 trials)'
+    ],
+    serious: [
+      'Pancreatitis (~0.4% in trials — discontinue if severe abdominal pain)',
+      'Severe nausea/vomiting leading to dehydration',
+      'Allergic reactions',
+      'Potential bone fracture risk with rapid weight loss (under study)'
+    ],
+    contraindications: [
+      'Under 18',
+      'Pregnancy/breastfeeding',
+      'Active eating disorders',
+      'Severe GI conditions',
+      'Personal/family history of medullary thyroid carcinoma',
+      'History of pancreatitis'
+    ],
+    safetyTips: [
+      'Start low dose and titrate slowly — 6-16% discontinue due to GI side effects',
+      'Stay hydrated, especially if experiencing vomiting/diarrhea',
+      'Take with food if nausea occurs',
+      'Rotate injection sites to prevent nodules',
+      'GI side effects typically improve as the body adjusts',
+      'Monitor heart rate regularly during first few months'
+    ]
+  },
+
+  'retatrutide-20mg': {
+    common: [
+      'Nausea (most common, especially weeks 1-2)',
+      'Decreased appetite',
+      'Diarrhea',
+      'Vomiting',
+      'Constipation',
+      'Mild headache',
+      'Fatigue',
+      'Injection site reactions — redness, itching, small nodules (5-15%)',
+      'Increased resting heart rate (+5-10 bpm, peaks ~week 24 then tapers)'
+    ],
+    lessCommon: [
+      'Dizziness',
+      'Abdominal discomfort',
+      'Heart rhythm changes (~6% in clinical trials vs 3% placebo)',
+      'Liver enzyme increases (rare, ~1% — overall liver markers stay stable)',
+      'Gallbladder issues (~1.1% in Phase 2 trials)'
+    ],
+    serious: [
+      'Pancreatitis (~0.4% in trials — discontinue if severe abdominal pain)',
+      'Severe nausea/vomiting leading to dehydration',
+      'Allergic reactions',
+      'Potential bone fracture risk with rapid weight loss (under study)'
+    ],
+    contraindications: [
+      'Under 18',
+      'Pregnancy/breastfeeding',
+      'Active eating disorders',
+      'Severe GI conditions',
+      'Personal/family history of medullary thyroid carcinoma',
+      'History of pancreatitis'
+    ],
+    safetyTips: [
+      'Start low dose and titrate slowly — 6-16% discontinue due to GI side effects',
+      'Stay hydrated, especially if experiencing vomiting/diarrhea',
+      'Take with food if nausea occurs',
+      'Rotate injection sites to prevent nodules',
+      'GI side effects typically improve as the body adjusts',
+      'Monitor heart rate regularly during first few months'
+    ]
   }
 }
 
