@@ -121,7 +121,7 @@ export const products = [
   // ==================== PHASE 2 PRODUCTS ====================
   {
     id: 'rt10-10mg',
-    name: 'RT10 10mg',
+    name: 'RT10 Retatrutide 10mg',
     price: 189,
     cost: 85,
     profit: 104,
@@ -146,7 +146,7 @@ export const products = [
 
   {
     id: 'rt20-20mg',
-    name: 'RT20 20mg',
+    name: 'RT20 Retatrutide 20mg',
     price: 299,
     cost: 135,
     profit: 164,
@@ -230,7 +230,7 @@ export const products = [
     badge: '🔥 Maximum Fat Burning',
     description: 'Ultimate fat burning combo: RT20 (weight loss) + MOTS-c (metabolic boost) for maximum effect. 4-week supply with FREE essential kit. Save RM75 versus individual purchases.',
     dosage: 'RT20: 5mg/week × 4 weeks | MOTS-c: 10mg/week × 4 weeks',
-    features: ['RT20 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Save RM75 vs individual', 'FREE essential kit included'],
+    features: ['RT20 Retatrutide 20mg + MOTS-c 40mg bundle', '4-week complete system', 'Weight loss + metabolic enhancement', 'Save RM75 vs individual', 'FREE essential kit included'],
     benefits: ['Maximum fat burning potential', 'Enhanced metabolic performance', 'Complete 4-week protocol'],
     image: '/images/metabolic-stack-bundle.png',
     inStock: 0,
@@ -243,7 +243,7 @@ export const products = [
       date: '2026-03-15',
       batch: 'STACK-240315'
     },
-    bundleContents: ['RT20 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
+    bundleContents: ['RT20 Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
     bundleSavings: 75
   },
 
