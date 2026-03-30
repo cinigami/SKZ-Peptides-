@@ -259,7 +259,7 @@ export const products = [
     dosage: '',
     features: ['Glutathione 1200mg + GHK-Cu 100mg', 'Complete anti-aging system', 'Save RM39 vs individual', 'Master antioxidant + copper peptide', 'Comprehensive cellular protection'],
     benefits: ['Complete anti-aging research', 'Cellular protection + regeneration', 'Cost-effective bundle pricing'],
-    image: '/images/glow-stack-bundle.png',
+    image: '/images/glow-stack-bundle-skz.png',
     inStock: 0,
     storage: 'Refrigerate 2-8°C',
     protocol: '/protocols/pdf/glow-stack-protocol.html',
