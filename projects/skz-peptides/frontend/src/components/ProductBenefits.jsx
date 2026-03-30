@@ -214,6 +214,90 @@ const ProductBenefits = ({ product }) => {
           ]
         }
 
+      case 'metabolic-stack':
+        return {
+          title: '⚡ Metabolic Stack Research Benefits',
+          subtitle: 'Ultimate Fat Burning Combo: Retatrutide 20mg + MOTS-c 40mg',
+          primaryBenefits: [
+            {
+              icon: TrendingUp,
+              title: 'Maximum Weight Management',
+              description: 'Synergistic fat burning with 20-30% body weight reduction potential combining triple receptor agonism with mitochondrial optimization.',
+              metrics: ['20-30% weight reduction potential', '80-90% appetite suppression', 'Enhanced metabolic efficiency']
+            },
+            {
+              icon: Zap,
+              title: 'Metabolic Amplification',
+              description: 'MOTS-c amplifies Retatrutide effects with enhanced fat oxidation, improved exercise performance, and metabolic flexibility.',
+              metrics: ['50-70% improved fat oxidation', '40-60% better exercise capacity', 'Enhanced metabolic adaptation']
+            },
+            {
+              icon: Activity,
+              title: 'Comprehensive System',
+              description: 'Complete 4-week system targeting multiple pathways: appetite control, metabolic rate, fat oxidation, and energy optimization.',
+              metrics: ['Multi-pathway targeting', '4-week complete protocol', 'Synergistic compound effects']
+            }
+          ],
+          mechanism: {
+            title: 'Dual-Pathway Fat Burning',
+            description: 'Combines Retatrutide\'s triple receptor agonism (GLP-1/GIP/Glucagon) with MOTS-c mitochondrial optimization for maximum effect.',
+            pathways: [
+              'Triple incretin receptor activation for appetite control',
+              'Mitochondrial biogenesis and optimization',
+              'Enhanced fat oxidation and thermogenesis',
+              'Improved insulin sensitivity and glucose metabolism'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1', effects: 'Rapid appetite suppression, initial fat burning activation, energy optimization begins' },
+            { phase: 'Week 2-3', effects: 'Synergistic effects peak, accelerated weight loss, enhanced exercise capacity' },
+            { phase: 'Week 4', effects: 'Maximum metabolic benefits, sustained fat loss, optimized body composition' },
+            { phase: 'Post-cycle', effects: 'Maintained metabolic improvements, sustained appetite control, enhanced fitness' }
+          ]
+        }
+
+      case 'glow-stack':
+        return {
+          title: '💎 Glow Stack Research Benefits',
+          subtitle: 'Anti-Aging Powerhouse: Glutathione 1200mg + GHK-Cu 100mg',
+          primaryBenefits: [
+            {
+              icon: Shield,
+              title: 'Complete Cellular Protection',
+              description: 'Master antioxidant defense combined with tissue regeneration for comprehensive anti-aging and cellular optimization.',
+              metrics: ['60-80% oxidative stress reduction', '50-70% enhanced cellular repair', 'Comprehensive anti-aging effects']
+            },
+            {
+              icon: Activity,
+              title: 'Tissue Regeneration',
+              description: 'GHK-Cu copper peptide enhances collagen synthesis and tissue repair while glutathione protects against cellular damage.',
+              metrics: ['40-60% improved skin elasticity', '50-70% enhanced tissue repair', 'Accelerated regenerative processes']
+            },
+            {
+              icon: Brain,
+              title: 'Systemic Wellness',
+              description: 'Dual-action approach targeting detoxification, cognitive enhancement, and overall wellness optimization.',
+              metrics: ['Enhanced mental clarity', 'Improved detoxification', 'Optimized overall wellness']
+            }
+          ],
+          mechanism: {
+            title: 'Synergistic Anti-Aging System',
+            description: 'Combines master antioxidant protection with copper peptide regeneration for comprehensive cellular health and longevity.',
+            pathways: [
+              'Glutathione: Direct antioxidant protection and detoxification',
+              'GHK-Cu: Collagen synthesis and tissue regeneration',
+              'Synergistic cellular repair and protection',
+              'Enhanced longevity and wellness pathways'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Initial detox and repair activation, early skin improvements, enhanced clarity' },
+            { phase: 'Week 3-4', effects: 'Visible anti-aging benefits, improved skin texture, enhanced energy' },
+            { phase: 'Week 5-8', effects: 'Significant regenerative effects, optimized cellular function, sustained wellness' },
+            { phase: 'Week 8+', effects: 'Long-term anti-aging benefits, sustained cellular protection, enhanced longevity' }
+          ]
+        }
+
       case 'motsc-40mg':
         return {
           title: 'MOTS-c Research Benefits',

@@ -611,6 +611,124 @@ const timelineData = {
       }
     ],
     note: 'Copper peptide effects are cumulative. Consistent use provides best regenerative and anti-aging outcomes.'
+  },
+
+  'metabolic-stack': {
+    summary: 'Accelerated fat burning and metabolic optimization over 4-6 weeks. Synergistic effects typically peak during week 2-3.',
+    phases: [
+      {
+        period: 'Week 1',
+        title: 'System Activation',
+        icon: '🚀',
+        color: 'blue',
+        effects: [
+          'Rapid appetite suppression from Retatrutide',
+          'Mitochondrial activation from MOTS-c begins',
+          'Initial weight loss (2-4 lbs)',
+          'Enhanced energy expenditure starts',
+          'Metabolic rate increase detectable'
+        ]
+      },
+      {
+        period: 'Week 2-3',
+        title: 'Synergistic Peak',
+        icon: '⚡',
+        color: 'indigo',
+        effects: [
+          'Maximum synergistic fat burning effects',
+          'Accelerated weight loss (3-5 lbs/week)',
+          'Enhanced exercise performance and recovery',
+          'Optimized glucose metabolism',
+          'Sustained appetite control with energy boost'
+        ]
+      },
+      {
+        period: 'Week 4-5',
+        title: 'Metabolic Optimization',
+        icon: '🎯',
+        color: 'purple',
+        effects: [
+          'Body composition improvements visible',
+          'Enhanced metabolic flexibility',
+          'Improved insulin sensitivity',
+          'Sustained fat oxidation capacity',
+          'Optimized energy utilization patterns'
+        ]
+      },
+      {
+        period: 'Week 6+',
+        title: 'Sustained Benefits',
+        icon: '🏆',
+        color: 'pink',
+        effects: [
+          'Maintained metabolic improvements',
+          'Sustained appetite control mechanisms',
+          'Enhanced fitness and recovery capacity',
+          'Optimized body composition maintenance',
+          'Long-term metabolic health benefits'
+        ]
+      }
+    ],
+    note: 'Maximum fat burning protocol. Best results with structured nutrition and exercise program during cycle.'
+  },
+
+  'glow-stack': {
+    summary: 'Comprehensive anti-aging and cellular optimization over 8-12 weeks. Skin improvements typically visible within 3-4 weeks.',
+    phases: [
+      {
+        period: 'Week 1-2',
+        title: 'Dual Activation',
+        icon: '🌟',
+        color: 'blue',
+        effects: [
+          'Initial detoxification processes activate',
+          'Tissue repair mechanisms begin',
+          'Enhanced cellular antioxidant activity',
+          'Early skin hydration improvements',
+          'Increased energy and mental clarity'
+        ]
+      },
+      {
+        period: 'Week 3-4',
+        title: 'Visible Transformation',
+        icon: '✨',
+        color: 'indigo',
+        effects: [
+          'Noticeable skin texture and tone improvements',
+          'Enhanced skin elasticity and firmness',
+          'Improved mental clarity and focus',
+          'Reduced inflammation markers',
+          'Enhanced overall vitality'
+        ]
+      },
+      {
+        period: 'Week 5-8',
+        title: 'Deep Regeneration',
+        icon: '🛡️',
+        color: 'purple',
+        effects: [
+          'Significant collagen remodeling effects',
+          'Optimized cellular protection systems',
+          'Enhanced detoxification capacity',
+          'Improved vascular health and circulation',
+          'Sustained anti-aging benefits'
+        ]
+      },
+      {
+        period: 'Week 9-12',
+        title: 'Long-term Wellness',
+        icon: '💎',
+        color: 'pink',
+        effects: [
+          'Sustained cellular protection established',
+          'Long-term anti-aging benefits visible',
+          'Optimized overall wellness markers',
+          'Enhanced resilience to aging factors',
+          'Comprehensive longevity benefits'
+        ]
+      }
+    ],
+    note: 'Synergistic anti-aging effects compound over time. Consistent use provides optimal cellular protection and regeneration.'
   }
 }
 

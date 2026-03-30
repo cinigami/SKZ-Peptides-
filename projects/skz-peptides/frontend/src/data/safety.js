@@ -377,6 +377,84 @@ const safetyData = {
       'Rotate injection sites regularly',
       'Report any unusual skin reactions promptly'
     ]
+  },
+
+  'metabolic-stack': {
+    common: [
+      'Nausea (from Retatrutide component - most common)',
+      'Decreased appetite and early satiety',
+      'Mild injection site reactions at both sites',
+      'Temporary fatigue during adaptation',
+      'Mild headache (combination effect)',
+      'Digestive changes (diarrhea or constipation)',
+      'Increased heart rate (+5-10 bpm)'
+    ],
+    lessCommon: [
+      'Enhanced detoxification reactions',
+      'Dizziness from rapid metabolic changes',
+      'Sleep pattern changes during adaptation',
+      'Mild muscle cramping (electrolyte related)',
+      'Temporary energy fluctuations'
+    ],
+    serious: [
+      'Severe GI reactions requiring discontinuation',
+      'Significant dehydration from combined effects',
+      'Allergic reactions to either compound',
+      'Pancreatitis risk (from Retatrutide component)'
+    ],
+    contraindications: [
+      'All Retatrutide contraindications apply',
+      'Pregnancy/breastfeeding',
+      'Under 18 years of age',
+      'History of pancreatitis',
+      'Severe cardiovascular conditions',
+      'Active eating disorders'
+    ],
+    safetyTips: [
+      'Start with conservative dosing of both compounds',
+      'Monitor hydration status closely',
+      'Stagger injection timing (separate sites/times)',
+      'Track both weight loss and energy levels',
+      'Enhanced monitoring needed due to combination',
+      'Consider cycling approach for optimal safety'
+    ]
+  },
+
+  'glow-stack': {
+    common: [
+      'Mild injection site reactions (both compounds)',
+      'Temporary skin flushing or sensitivity',
+      'Initial detoxification reactions (fatigue, mild nausea)',
+      'Mild headache during first few sessions',
+      'Temporary skin changes or sensitivity'
+    ],
+    lessCommon: [
+      'Enhanced detox symptoms initially',
+      'Mild digestive changes',
+      'Temporary metallic taste (from copper)',
+      'Skin discoloration at injection sites',
+      'Changes in energy levels during adaptation'
+    ],
+    serious: [
+      'Severe allergic reactions to either compound',
+      'Significant skin reactions or sensitivity',
+      'Asthma exacerbation (from glutathione component)'
+    ],
+    contraindications: [
+      'Pregnancy/breastfeeding',
+      'Severe asthma (glutathione component)',
+      'Wilson\'s disease or copper disorders',
+      'Active chemotherapy',
+      'Known sensitivities to either compound'
+    ],
+    safetyTips: [
+      'Generally very well tolerated combination',
+      'Monitor skin reactions at both injection sites',
+      'Stay well hydrated to support detoxification',
+      'Start with conservative dosing of both',
+      'Rotate injection sites for both compounds',
+      'May enhance each other\'s beneficial effects'
+    ]
   }
 }
 
