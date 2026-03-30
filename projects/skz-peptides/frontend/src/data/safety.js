@@ -308,6 +308,75 @@ const safetyData = {
       'GI side effects typically improve as the body adjusts',
       'Monitor heart rate regularly during first few months'
     ]
+  },
+
+  'glutathione-1200mg': {
+    common: [
+      'Mild injection site reactions — redness, swelling',
+      'Temporary fatigue during initial detox phase',
+      'Mild nausea (especially at higher doses)',
+      'Temporary skin flushing',
+      'Mild headache during first few sessions'
+    ],
+    lessCommon: [
+      'Digestive discomfort',
+      'Temporary skin lightening (reversible)',
+      'Changes in stool consistency',
+      'Mild dizziness',
+      'Initial worsening of symptoms (detox reaction)'
+    ],
+    serious: [
+      'Severe allergic reactions (very rare)',
+      'Asthma exacerbation in sensitive individuals',
+      'Significant skin reactions'
+    ],
+    contraindications: [
+      'Pregnancy/breastfeeding',
+      'Severe asthma (may trigger bronchospasm)',
+      'Known hypersensitivity to glutathione',
+      'Active chemotherapy (may interfere with treatment)'
+    ],
+    safetyTips: [
+      'Generally very well tolerated with minimal side effects',
+      'Start with lower doses if sensitive to detox reactions',
+      'Stay well hydrated to support detoxification',
+      'Monitor for any skin changes or reactions',
+      'Rotate injection sites to prevent tissue irritation',
+      'May enhance effects of other antioxidants'
+    ]
+  },
+
+  'ghk-cu-100mg': {
+    common: [
+      'Injection site reactions — redness, mild irritation',
+      'Temporary skin flushing',
+      'Mild headache',
+      'Initial skin sensitivity'
+    ],
+    lessCommon: [
+      'Mild nausea',
+      'Temporary metallic taste',
+      'Skin discoloration at injection site',
+      'Mild fatigue'
+    ],
+    serious: [
+      'Allergic reactions to copper compounds (rare)',
+      'Severe skin reactions'
+    ],
+    contraindications: [
+      'Pregnancy/breastfeeding',
+      'Wilson\'s disease or copper metabolism disorders',
+      'Known copper sensitivity',
+      'Active skin infections at injection site'
+    ],
+    safetyTips: [
+      'Well tolerated with minimal systemic effects',
+      'Monitor injection sites for irritation',
+      'Avoid if you have copper metabolism issues',
+      'Start with lower doses to assess tolerance',
+      'Rotate injection sites regularly',
+      'Report any unusual skin reactions promptly'
+    ]
   }
 }
 

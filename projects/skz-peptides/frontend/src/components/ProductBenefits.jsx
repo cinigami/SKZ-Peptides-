@@ -130,6 +130,90 @@ const ProductBenefits = ({ product }) => {
           ]
         }
 
+      case 'glutathione-1200mg':
+        return {
+          title: 'Glutathione Research Benefits',
+          subtitle: 'Master Antioxidant for Cellular Protection & Anti-Aging',
+          primaryBenefits: [
+            {
+              icon: Shield,
+              title: 'Cellular Protection',
+              description: 'Superior antioxidant defense with 40-60% reduction in oxidative stress markers and enhanced cellular repair mechanisms.',
+              metrics: ['40-60% oxidative stress reduction', '50-70% improved cellular repair', 'Enhanced DNA protection']
+            },
+            {
+              icon: Brain,
+              title: 'Cognitive Enhancement',
+              description: 'Neurological support with improved mental clarity, focus enhancement, and neuroprotective benefits.',
+              metrics: ['25-40% improved mental clarity', '30-50% better focus retention', 'Enhanced memory consolidation']
+            },
+            {
+              icon: Activity,
+              title: 'Detoxification Support',
+              description: 'Superior liver detoxification with enhanced Phase II conjugation and improved toxin elimination pathways.',
+              metrics: ['60-80% enhanced detox capacity', '40-55% improved liver function', 'Accelerated toxin clearance']
+            }
+          ],
+          mechanism: {
+            title: 'Master Antioxidant System',
+            description: 'Primary cellular antioxidant that regenerates other antioxidants (Vitamin C, E) and directly neutralizes free radicals.',
+            pathways: [
+              'Direct free radical scavenging and neutralization',
+              'Regeneration of oxidized vitamins C and E',
+              'Enhanced Phase II liver detoxification',
+              'Mitochondrial protection and energy optimization'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Initial detox response, improved energy, enhanced mental clarity' },
+            { phase: 'Week 3-4', effects: 'Visible skin improvements, better sleep quality, reduced inflammation' },
+            { phase: 'Week 5-8', effects: 'Optimized immune function, enhanced recovery, stable energy levels' },
+            { phase: 'Week 8+', effects: 'Long-term cellular protection, anti-aging benefits, sustained wellness' }
+          ]
+        }
+
+      case 'ghk-cu-100mg':
+        return {
+          title: 'GHK-Cu Research Benefits',
+          subtitle: 'Copper Peptide for Tissue Repair & Regeneration',
+          primaryBenefits: [
+            {
+              icon: Activity,
+              title: 'Tissue Regeneration',
+              description: 'Enhanced collagen synthesis with 30-50% improvement in skin elasticity and accelerated wound healing.',
+              metrics: ['30-50% improved skin elasticity', '40-60% faster wound healing', 'Enhanced collagen production']
+            },
+            {
+              icon: Shield,
+              title: 'Anti-Inflammatory Effects',
+              description: 'Significant reduction in inflammation markers with improved tissue repair and recovery processes.',
+              metrics: ['50-70% inflammation reduction', '40-55% faster recovery', 'Enhanced tissue repair']
+            },
+            {
+              icon: Heart,
+              title: 'Vascular Health',
+              description: 'Improved circulation and vascular integrity with enhanced blood flow and capillary health.',
+              metrics: ['25-40% improved circulation', '30-50% better vascular health', 'Enhanced capillary function']
+            }
+          ],
+          mechanism: {
+            title: 'Copper Peptide Complex',
+            description: 'Bioactive copper-peptide complex that modulates gene expression for tissue repair and regeneration.',
+            pathways: [
+              'Collagen and elastin synthesis stimulation',
+              'Anti-inflammatory cytokine modulation',
+              'Growth factor activation and signaling',
+              'Antioxidant enzyme system enhancement'
+            ]
+          },
+          timeline: [
+            { phase: 'Week 1-2', effects: 'Initial tissue repair activation, reduced inflammation markers' },
+            { phase: 'Week 3-4', effects: 'Visible skin texture improvements, enhanced healing response' },
+            { phase: 'Week 5-8', effects: 'Significant collagen remodeling, improved skin elasticity' },
+            { phase: 'Week 8+', effects: 'Sustained regenerative effects, long-term tissue health' }
+          ]
+        }
+
       case 'motsc-40mg':
         return {
           title: 'MOTS-c Research Benefits',

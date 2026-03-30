@@ -493,6 +493,124 @@ const timelineData = {
       }
     ],
     note: 'Individual results vary. Best results achieved with lifestyle modifications including balanced nutrition and regular physical activity.'
+  },
+
+  'glutathione-1200mg': {
+    summary: 'Progressive cellular protection and detoxification benefits over 8-12 weeks. Initial detox reactions typically resolve within first week.',
+    phases: [
+      {
+        period: 'Week 1-2',
+        title: 'Initial Detoxification',
+        icon: '🌱',
+        color: 'blue',
+        effects: [
+          'Mild detox symptoms may occur initially',
+          'Increased energy and mental clarity begin',
+          'Enhanced cellular antioxidant activity',
+          'Improved sleep quality starts',
+          'Initial immune system support'
+        ]
+      },
+      {
+        period: 'Week 3-4',
+        title: 'Cellular Optimization',
+        icon: '⚡',
+        color: 'indigo',
+        effects: [
+          'Noticeable skin texture improvements',
+          'Sustained energy levels throughout day',
+          'Enhanced mental focus and clarity',
+          'Reduced inflammation markers',
+          'Better stress response and recovery'
+        ]
+      },
+      {
+        period: 'Week 5-8',
+        title: 'Systemic Benefits',
+        icon: '🛡️',
+        color: 'purple',
+        effects: [
+          'Optimized immune function response',
+          'Visible anti-aging skin benefits',
+          'Enhanced liver detoxification capacity',
+          'Improved exercise recovery',
+          'Stable mood and cognitive function'
+        ]
+      },
+      {
+        period: 'Week 9-12',
+        title: 'Long-term Protection',
+        icon: '🎯',
+        color: 'pink',
+        effects: [
+          'Sustained cellular protection established',
+          'Optimized antioxidant defense systems',
+          'Long-term anti-aging benefits visible',
+          'Enhanced overall wellness markers',
+          'Improved resilience to oxidative stress'
+        ]
+      }
+    ],
+    note: 'Master antioxidant effects compound over time. Best results with consistent use and supportive lifestyle factors.'
+  },
+
+  'ghk-cu-100mg': {
+    summary: 'Progressive tissue repair and regeneration effects over 8-16 weeks. Skin improvements typically visible within first month.',
+    phases: [
+      {
+        period: 'Week 1-2',
+        title: 'Activation Phase',
+        icon: '🌟',
+        color: 'blue',
+        effects: [
+          'Initial tissue repair processes activate',
+          'Mild inflammation reduction begins',
+          'Enhanced wound healing response',
+          'Improved skin hydration',
+          'Initial collagen synthesis stimulation'
+        ]
+      },
+      {
+        period: 'Week 3-4',
+        title: 'Visible Improvements',
+        icon: '✨',
+        color: 'indigo',
+        effects: [
+          'Noticeable skin texture improvements',
+          'Enhanced skin elasticity and firmness',
+          'Reduced fine lines and wrinkles',
+          'Improved skin tone and clarity',
+          'Accelerated healing of minor injuries'
+        ]
+      },
+      {
+        period: 'Week 5-8',
+        title: 'Tissue Remodeling',
+        icon: '🔄',
+        color: 'purple',
+        effects: [
+          'Significant collagen remodeling occurs',
+          'Enhanced skin thickness and resilience',
+          'Improved vascular health and circulation',
+          'Sustained anti-inflammatory effects',
+          'Better overall skin quality'
+        ]
+      },
+      {
+        period: 'Week 9-16',
+        title: 'Long-term Regeneration',
+        icon: '🏆',
+        color: 'pink',
+        effects: [
+          'Sustained regenerative processes',
+          'Long-term anti-aging benefits established',
+          'Optimized tissue repair mechanisms',
+          'Enhanced overall skin health',
+          'Improved resilience to aging factors'
+        ]
+      }
+    ],
+    note: 'Copper peptide effects are cumulative. Consistent use provides best regenerative and anti-aging outcomes.'
   }
 }
 
