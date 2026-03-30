@@ -99,7 +99,7 @@ const ProductCard = ({ product }) => {
             <span className="text-xl font-bold text-gray-900 dark:text-purple-400">
               {formatPrice(product.price)}
             </span>
-            <p className="text-xs text-gray-500">{product.dosage}</p>
+            {product.dosage && <p className="text-xs text-gray-500">{product.dosage}</p>}
           </div>
         </div>
       </Link>
