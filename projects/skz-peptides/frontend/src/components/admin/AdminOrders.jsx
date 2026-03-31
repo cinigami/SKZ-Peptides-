@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Plus, X, MessageCircle, ChevronRight } from 'lucide-react'
 import { useAdmin } from '../../context/AdminContext'
 import SyncStatus from './SyncStatus'
+import SupabaseSync from './SupabaseSync'
 
 const STATUSES = ['Pending', 'Confirmed', 'Shipped', 'Delivered']
 
@@ -13,7 +14,13 @@ const statusColors = {
 }
 
 const AdminOrders = () => {
-  const { orders, addOrder, updateOrderStatus, deleteOrder, products, syncStatus, forceSync, loading } = useAdmin()
+  const { orders, addOrder, updateOrderStatus, deleteOrder, products } = useAdmin()
+  const [syncMessage, setSyncMessage] = useState(null)
+  
+  const handleSyncComplete = (type, message) => {
+    setSyncMessage({ type, message })
+    setTimeout(() => setSyncMessage(null), 5000)
+  }
   const [showForm, setShowForm] = useState(false)
   const [form, setForm] = useState({
     customerName: '',
@@ -82,17 +89,29 @@ const AdminOrders = () => {
 
   return (
     <div className="space-y-4">
+      {syncMessage && (
+        <div className={`p-3 rounded-lg ${
+          syncMessage.type === 'success' 
+            ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300' 
+            : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300'
+        }`}>
+          {syncMessage.message}
+        </div>
+      )}
+      
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">Orders</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">{orders.length} orders</p>
         </div>
         <div className="flex items-center gap-3">
-          <SyncStatus status={syncStatus} onForceSync={forceSync} />
+          <SupabaseSync 
+            orders={orders}
+            onSyncComplete={handleSyncComplete}
+          />
           <button
             onClick={() => setShowForm(true)}
-            disabled={loading}
-            className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white rounded-lg text-sm font-medium transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors"
           >
             <Plus className="w-4 h-4" />
             New Order
