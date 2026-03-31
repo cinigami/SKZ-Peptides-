@@ -126,10 +126,14 @@ export function AdminProvider({ children }) {
     setOrders(prev => [newOrder, ...prev])
     // Deduct stock for each product in the order
     if (order.items && Array.isArray(order.items)) {
+      console.log('Deducting stock for items:', order.items)
       order.items.forEach(item => {
+        console.log(`Deducting ${item.qty} units of ${item.id}`)
         setProducts(prev => prev.map(p => {
           if (p.id !== item.id) return p
-          return { ...p, inStock: Math.max(0, p.inStock - item.qty) }
+          const newStock = Math.max(0, p.inStock - item.qty)
+          console.log(`${p.name}: ${p.inStock} → ${newStock}`)
+          return { ...p, inStock: newStock }
         }))
       })
     }

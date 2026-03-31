@@ -68,7 +68,7 @@ const AdminOrders = () => {
       products: productsText,
       total: orderTotal,
       notes: form.notes,
-      items: selectedProducts.map(sp => ({ id: sp.id, qty: sp.qty })),
+      items: selectedProducts.map(sp => ({ id: sp.id, name: sp.name, price: sp.price, qty: sp.qty })),
     })
     setForm({ customerName: '', customerPhone: '', notes: '' })
     setSelectedProducts([])
