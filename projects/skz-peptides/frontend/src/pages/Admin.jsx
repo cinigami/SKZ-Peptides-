@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react'
 import { LayoutDashboard, Package, ShoppingBag, ClipboardList, TrendingUp, LogOut, Download, Upload } from 'lucide-react'
-import { AdminProvider, useAdmin } from '../context/AdminContext'
+// Switch between old localStorage-only and new Supabase-synced context
+// Using AdminContextV2 for Supabase sync
+import { AdminProvider, useAdmin } from '../context/AdminContextV2'
 import AdminLogin from '../components/admin/AdminLogin'
 import AdminDashboard from '../components/admin/AdminDashboard'
 import AdminInventory from '../components/admin/AdminInventory'

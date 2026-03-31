@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Plus, X, MessageCircle, ChevronRight } from 'lucide-react'
 import { useAdmin } from '../../context/AdminContext'
+import SyncStatus from './SyncStatus'
 
 const STATUSES = ['Pending', 'Confirmed', 'Shipped', 'Delivered']
 
@@ -12,7 +13,7 @@ const statusColors = {
 }
 
 const AdminOrders = () => {
-  const { orders, addOrder, updateOrderStatus, deleteOrder, products } = useAdmin()
+  const { orders, addOrder, updateOrderStatus, deleteOrder, products, syncStatus, forceSync, loading } = useAdmin()
   const [showForm, setShowForm] = useState(false)
   const [form, setForm] = useState({
     customerName: '',
@@ -86,13 +87,17 @@ const AdminOrders = () => {
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">Orders</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">{orders.length} orders</p>
         </div>
-        <button
-          onClick={() => setShowForm(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors"
-        >
-          <Plus className="w-4 h-4" />
-          New Order
-        </button>
+        <div className="flex items-center gap-3">
+          <SyncStatus status={syncStatus} onForceSync={forceSync} />
+          <button
+            onClick={() => setShowForm(true)}
+            disabled={loading}
+            className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white rounded-lg text-sm font-medium transition-colors"
+          >
+            <Plus className="w-4 h-4" />
+            New Order
+          </button>
+        </div>
       </div>
 
       {/* New Order Form */}
