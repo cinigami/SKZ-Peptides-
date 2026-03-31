@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Plus, X, MessageCircle, ChevronRight } from 'lucide-react'
 import { useAdmin } from '../../context/AdminContext'
 import SyncStatus from './SyncStatus'
-import AutoSyncStatus from './AutoSyncStatus'
+import SimpleSync from './SimpleSync'
 
 const STATUSES = ['Pending', 'Confirmed', 'Shipped', 'Delivered']
 
@@ -14,7 +14,13 @@ const statusColors = {
 }
 
 const AdminOrders = () => {
-  const { orders, addOrder, updateOrderStatus, deleteOrder, products, syncStatus, lastSync, forceSync } = useAdmin()
+  const { orders, addOrder, updateOrderStatus, deleteOrder, products } = useAdmin()
+  const [syncMessage, setSyncMessage] = useState(null)
+  
+  const handleSyncComplete = (type, message) => {
+    setSyncMessage({ type, message })
+    setTimeout(() => setSyncMessage(null), 5000)
+  }
   const [showForm, setShowForm] = useState(false)
   const [form, setForm] = useState({
     customerName: '',
@@ -83,16 +89,25 @@ const AdminOrders = () => {
 
   return (
     <div className="space-y-4">
+      {syncMessage && (
+        <div className={`p-3 rounded-lg ${
+          syncMessage.type === 'success' 
+            ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300' 
+            : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300'
+        }`}>
+          {syncMessage.message}
+        </div>
+      )}
+      
       <div className="flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">Orders</h2>
           <p className="text-sm text-gray-500 dark:text-gray-400">{orders.length} orders</p>
         </div>
         <div className="flex items-center gap-3">
-          <AutoSyncStatus 
-            status={syncStatus}
-            lastSync={lastSync}
-            onForceSync={forceSync}
+          <SimpleSync 
+            orders={orders}
+            onSyncComplete={handleSyncComplete}
           />
           <button
             onClick={() => setShowForm(true)}
