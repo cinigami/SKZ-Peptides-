@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Plus, X, MessageCircle, ChevronRight } from 'lucide-react'
 import { useAdmin } from '../../context/AdminContext'
 import SyncStatus from './SyncStatus'
-import SupabaseSync from './SupabaseSync'
+import SimpleSync from './SimpleSync'
 
 const STATUSES = ['Pending', 'Confirmed', 'Shipped', 'Delivered']
 
@@ -105,7 +105,7 @@ const AdminOrders = () => {
           <p className="text-sm text-gray-500 dark:text-gray-400">{orders.length} orders</p>
         </div>
         <div className="flex items-center gap-3">
-          <SupabaseSync 
+          <SimpleSync 
             orders={orders}
             onSyncComplete={handleSyncComplete}
           />

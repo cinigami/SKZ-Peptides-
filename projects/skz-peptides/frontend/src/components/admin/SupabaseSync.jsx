@@ -39,7 +39,7 @@ const SupabaseSync = ({ orders, setOrders, onSyncComplete }) => {
     setSyncing(false)
   }
 
-  // Pull orders from Supabase
+  // Pull orders from Supabase (manual refresh required)
   const pullFromSupabase = async () => {
     setSyncing(true)
     try {
@@ -50,7 +50,12 @@ const SupabaseSync = ({ orders, setOrders, onSyncComplete }) => {
 
       if (error) throw error
 
-      // Convert to app format
+      // For now, just show success and ask user to refresh
+      const count = (data || []).length
+      setLastSync(new Date().toLocaleString())
+      onSyncComplete?.('success', `Found ${count} orders in cloud. Please refresh page to see them.`)
+      
+      // Store in localStorage as backup
       const formattedOrders = (data || []).map(order => ({
         id: order.id,
         customerName: order.customer_name,
@@ -61,10 +66,8 @@ const SupabaseSync = ({ orders, setOrders, onSyncComplete }) => {
         status: order.status,
         createdAt: order.created_at,
       }))
-
-      setOrders(formattedOrders)
-      setLastSync(new Date().toLocaleString())
-      onSyncComplete?.('success', `Pulled ${formattedOrders.length} orders from cloud`)
+      
+      localStorage.setItem('skz_admin_orders', JSON.stringify(formattedOrders))
       
     } catch (error) {
       console.error('Pull error:', error)
