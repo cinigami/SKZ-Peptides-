@@ -251,12 +251,16 @@ const ProductDetail = () => {
               </button>
 
               <button
-                onClick={() => openWhatsApp(buildProductMessage(product, quantity))}
+                onClick={() => openWhatsApp(
+                  isOutOfStock 
+                    ? `Hi! I'm interested in *${product.name}* but I see it's currently out of stock. Can you please let me know when it will be available again? Thank you!`
+                    : buildProductMessage(product, quantity)
+                )}
                 className="w-full flex items-center justify-center space-x-2 py-4 px-6 rounded-lg font-medium transition-colors text-white"
-                style={{ backgroundColor: '#25D366' }}
+                style={{ backgroundColor: isOutOfStock ? '#9CA3AF' : '#25D366' }}
               >
                 <MessageCircle className="w-5 h-5" />
-                <span>Order via WhatsApp</span>
+                <span>{isOutOfStock ? 'Register Your Interest' : 'Order via WhatsApp'}</span>
               </button>
             </div>
 
