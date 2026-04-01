@@ -13,7 +13,7 @@ export const products = [
     features: ['5mg vial — ideal beginner size', 'Start at 2mg/week, titrate to 4mg/week', 'Triple receptor agonist (GLP-1 + GIP + Glucagon)', 'Research grade, 99.52% purity (Janoshik verified)', 'One vial lasts ~2.5 weeks at starter dose'],
     benefits: ['Weight management studies', 'Metabolic research', 'Appetite regulation'],
     image: '/images/retatrutide-vial-mockup.png',
-    inStock: 8,
+    inStock: 0,
     storage: 'Refrigerate 2-8°C',
     protocol: '/protocols/pdf/retatrutide-protocol.html',
     protocolTitle: 'Retatrutide Research Protocol',
