@@ -67,9 +67,9 @@ export const products = [
   {
     id: 'motsc-40mg',
     name: 'MOTS-c 40mg',
-    price: 225,
+    price: 189,
     cost: 78.95,
-    profit: 146.05,
+    profit: 110.05,
     category: 'Mitochondrial',
     description: 'Metabolic powerhouse — supports energy, endurance & cellular performance.',
     features: ['40mg vial', 'Mitochondrial peptide', 'Research grade', 'High potency'],
@@ -244,7 +244,7 @@ export const products = [
       batch: 'STACK-240315'
     },
     bundleContents: ['Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
-    bundleSavings: 75
+    bundleSavings: 39
   },
 
   {
