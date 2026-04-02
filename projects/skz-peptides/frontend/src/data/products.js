@@ -122,9 +122,9 @@ export const products = [
   {
     id: 'retatrutide-10mg',
     name: 'Retatrutide 10mg',
-    price: 189,
+    price: 169,
     cost: 85,
-    profit: 104,
+    profit: 84,
     category: 'Weight Management',
     badge: '🔥 Advanced Formula',
     description: 'Enhanced Retatrutide formulation with optimized bioavailability. Higher concentration for experienced users seeking maximum efficacy.',
@@ -147,9 +147,9 @@ export const products = [
   {
     id: 'retatrutide-20mg',
     name: 'Retatrutide 20mg',
-    price: 299,
+    price: 259,
     cost: 135,
-    profit: 164,
+    profit: 124,
     category: 'Weight Management',
     badge: '💎 Premium Grade',
     description: 'Premium high-concentration Retatrutide for research requiring maximum potency. Professional-grade formulation for advanced users.',
@@ -244,7 +244,7 @@ export const products = [
       batch: 'STACK-240315'
     },
     bundleContents: ['Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
-    bundleSavings: 89
+    bundleSavings: 49
   },
 
   {
