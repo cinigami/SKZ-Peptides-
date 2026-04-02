@@ -223,9 +223,9 @@ export const products = [
   {
     id: 'metabolic-stack',
     name: '⚡ Metabolic Stack',
-    price: 449,
+    price: 399,
     cost: 213.95,
-    profit: 235.05,
+    profit: 185.05,
     category: 'Bundles',
     badge: '🔥 Maximum Fat Burning',
     description: 'Ultimate fat burning combo: Retatrutide 20mg (weight loss) + MOTS-c 40mg (metabolic boost) for maximum effect. 4-week complete system with FREE essential kit.',
@@ -244,7 +244,7 @@ export const products = [
       batch: 'STACK-240315'
     },
     bundleContents: ['Retatrutide 20mg', 'MOTS-c 40mg', 'FREE Essential Kit'],
-    bundleSavings: 39
+    bundleSavings: 89
   },
 
   {
