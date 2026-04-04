@@ -11,7 +11,7 @@ import Checkout from './pages/Checkout'
 import Protocols from './pages/Protocols'
 import About from './pages/About'
 import Admin from './pages/Admin'
-import TestSupabase from './pages/TestSupabase'
+// import TestSupabase from './pages/TestSupabase' // Temporarily disabled
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -41,7 +41,7 @@ function App() {
                 <Route path="/protocols" element={<Protocols />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/admin" element={<Admin />} />
-                <Route path="/test-supabase" element={<TestSupabase />} />
+                {/* <Route path="/test-supabase" element={<TestSupabase />} /> */}
               </Routes>
             </ResponsiveLayout>
           </Router>
