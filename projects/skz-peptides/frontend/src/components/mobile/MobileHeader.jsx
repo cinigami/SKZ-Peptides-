@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ShoppingCart, Menu, X, Search, Home, Package, Info } from 'lucide-react'
+import { ShoppingCart, Menu, X, Search, Home, Package, Info, Calculator } from 'lucide-react'
 import { useCart } from '../../context/CartContext'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -12,6 +12,7 @@ const MobileHeader = () => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Products', href: '/products', icon: Package },
+    { name: 'Calc', href: '/calculator', icon: Calculator },
     { name: 'About', href: '/about', icon: Info },
   ]
 
@@ -35,9 +36,9 @@ const MobileHeader = () => {
 
             {/* Right side controls */}
             <div className="flex items-center space-x-3">
-              <button className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center" style={{ minWidth: '44px', minHeight: '44px' }}>
-                <Search className="w-5 h-5" />
-              </button>
+              <Link to="/calculator" className="p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center" style={{ minWidth: '44px', minHeight: '44px' }}>
+                <Calculator className="w-5 h-5" />
+              </Link>
 
               <Link to="/cart" className="relative p-2 text-gray-400 hover:text-gray-600 dark:text-gray-300 dark:hover:text-white flex items-center justify-center" style={{ minWidth: '44px', minHeight: '44px' }}>
                 <ShoppingCart className="w-5 h-5" />
@@ -95,6 +96,15 @@ const MobileHeader = () => {
                 >
                   <Package className="w-6 h-6" />
                   <span className="font-semibold text-lg">Products</span>
+                </Link>
+                <Link
+                  to="/calculator"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center space-x-4 px-4 py-4 rounded-xl"
+                  style={isActive('/calculator') ? { backgroundColor: '#7C3AED', color: '#FFFFFF' } : { color: '#E5E7EB' }}
+                >
+                  <Calculator className="w-6 h-6" />
+                  <span className="font-semibold text-lg">Calculator</span>
                 </Link>
                 <Link
                   to="/protocols"

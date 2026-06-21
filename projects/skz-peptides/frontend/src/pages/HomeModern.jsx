@@ -125,7 +125,7 @@ const HomeModern = () => {
               </Link>
               
               <Link
-                to="/about"
+                to="/calculator"
                 className="font-medium px-8 py-4 transition-all duration-300 flex items-center justify-center"
                 style={{ 
                   background: 'transparent', 
@@ -134,7 +134,7 @@ const HomeModern = () => {
                   borderRadius: '12px'
                 }}
               >
-                <span>About</span>
+                <span>Open Calculator</span>
               </Link>
             </motion.div>
             
@@ -367,10 +367,10 @@ const HomeModern = () => {
               <Truck className="w-8 h-8 text-blue-600 dark:text-purple-400" />
               <div className="text-left">
                 <div className="text-lg font-bold text-gray-900 dark:text-white">
-                  FREE Shipping on Orders Above RM100
+                  Fast Delivery Across Malaysia
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
-                  Fast delivery across Malaysia • Secure packaging
+                  Secure packaging • Reliable shipping
                 </div>
               </div>
             </div>

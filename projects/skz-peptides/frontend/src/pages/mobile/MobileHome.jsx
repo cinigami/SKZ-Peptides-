@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Shield, Truck, Info, Package, Zap, Beaker, FileText } from 'lucide-react'
+import { ArrowRight, Shield, Truck, Info, Package, Zap, Beaker, FileText, Calculator } from 'lucide-react'
 import { products } from '../../data/products'
 import MobileProductCard from '../../components/mobile/MobileProductCard'
 import { motion } from 'framer-motion'
@@ -120,7 +120,7 @@ const MobileHome = () => {
             </Link>
 
             <Link
-              to="/about"
+              to="/calculator"
               className="font-medium py-3 px-6 transition-all duration-300 flex items-center justify-center"
               style={{
                 background: 'transparent',
@@ -129,7 +129,7 @@ const MobileHome = () => {
                 borderRadius: '12px'
               }}
             >
-              <span>About</span>
+              <span>Open Calculator</span>
             </Link>
           </motion.div>
         </motion.div>
@@ -195,8 +195,8 @@ const MobileHome = () => {
         >
           <Truck className="w-5 h-5 flex-shrink-0" style={{ color: '#7C3AED' }} />
           <div>
-            <p className="text-sm font-semibold text-gray-900 dark:text-white">FREE Shipping on Orders Above RM100</p>
-            <p className="text-xs text-gray-500 dark:text-gray-400">Fast delivery across Malaysia</p>
+            <p className="text-sm font-semibold text-gray-900 dark:text-white">Fast Delivery Across Malaysia</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">Secure packaging • Reliable shipping</p>
           </div>
         </div>
       </motion.section>
@@ -305,6 +305,18 @@ const MobileHome = () => {
       >
         <motion.h2 variants={itemVariants} className="text-lg font-bold text-gray-900 dark:text-white mb-4">Quick Actions</motion.h2>
         <div className="grid grid-cols-2 gap-3">
+          <motion.div variants={itemVariants}>
+            <Link
+              to="/calculator"
+              className="block bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm active:scale-[0.98] transition-transform duration-150"
+            >
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3" style={{ background: 'rgba(124, 58, 237, 0.1)' }}>
+                <Calculator className="w-5 h-5" style={{ color: '#7C3AED' }} />
+              </div>
+              <h3 className="font-semibold text-gray-900 dark:text-white text-sm">Calculator</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">Units, dose & vial math</p>
+            </Link>
+          </motion.div>
           <motion.div variants={itemVariants}>
             <Link
               to="/about"

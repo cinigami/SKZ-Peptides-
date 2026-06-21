@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ShoppingCart, Menu, X, User, Search } from 'lucide-react'
+import { ShoppingCart, Menu, X, User, Search, Calculator } from 'lucide-react'
 import { useCart } from '../context/CartContext'
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Products', href: '/products' },
+    { name: 'Calculator', href: '/calculator' },
     { name: 'Protocols', href: '/protocols' },
     { name: 'About', href: '/about' },
 
@@ -49,6 +50,15 @@ const Header = () => {
 
           {/* Right side icons */}
           <div className="flex items-center space-x-4">
+            {/* Search */}
+            <Link to="/calculator" className="p-2 text-gray-400 hover:text-gray-600">
+              <Calculator className="w-5 h-5" />
+            </Link>
+
+            {/* Account */}
+            <button className="p-2 text-gray-400 hover:text-gray-600">
+              <User className="w-5 h-5" />
+            </button>
             {/* Cart */}
             <Link to="/cart" className="relative p-2 text-gray-400 hover:text-gray-600">
               <ShoppingCart className="w-5 h-5" />
